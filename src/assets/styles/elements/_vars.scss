@@ -1,0 +1,72 @@
+:root{
+    --color-primary: rgb(57, 57, 57);
+    --color-primary-light: rgb(91, 91, 91);
+    --color-primary-dark: rgb(28, 28, 28);
+    --color-primary-bg: rgb(69, 69, 69);
+
+    --color-accent: #dfdfdf;
+    --color-accent-light: #e8e8e8;
+    --color-accent-dark: #aeaeae;
+    --color-accent-bg: #dedede;
+
+    // shades - generated using chroma.js - 12 steps
+    --black: #1d1d21;
+    --gray-10: #2e2e31;
+    --gray-6: #7b7a7d;
+    --gray-4: #a5a5a6;
+    --gray-3: #bbbbbc;
+    --gray-2: #d1d0d2;
+    --gray-1: #e8e7e8;
+    --white: white;
+
+    /* feedback */
+    --color-success: #88c459;
+    --color-error: #f5414f;
+    --color-warning: #ffd137;
+
+    /* typography */
+    --color-text: var(--gray-10);
+    --color-text-heading: var(--black);
+    --color-text-subtle: var(--gray-6);
+    --color-link: var(--color-primary);
+    --color-link-visited: var(--color-primary-dark);
+    --color-mark: var(--color-accent-bg);
+    --color-blockquote-border: var(--gray-2);
+
+    /* border */
+    --color-border: var(--gray-2);
+
+    /* body */
+    --color-body: var(--white);
+
+    /* forms */
+    --form-element-border: var(--color-border);
+    --form-element-border-focus: var(--color-primary);
+    --form-element-border-error: var(--color-error);
+    --form-element-bg: var(--white);
+    --form-text-placeholder: var(--gray-4);
+
+    /* buttons */
+    --btn-primary-bg: var(--color-primary);
+    --btn-primary-hover: var(--color-primary-light);
+    --btn-primary-active: var(--color-primary-dark);
+    --btn-primary-label: var(--white);
+
+    /* icons */
+    --color-icon-primary: var(--gray-4);
+    --color-icon-secondary: inherit;
+
+
+   /* spacing */
+    --space-unit: 1em;
+    --space-xxs:  calc(0.25 * var(--space-unit));
+    --space-xs:   calc(0.5 * var(--space-unit));
+    --space-sm:   calc(0.75 * var(--space-unit));
+    --space-md:   calc(1.25 * var(--space-unit));
+    --space-lg:   calc(2 * var(--space-unit));
+    --space-xl:   calc(3.25 * var(--space-unit));
+    --space-xxl:  calc(5.25 * var(--space-unit));
+  
+  /* components padding */
+    --component-padding: var(--space-sm);
+}

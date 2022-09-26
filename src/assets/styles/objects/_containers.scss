@@ -1,0 +1,13 @@
+.container{
+    margin: 0px auto;
+    max-width: 1000px;
+}
+
+.mvl-grid{
+    display: inline-grid;
+    gap: 10px;
+}
+
+.mvl-grid-6{
+    grid-template-columns: repeat(6,minmax(15%, 1fr));
+}
