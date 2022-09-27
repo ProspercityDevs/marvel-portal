@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import CharactersGrid from '@/modules/marvel/components/CharactersGrid.jsx'
+import CharactersGrid from '@/modules/marvel/characters/components/CharactersGrid'
 import '@/assets/styles/components/_characters-page-header.scss'
 
 export function CharacterPage (){
@@ -13,9 +13,7 @@ export function CharacterPage (){
             </header>
             <div className='container'>
                 <h1>MARVEL CHARACTERS LIST</h1>
-                <div className="mvl-grid mvl-grid-6">
                     <CharactersGrid/>
-                </div>
             </div>
         </div>
     )

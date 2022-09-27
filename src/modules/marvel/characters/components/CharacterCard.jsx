@@ -1,8 +1,8 @@
 import "@/assets/styles/components/_character-card.scss";
 
-export default function CharacterCard({ image, name }) {
+export default function CharacterCard({ image, name, isSkeleton }) {
   return (
-    <div className="mvl-character-card">
+    <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
       <div className="mvl-character-card__image-container">
         <img className="mvl-character-card__image" src={image} alt="" />
       </div>

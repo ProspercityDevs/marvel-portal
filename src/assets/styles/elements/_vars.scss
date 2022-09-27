@@ -39,6 +39,10 @@
     /* body */
     --color-body: var(--white);
 
+
+    --color-skeleton-background: var(--gray-1);
+    --color-skeleton: var(--gray-6);
+
     /* forms */
     --form-element-border: var(--color-border);
     --form-element-border-focus: var(--color-primary);

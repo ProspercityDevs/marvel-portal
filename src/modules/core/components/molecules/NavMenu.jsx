@@ -14,18 +14,9 @@ export function NavMenu() {
         </NavLink>
 
         <div className="mvl-navbar__actions">
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/characters">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
             Characters
           </NavLink>
-
-          {/* <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
-            Home
-          </NavLink>
-
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/sub-page">
-            SubPage
-          </NavLink> */}
-
         </div>
       </div>
 

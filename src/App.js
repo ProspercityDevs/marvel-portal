@@ -1,7 +1,7 @@
 
 import '@/assets/styles/main.scss';
 
-import { NavMenu } from '@/modules/core/components/molecules/NavMenu.js';
+import { NavMenu } from '@/modules/core/components/molecules/NavMenu';
 
 import AppRoutes from "./routes";
 
