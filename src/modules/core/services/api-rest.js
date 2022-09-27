@@ -1,4 +1,15 @@
-export async function get(url, queryParams = {}) {
+import { defaultMapper } from '@/modules/core/services';
+
+export async function getAndMap(url, { queryParams = {}, mappedBy = defaultMapper }) {
+  const data = await get(url, { queryParams });
+  const mappedResults = data.results.map(mappedBy);
+  return {
+    ...data,
+    results: mappedResults
+  };
+}
+
+export async function get(url, { queryParams = {} }) {
   const params = objectToURLString(queryParams);
   return myFetch(`${url}${params}`, { method: 'GET' });
 }
@@ -10,9 +21,9 @@ export async function myFetch(url, options = {}) {
       'Content-Type': 'application/json'
     }
   })
-    .then((data) => getResponseAsJSON(data))
+    .then((response) => getResponseAsJSON(response))
     .catch((error) => error);
-  return response;
+  return response.data;
 }
 
 function objectToURLString(params = {}) {

@@ -1,19 +1,19 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import { getAllCharacters, mapCharacterToCard } from '@/modules/marvel/characters/services';
+import { getCharactersForGrid } from '@/modules/marvel-characters/services';
 
-import CharacterCard from '@/modules/marvel/characters/components/CharacterCard';
+import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
 import Paginator from '@/modules/core/components/molecules/Paginator';
-import '@/assets/styles/components/_character-grid.scss';
+import './styles.scss';
+
+const INITIAL_PAGE = 1;
+const ITEMS_PER_PAGE = 24;
 
 export default function CharacterGridPaginated() {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
-
-  const initialPage = 1;
-  const itemsPerPage = 24;
 
   useEffect(() => {
     fetchCharactersAtPage();
@@ -21,23 +21,15 @@ export default function CharacterGridPaginated() {
 
   async function fetchCharactersAtPage(page = 1) {
     setLoading(true);
-    const data = await getAllCharacters(mapCharacterToCard, {
-      limit: itemsPerPage,
-      offset: getOffset(page, itemsPerPage)
-    });
+    const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
     setTotalItems(data.total);
     setCharacters(data.results);
     setLoading(false);
   }
 
-  function getOffset(page, itemsPerPage) {
-    const currentOffset = page - 1;
-    return currentOffset * itemsPerPage;
-  }
-
-  const onPageChange = useCallback((newPage) => {
+  const onPageChange = (newPage) => {
     fetchCharactersAtPage(newPage);
-  }, []);
+  };
 
   return (
     <>
@@ -45,12 +37,15 @@ export default function CharacterGridPaginated() {
         <input type="text" placeholder="search" />
       </div>
       <div className="mvl-grid mvl-grid-6">
-        <CharacterGrid characters={characters} isLoading={isLoading} itemsPerPage={itemsPerPage} />
+        <CharacterGrid
+          characters={characters}
+          isLoading={isLoading}
+          itemsPerPage={ITEMS_PER_PAGE}
+        />
       </div>
       <Paginator
-        pageCount
-        initialPage={initialPage}
-        itemsPerPage={itemsPerPage}
+        initialPage={INITIAL_PAGE}
+        itemsPerPage={ITEMS_PER_PAGE}
         totalItems={totalItems}
         onPageChange={onPageChange}
       />

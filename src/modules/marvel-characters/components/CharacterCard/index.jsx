@@ -1,4 +1,4 @@
-import '@/assets/styles/components/_character-card.scss';
+import './styles.scss';
 import PropTypes from 'prop-types';
 
 CharacterCard.propTypes = {

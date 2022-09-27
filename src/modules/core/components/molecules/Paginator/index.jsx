@@ -3,7 +3,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { BiChevronRight, BiChevronLeft } from 'react-icons/bi';
-import '@/assets/styles/components/_paginator.scss';
+import './styles.scss';
 
 Pagination.propTypes = {
   totalItems: PropTypes.number.isRequired,
@@ -28,7 +28,7 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
 
   useEffect(() => {
     onPageChange(currentPage);
-  }, [currentPage, onPageChange]);
+  }, [currentPage]);
 
   return (
     <div className="mvl-paginator">
