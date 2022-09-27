@@ -1,1 +1,1 @@
-export const defaultMapper = (item) => item
+export const defaultMapper = (item) => item;

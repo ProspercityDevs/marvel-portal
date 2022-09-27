@@ -1,10 +1,9 @@
-
 const SubPage = () => {
-    return(
-        <>
-            <h1>SubPage</h1>
-        </>
-    )
-}
+  return (
+    <>
+      <h1>SubPage</h1>
+    </>
+  );
+};
 
 export default SubPage;
