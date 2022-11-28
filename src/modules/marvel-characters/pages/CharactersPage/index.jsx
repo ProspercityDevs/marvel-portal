@@ -4,12 +4,17 @@ import './styles.scss';
 
 export function CharacterPage() {
   return (
-    <div className="mvl-chararcters-page">
+    <div className="mvl-characters-page">
       <header className="mvl-characters-page-header">
         <h1 className="u-no-margin">MARVELS CHARACTERS</h1>
         <p>Get a list of all Marvels characters and villians</p>
       </header>
+
       <div className="container">
+        <section className="mvl-section-card">
+          <p>Use this space to add some cards and other content </p>
+        </section>
+
         <h1>MARVEL CHARACTERS LIST</h1>
         <CharactersGrid />
       </div>
