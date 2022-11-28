@@ -6,6 +6,7 @@ import { getCharactersForGrid } from '@/modules/marvel-characters/services';
 import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
 import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
+import Filter from '@/modules/core/components/molecules/Filter';
 
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
@@ -14,6 +15,7 @@ export default function CharacterGridPaginated() {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
+  const [queryParams, setQueryParams] = useState({});
 
   useEffect(() => {
     fetchCharactersAtPage();
@@ -31,11 +33,13 @@ export default function CharacterGridPaginated() {
     fetchCharactersAtPage(newPage);
   };
 
+  const onQueryChange = (query) => {
+    setQueryParams(query);
+  };
+
   return (
     <>
-      <div className="mvl-character-gri-filters">
-        <input type="text" placeholder="search" />
-      </div>
+      <Filter query={queryParams} onQueryChange={onQueryChange} />
       <div className="mvl-grid mvl-grid-6">
         <CharacterGrid
           characters={characters}

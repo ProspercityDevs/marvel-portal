@@ -17,7 +17,6 @@ export async function getAllPaginated(
     mappedBy,
     queryParams: {
       ...queryParams,
-      ...credentials,
       limit: itemsPerPage,
       offset: getOffset(page, itemsPerPage)
     }
