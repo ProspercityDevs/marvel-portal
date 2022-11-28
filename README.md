@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## link with Marvels API.
+
+For connections with Marvel API.
+
+### Add your local environment to be allowed by the backend 
+
+1. Go to the (Marverl API)[https://developer.marvel.com/]
+2. Create a user 
+3. Go to login 
+4. Go to My Developer Account
+5. On the section called **Your authorized referrers** click on add a new reference 
+6. Add a new reference `localhost`
+7. Click on update
+
+
+### Add Public Key to access your data
+
+1. On the --My Developer-- Account copy the value on `Your public key` 
+2. Copy the file called `.env` and with a new name `.env.local`
+3. On the `.env.local` add your assign your public key to `REACT_APP_PUBLIC_KEY`
+4. run your project, you should see the images of the characters 
