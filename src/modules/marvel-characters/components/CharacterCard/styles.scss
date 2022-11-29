@@ -3,7 +3,7 @@
     height: 355px;
     overflow: hidden;
     background: var(--color-primary-dark);
-    color: var(--color-accent);
+    color: var(--color-accent);    
 }
 
 .mvl-character-card__image-container{
@@ -30,7 +30,7 @@
 }
 
 .mvl-character-card__body{
-    padding: var(--space-sm);
+    padding: var(--space-sm);    
 }
 
 .mvl-character-card[data-is-skeleton=true]{
@@ -44,7 +44,7 @@
         left: 0;
         background: var(--color-skeleton);
         opacity: 0.9;
-        z-index: 3;
+        z-index: 3;        
     }
 }
 
