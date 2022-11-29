@@ -4,6 +4,12 @@
     overflow: hidden;
     background: var(--color-primary-dark);
     color: var(--color-accent);
+    border-style: solid;
+    border-color: red;
+}
+
+.etiqueta-marvel{
+    font-weight: bolder;
 }
 
 .mvl-character-card__image-container{
