@@ -9,6 +9,23 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+/* agregar border a las tarjetas */
 .mvl-character-card{
   border: 3px solid red;
 }
+/* texto de la fecha de creaciòn de marvel */
+
+
+/* cambios en la barra de navegacion */
+.input-nav{
+  border-bottom: 2px solid black;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  font-size: 2.5rem;
+  
+}
+.input-nav:hover{
+  border: 2px solid yellow;
+};
+
