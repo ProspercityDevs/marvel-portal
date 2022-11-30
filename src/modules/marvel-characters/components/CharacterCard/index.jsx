@@ -16,11 +16,12 @@ export default function CharacterCard({ image, name, isSkeleton }) {
       <div className="mvl-character-card__body">
         {' '}
         {/* aca se trae la descripcion de lo solicitado */}
-        <h6 className="card-desc">
+        <h6 className="etiqueta-marvel">{name} - 1939 Timely Comics</h6>
+        {/* <h6 className="card-desc">
           {name}
           <br></br>
           {name}
-        </h6>
+        </h6> > */}
         {/* <h6 className="card-desc"></h6> <h6 className="etiqueta-marvel">1939 Timely Comics</h6> */}
         {/* <h6 className="etiqueta-marvel">1939 Timely Comics</h6> */}
         {/* <h4 className="u-no-margin">{name}</h4>   aca se trae la descripcion de lo solicitado */}
