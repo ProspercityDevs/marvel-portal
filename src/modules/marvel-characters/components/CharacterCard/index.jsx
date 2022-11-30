@@ -15,6 +15,8 @@ export default function CharacterCard({ image, name, isSkeleton }) {
       </div>
       <div className="mvl-character-card__body">
         <h4 className="u-no-margin">{name}</h4>
+        <br></br>
+        <h6 className="u-no-margin">- 1939 Timely Comics</h6>
       </div>
     </div>
   );
