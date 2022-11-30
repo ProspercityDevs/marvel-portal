@@ -14,7 +14,16 @@ export default function CharacterCard({ image, name, isSkeleton }) {
         <img className="mvl-character-card__image" src={image} alt="" />
       </div>
       <div className="mvl-character-card__body">
-        <h4 className="u-no-margin">{name}</h4>
+        {' '}
+        {/* aca se trae la descripcion de lo solicitado */}
+        <h6 className="card-desc">
+          {name}
+          <br></br>
+          {name}
+        </h6>
+        {/* <h6 className="card-desc"></h6> <h6 className="etiqueta-marvel">1939 Timely Comics</h6> */}
+        {/* <h6 className="etiqueta-marvel">1939 Timely Comics</h6> */}
+        {/* <h4 className="u-no-margin">{name}</h4>   aca se trae la descripcion de lo solicitado */}
       </div>
     </div>
   );
