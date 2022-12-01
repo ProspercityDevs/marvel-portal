@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .mvl-character-card {
   height: 355px;
   overflow: hidden;
@@ -6,6 +7,17 @@
   border-style: solid;
   border-color: red;
   border-radius: 0.5rem;
+=======
+
+.mvl-character-card{
+    height: 355px;
+    overflow: hidden;
+    background: var(--color-primary-dark);
+    color: var(--color-accent);    
+    border-style: solid;
+    border-width: 10px;
+    border-color: red;
+>>>>>>> develop
 }
 
 .etiqueta-marvel {
@@ -53,3 +65,27 @@
     z-index: 3;
   }
 }
+<<<<<<< HEAD
+=======
+
+.mvl-character-card__body{
+    padding: var(--space-sm);    
+}
+
+.mvl-character-card[data-is-skeleton=true]{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: var(--color-skeleton);
+        opacity: 0.9;
+        z-index: 3;        
+    }
+}
+
+
+>>>>>>> develop
