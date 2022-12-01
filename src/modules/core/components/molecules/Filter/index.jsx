@@ -9,7 +9,6 @@ export default function Filter() {
         aria-controls="react-autowhatever-1"
         className="typeahead__input"
         placeholder="Search"></input>
-      {/* <input className="input" type="text" placeholder="search" onClick="cambiacolor" />*/}
     </div>
   );
 }
