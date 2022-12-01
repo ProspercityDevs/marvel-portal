@@ -10,22 +10,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 /* agregar border a las tarjetas */
-.mvl-character-card{
+.mvl-character-card {
   border: 3px solid red;
 }
 /* texto de la fecha de creaciòn de marvel */
 
-
 /* cambios en la barra de navegacion */
-.input-nav{
-  border-bottom: 2px solid black;
+ 
+.input-nav {
   width: 100%;
   border-radius: 0;
-  border: none;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  border: 0;
+  border-bottom: 3px solid black;
+  padding-bottom: 0.4375rem;
   
 }
-.input-nav:hover{
-  border: 2px solid yellow;
-};
-
+:focus {
+  outline-color: yellow;
+} 
+/* .input-nav {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font: 800 26px/1 RobotoCondensed, Trebuchet MS, Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 0;
+  border-bottom: 2px solid #151515;
+  width: 100%;
+  padding-bottom: 0.4375rem;
+  padding-left: 1.875rem;
+  border-radius: 0;
+}
+:focus {
+  outline-color: rgba(226, 226, 19, 0.89);
+} */
