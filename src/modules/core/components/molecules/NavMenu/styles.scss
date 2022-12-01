@@ -25,7 +25,7 @@
 .mvl-navbar-item--text{
     color: var(--color-accent);
     text-decoration: none;
-    background-color: green;
+    background-color: black;
     font-weight: bold;
     &:hover{
     color: var(--color-primary-light);
@@ -66,13 +66,39 @@
     text-transform: uppercase;
     border: 0;
     border-bottom: 2px solid #151515;
-    width: 50%;
+    width: 45%;
     padding-bottom: .4375rem;
     padding-left: 1.875rem;
     border-radius: 0;
     }
     :focus {
-        outline-color:rgba(226, 226, 19, 0.89);
+        outline-color:yellow;
         }
-  
+     
+    {/* DESDE ACA agregamos cositas para la cortinilla roj4 EN EL CARD*/}
+    .mvl-card--explore .card-thumb-frame figure img {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transition: all .2s linear;
+        transition: all .2s linear;
+        overflow: hidden;
+        -o-object-position: top center;
+        object-position: top center;
+    }
 
+    .mvl-card--explore .card-body.is-sliding:before {
+        background: #e62429;
+        bottom: 100%;
+        content: "{name}";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        -webkit-transition-timing-function: cubic-bezier(.75,0,.125,1);
+        transition-timing-function: cubic-bezier(.75,0,.125,1);
+        -webkit-transition: -webkit-transform .3s;
+        transition: -webkit-transform .3s;
+        transition: transform .3s;
+        transition: transform .3s,-webkit-transform .3s;
+        width: 100%;
+        z-index: -1;
+    }
