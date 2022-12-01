@@ -17,7 +17,7 @@ export default function CharacterCard({ image, name, isSkeleton }) {
         {/* aca se trae la descripcion de lo solicitado */}
         <h4 className="u-no-margin">{name}</h4>
         <h6 className="etiqueta-marvel">
-          1939<br></br>Timely Comics
+          1939<br></br>new date()getFullYear()
         </h6>
       </div>
     </div>
