@@ -25,9 +25,10 @@
 .mvl-navbar-item--text{
     color: var(--color-accent);
     text-decoration: none;
+    background-color: green;
     font-weight: bold;
     &:hover{
-        color: var(--color-primary-light);
+    color: var(--color-primary-light);
     }
 }
 
@@ -54,4 +55,24 @@
 .mvl-navbar__img{
     max-height: 100%;
 }
+
+
+  
+.typeahead__input {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font: 800 26px/1 RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 0;
+    border-bottom: 2px solid #151515;
+    width: 50%;
+    padding-bottom: .4375rem;
+    padding-left: 1.875rem;
+    border-radius: 0;
+    }
+    :focus {
+        outline-color:rgba(226, 226, 19, 0.89);
+        }
+  
 
