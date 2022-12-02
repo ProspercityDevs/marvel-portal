@@ -1,25 +1,35 @@
-.mvl-characters-page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var( --space-lg);
+.mvl-characters-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
 }
 
-.mvl-characters-page-header{
-    background-image: url("/assets/images/characters_banner.jpeg");
-    min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--color-accent);
-    flex-direction: column;
-    width: 100%;
+.mvl-characters-page-header {
+  background-image: url("/assets/images/characters_banner.jpeg");
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-accent);
+  flex-direction: column;
+  width: 100%;
 }
 
-.mvl-section-card{
-    min-height: 200px;
+
+  .mvl-section-card{
+    min-height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid var(--color-border);
+    max-width: 97%;
+    background-color: black;
+    background-image: url("/assets/images/banner.png");
+}
+ .mvl-characters-page{
+  background-color: black;
+} 
+.title-List{
+  color: bisque;
 }
