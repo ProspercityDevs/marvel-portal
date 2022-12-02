@@ -45,7 +45,13 @@
         background: var(--color-skeleton);
         opacity: 0.9;
         z-index: 3;
+        
     }
 }
-
+.mvl-character-card{
+    cursor: pointer;
+}
+.mvl-character-card:hover{
+    background-color: red;
+}
 
