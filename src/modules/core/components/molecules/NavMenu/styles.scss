@@ -42,9 +42,9 @@
 }
 
 
-.mvl-navbar--right{
+// .mvl-navbar--right{
 
-}
+// }
 
 
 .mvl-navbar__actions{
@@ -55,8 +55,6 @@
 .mvl-navbar__img{
     max-height: 100%;
 }
-
-
   
 .typeahead__input {
     box-sizing: border-box;
@@ -75,7 +73,7 @@
         outline-color:yellow;
         }
      
-    {/* DESDE ACA agregamos cositas para la cortinilla roj4 EN EL CARD*/}
+    /* DESDE ACA agregamos cositas para la cortinilla roj4 EN EL CARD*/
     .mvl-card--explore .card-thumb-frame figure img {
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
