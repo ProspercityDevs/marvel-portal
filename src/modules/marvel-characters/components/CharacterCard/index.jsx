@@ -14,12 +14,8 @@ export default function CharacterCard({ image, name, isSkeleton }) {
         <img className="mvl-character-card__image" src={image} alt="" />
       </div>
       <div className="mvl-character-card__body">
-<<<<<<< HEAD
-        <h6 className="u-no-margin">1939 Timely comics</h6> <br></br>
-=======
         <h6 className="marvel-label">1939 Timely Comics</h6>
         <h6>Current Year {new Date().getFullYear().toString()}</h6>
->>>>>>> develop
         <h4 className="u-no-margin">{name}</h4>
         <h6 className="etiqueta-marvel">
           1939<br></br>Timely Comics
