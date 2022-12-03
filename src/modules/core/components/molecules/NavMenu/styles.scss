@@ -13,6 +13,7 @@
     display: inline-flex;
     align-items: center;
     height: 100%;
+    width: 400px;
 }
 
 .mvl-navbar-item{
@@ -20,12 +21,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 15px;
 }
 
 .mvl-navbar-item--text{
     color: var(--color-accent);
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
     &:hover{
         color: var(--color-primary-light);
     }
