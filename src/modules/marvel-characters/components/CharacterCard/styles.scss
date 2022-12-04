@@ -13,7 +13,7 @@
 }
 
 .mvl-character-card__image-container {
-  background: black;
+  background: var(--color-primary-dark);
   height: 50%;
   position: relative;
   &::before {

@@ -27,7 +27,7 @@
 .mvl-navbar-item--text{
     color: var(--color-accent);
     text-decoration: none;
-    background-color: black;
+    background-color: var(--color-primary-dark);
     font-weight: bold;
     font-size: 1rem;
     &:hover{

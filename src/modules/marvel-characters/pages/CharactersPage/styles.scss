@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: var( --space-lg);
-    background-color: black;
+    background-color: var(--color-primary-dark);;
 }
 
 .mvl-characters-page-header{
@@ -29,6 +29,6 @@
 }
 
 .container{
-    background-color: black;
+    background-color: var(--color-primary-dark);;
     color: white;
 }
