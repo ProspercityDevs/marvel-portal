@@ -6,6 +6,7 @@
   border-style: solid;
   border-color: red;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .etiqueta-marvel {
@@ -56,6 +57,12 @@
 
 .mvl-character-card__body{
     padding: var(--space-sm);
+    background-color: var(--color-primary-dark);
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.mvl-character-card__body:hover{
+  background-color: red;
 }
 
 .mvl-character-card[data-is-skeleton=true]{
@@ -73,11 +80,42 @@
         
     }
 }
-.mvl-character-card{
-    cursor: pointer;
-}
-.mvl-character-card:hover{
+// .mvl-character-card{
+//     cursor: pointer;
+//     background-color: var(--color-primary-dark);
     
-    background-color: red;
-}
+//     transition: width 2s, height 2s, background-color 2s, transform 2s;
+// }
 
+// .mvl-character-card:hover{
+//     height: 100%;  
+//     background-color: red;
+// }
+
+// /* DESDE ACA agregamos cositas para la cortinilla roj4 EN EL CARD*/
+// .mvl-card--explore .card-thumb-frame figure img {
+//   -webkit-transform: scaleX(1);
+//   transform: scaleX(1);
+//   -webkit-transition: all .2s linear;
+//   transition: all .2s linear;
+//   overflow: hidden;
+//   -o-object-position: top center;
+//   object-position: top center;
+// }
+
+// .mvl-card--explore .card-body.is-sliding:before {
+//   background: #e62429;
+//   bottom: 100%;
+//   content: "{name}";
+//   height: 100%;
+//   left: 0;
+//   position: absolute;
+//   -webkit-transition-timing-function: cubic-bezier(.75,0,.125,1);
+//   transition-timing-function: cubic-bezier(.75,0,.125,1);
+//   -webkit-transition: -webkit-transform .3s;
+//   transition: -webkit-transform .3s;
+//   transition: transform .3s;
+//   transition: transform .3s,-webkit-transform .3s;
+//   width: 100%;
+//   z-index: -1;
+// }
