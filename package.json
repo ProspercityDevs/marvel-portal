@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bulma": "^0.9.4",
+    "create-react-app": "^5.0.1",
     "react": "^18.2.0",
     "react-icons": "^4.4.0"
   },
