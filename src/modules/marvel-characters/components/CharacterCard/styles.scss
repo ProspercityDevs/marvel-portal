@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 .mvl-character-card{
     height: 355px;
@@ -7,23 +6,7 @@
     color: var(--color-accent);
     border-color: red;
     border-style: solid;
-=======
-.mvl-character-card {
-  height: 355px;
-  overflow: hidden;
-  background: var(--color-primary-dark);
-  color: var(--color-accent);
-  border-style: solid;
-  border-color: red;
-  border-radius: 0.5rem;
-  cursor: pointer;
->>>>>>> cfc9980116489937b0b50859450e6cc9321e5b85
 }
-
-// .mvl-character-card:hover{
-//    background-color: red;
-//   transition: background-color 2s;
-// }
 
 .marvel-label {
   font-weight: bolder;
@@ -111,7 +94,6 @@
     z-index: 3;
   }
 }
-<<<<<<< HEAD
 
 .mvl-character-card__body{
     padding: var(--space-sm);
@@ -152,5 +134,3 @@
 
 
 
-=======
->>>>>>> cfc9980116489937b0b50859450e6cc9321e5b85
