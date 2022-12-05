@@ -22,7 +22,7 @@ export function NavMenu() {
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
             Events
           </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/series">
             Series
           </NavLink>
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
