@@ -1,14 +1,24 @@
 .mvl-paginator{
-    display: flex;
-    gap: var(--space-lg);
-    padding: var(--space-md);
+    position: relative;
     width: 100%;
-    justify-content: flex-end;
-    box-sizing: border-box;
-    position: sticky;
-    bottom: 0;
-    background: var(--color-body);
-    z-index: 3;
+    max-width: 375px;
+    padding: 0 8px 50px;
+    margin: 0 auto 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    font-size: 1.125rem;
+    text-transform: uppercase;
 }
 
 .mvl-paginator__actions{
