@@ -5,12 +5,12 @@ export function NavMenu() {
   return (
     <nav className="mvl-navbar">
       <div className="mvl-navbar--left">
-        <NavLink className="mvl-navbar-item mlv-navbar__image" href="#">
+        <NavLink className="mvl-navbar-item mlv-navbar__image" href="#" to="/">
           <img src="/images/marvel_logo.png" className="mvl-navbar__img" alt="compny logo" />
         </NavLink>
 
         <div className="mvl-navbar__actions">
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/Characters">
             Characters
           </NavLink>
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
@@ -22,7 +22,7 @@ export function NavMenu() {
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
             Events
           </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/Series">
             Series
           </NavLink>
         </div>
