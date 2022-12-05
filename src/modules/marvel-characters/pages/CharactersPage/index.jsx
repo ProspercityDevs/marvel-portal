@@ -12,7 +12,8 @@ export function CharacterPage() {
 
       <div className="container">
         <section className="mvl-section-card">
-          <p>Use this space to add some cards and other content </p>
+          <h2> {clock()} </h2>
+          {/*<p>Use this space to add some cards and other content </p> */}
         </section>
 
         <h1>MARVEL CHARACTERS LIST</h1>
@@ -21,3 +22,13 @@ export function CharacterPage() {
     </div>
   );
 }
+
+function clock() {
+  const element = (
+    <div>
+      <h2>The time is: {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  return element;
+}
+setInterval(clock, 1000);
