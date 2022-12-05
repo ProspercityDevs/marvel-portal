@@ -52,8 +52,11 @@
 
 .mvl-character-card:hover{
     background-color: rgb(255, 0, 0);
+    transition: .3s;
 }
-
+.mvl-character-card__image-container:hover{
+    transform: scale(1.05);
+}
 .mvl-character-card__data{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
