@@ -1,9 +1,10 @@
-
 .mvl-character-card{
     height: 355px;
     overflow: hidden;
     background: var(--color-primary-dark);
     color: var(--color-accent);
+    border-color: red;
+    border-style: solid;
 }
 
 .mvl-character-card__image-container{
@@ -47,5 +48,22 @@
         z-index: 3;
     }
 }
+.mvl-character-card:hover{
+    background: rgb(202, 25, 25);
+    color: var(--color-accent);
+    box-shadow: 5px 10px 20px 1px rgb(153, 66, 175);   /* darle sombra a los bordes*/
+    transition: all 0.7s linear;    /* que el efecto sea lento*/
+    cursor: pointer;        /*  para que cambie el cursor cuando este el cursos por encima del boton */
+    .mvl-character-card__image{
+        width: 100%;
+        height: 97%;
+        object-fit: cover;
+        object-position: left bottom;
+        transform: scaleX(1);
+        transform: scaleX(1.1) scaleY(1.1);
+        transition: all 0.1s linear;    /* que el efecto sea lento*/
+    }
+}
+
 
 
