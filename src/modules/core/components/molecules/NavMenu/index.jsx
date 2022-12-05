@@ -16,7 +16,7 @@ export function NavMenu() {
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
             Comics
           </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/creators">
             Creators
           </NavLink>
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
