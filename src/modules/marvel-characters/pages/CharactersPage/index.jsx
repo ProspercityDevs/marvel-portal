@@ -12,6 +12,10 @@ export function CharacterPage() {
 
       <div className="container">
         <section className="mvl-section-card">
+<<<<<<< HEAD
+=======
+          {/* <p>Use this space to add some cards and other content </p> */}
+>>>>>>> cfc9980116489937b0b50859450e6cc9321e5b85
         </section>
 
         <h1>MARVEL CHARACTERS LIST</h1>
