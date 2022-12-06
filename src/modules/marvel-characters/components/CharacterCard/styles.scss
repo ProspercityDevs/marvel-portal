@@ -7,14 +7,14 @@
 }
 
 .mvl-character-card__image-container{
-    background: black;
+    background: rgb(47, 130, 55);
     height: 50%;
     position: relative;
     &::before{
         content: '';
         width: 100%;
         height: 5px;
-        background: red;
+        background: rgb(255, 0, 0);
         position: absolute;
         bottom: -5px;
         z-index: 2;
@@ -27,6 +27,8 @@
     object-fit: cover;
     object-position: left bottom;
     transform: scaleX(1);
+    cursor: pointer;
+    
 }
 
 .mvl-character-card__body{
@@ -48,4 +50,14 @@
     }
 }
 
-
+.mvl-character-card:hover{
+    background-color: rgb(255, 0, 0);
+    transition: .3s;
+}
+.mvl-character-card__image-container:hover{
+    transform: scale(1.05);
+}
+.mvl-character-card__data{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
