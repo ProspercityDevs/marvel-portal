@@ -30,6 +30,9 @@ export default function Filter() {
             </div>
           </div>
         </div>
+        <div>
+          <h5>Resultados busqueda</h5>
+        </div>
       </section>
     </div>
   );
