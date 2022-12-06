@@ -7,6 +7,7 @@ import { SeriesPage } from '@/modules/marvel-characters/pages/SeriesPage';
 import { CreatorsPage } from '@/modules/marvel-characters/pages/CreatorsPage';
 import { ComicsPage } from '@/modules/marvel-characters/pages/ComicsPage';
 import { EventsPage } from '@/modules/marvel-characters/pages/EventsPage';
+import { StoriesPage } from '@/modules/marvel-characters/pages/StoriesPage';
 
 const AppRoutes = () => (
   <Routes>
@@ -16,6 +17,7 @@ const AppRoutes = () => (
     <Route exact path="/creators" element={<CreatorsPage />} />
     <Route exact path="/events" element={<EventsPage />} />
     <Route exact path="/series" element={<SeriesPage />} />
+    <Route exact path="/stories" element={<StoriesPage />} />
     <Route element={<NotFoundPage404 />} />
   </Routes>
 );
