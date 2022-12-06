@@ -7,11 +7,6 @@
     cursor: pointer;
 }
 
-.mvl-character-card:hover .mvl-character-card__image{
-    transform: scale(1.1);
-    height: 97%;
-}
-
 .mvl-character-card__image-container{
     background: black;
     height: 50%;
@@ -33,17 +28,11 @@
     object-fit: cover;
     object-position: left bottom;
     transform: scaleX(1);
-    border-bottom: 2px solid red;
+    border-bo;
 }
 
 .mvl-character-card__body{
     padding: var(--space-sm);
-    height: 2px;
-    transition: height 2s;
-}
-.mvl-character-card:hover .mvl-character-card__body{
-    height: 355px;
-    background: red;
 }
 
 .mvl-character-card[data-is-skeleton=true]{
