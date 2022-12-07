@@ -1,4 +1,10 @@
-function Filter() {
+import PropTypes from 'prop-types';
+
+Filter.propTypes = {
+  totalItems: PropTypes.number.isRequired
+};
+
+function Filter({ totalItems }) {
   return (
     <div className="mvl-character-gri-filters">
       <div>
@@ -11,8 +17,8 @@ function Filter() {
           aria-autocomplete="list"
           aria-controls="reac-autowhatever-1"></input>
       </div>
-      <div>
-        <span className="span-results">3744 RESULTADOS</span>
+      <div className="Container-span">
+        <span className="span-results">{totalItems} RESULTADOS</span>
       </div>
     </div>
   );
