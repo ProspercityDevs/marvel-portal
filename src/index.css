@@ -18,16 +18,18 @@ code {
 /* cambios en la barra de navegacion */
  
 .input-nav {
-  width: 100%;
+  width: 40%;
   border-radius: 0;
   font-size: 2rem;
   border: 0;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid rgb(201, 28, 28);
   padding-bottom: 0.4375rem;
+  background-color: rgb(26, 24, 24);
   
 }
 :focus {
   outline-color: yellow;
+  
 } 
 /* .mvl-characters-page{
   background-color: black;
