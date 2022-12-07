@@ -1,0 +1,25 @@
+*{
+  padding: 0;
+  margin: 0;
+  bo
+}
+.not_found_flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .not_found_info {
+    width: 50%;
+    align-content: center;
+  }
+  
+  .not_found_img {
+    height: auto;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    height: 604px;
+  }
+
+  .image_not_found{
+    height: 100%;
+  }

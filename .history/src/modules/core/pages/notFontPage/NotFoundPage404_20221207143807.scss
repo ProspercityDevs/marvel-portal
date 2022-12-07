@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.not_found_flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .not_found_info {
+    width: 50%;
+    align-content: center;
+  }
+  
+  .not_found_img {
+    
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .image_not_found {
+    height: 10%;
+  }
