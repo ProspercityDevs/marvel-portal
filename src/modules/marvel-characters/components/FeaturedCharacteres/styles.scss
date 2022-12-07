@@ -41,12 +41,19 @@
 
 .mvl-featuredCharacters-card__body{
     padding: var(--space-sm);
+    height: 0px;
 }
 
 .mvl-featuredCharacters-card:hover{
-  background-color: rgb(255, 0, 0);
-  transition: .3s;
-}
-.mvl-featuredCharacters-card__image-container:hover{
-  transform: scale(1.05);
+    .mvl-featuredCharacters-card__image-container{
+        transform: scale(1.05);
+    }
+    .mvl-featuredCharacters-card__body{
+        padding: var(--space-sm);
+        background-color: rgb(214, 15, 15);
+        opacity: 1;
+        height: 200px;
+        transition: 0.3s ease-in-out ;
+    }
+
 }
