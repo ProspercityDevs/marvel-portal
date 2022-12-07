@@ -8,7 +8,9 @@ const NotFoundPage404 = () => {
           <div className="not_found_info">
             <div>
               <h1>404 PAGE NOT FOUND</h1>
-              <h3>Not even the Eye of Uatu sees you request...</h3>
+              <br />
+              <h4>Not even the Eye of Uatu sees you request...</h4>
+              <br />
               <p>
                 Check that you tiped the address correctly, go back to your previus page or try
                 using our site searchg to find something specific.
@@ -16,7 +18,7 @@ const NotFoundPage404 = () => {
             </div>
           </div>
           <div className="not_found_img">
-            <img className="image_not_found" src="/images/black-widow.jpg" alt="" />
+            <div className="error-image-animate"></div>
           </div>
         </div>
       </div>
