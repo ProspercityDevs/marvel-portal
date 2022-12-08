@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: var( --space-lg);
-    background-color: black;
+    background-color: var(--color-primary-dark);;
 }
 
 .mvl-characters-page-header{
@@ -26,9 +26,15 @@
     justify-content: center;
     align-items: center;
     border: 1px solid var(--color-border);
+    background-image: url("/assets/images/imagenmarvel.png");
 }
 
-.container{
-    background-color: black;
+.main
+{
+  background-color: black;
+}
+
+.container
+{
     color: white;
 }

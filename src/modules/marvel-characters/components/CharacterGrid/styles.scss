@@ -1,9 +1,15 @@
-
-.mvl-character-gri-filters{
-    display: flex;
-    gap: var(--space-lg);
-    padding: var(--space-md) 0;
-    width: 100%;
-    box-sizing: border-box;
-    
+.mvl-character-gri-filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 5px;
+  gap: var(--space-lg);
+  padding: var(--space-md) 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.span-results{
+    font-size: 1.2rem;
+    color: grey;
 }
