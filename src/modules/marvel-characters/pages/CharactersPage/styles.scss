@@ -23,3 +23,75 @@
     align-items: center;
     border: 1px solid var(--color-border);
 }
+
+.Featured-Characters{
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //border: 1px solid var(--color-border);
+}
+
+//Estilo del titulo seccion FEATURED SHARACTERS
+
+.prueba {
+   display: block;
+   margin-top: -150px;    
+   margin-right: -550px; 
+}
+
+.Title-featured-characters{  
+    font-family: RobotoCondensed, "Trebuchet MS", Helvetica, Arial, sans-serif;
+    // margin-top: -80px;    
+    // margin-left: -600px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+//Funcion pseudo-elementos ::before y ::after para rayas diagonales.
+
+.Title-featured-characters::after, .Title-featured-characters::before{ 
+    background-color: rgb(198, 169, 114);    
+    content: "";      //Se agregan rayas diagonales.
+    display: block;
+    height: 2px;   //Tamano de la letra
+    position: absolute;
+    transform: rotate(-45deg) skewX(45deg); //Metodo para poner las rayas diagonales.
+    width: 20px;   //Ancho de la rayitas diagonales
+}
+
+.Title-featured-characters::before { //Raya diagonal arriba, 
+    margin-left: 70px;               //posicion de ambas rayas diagonales
+    margin-top: -8px;
+}
+
+.Title-featured-characters::after {  //Raya diagonal abajo
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+//Estilos del las 6 imagenes grip layout. 
+
+.Container-Cards-grip-6 { 
+    display: grid;    //Hacemos grip layout.
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-column-gap: 10px;
+    margin-top: 150px;
+    margin-left: 200px;
+    justify-content: center;
+}
+
+.Cards-img{
+    
+}
+
+.Img-Cards{
+    width: 155px;
+    height: 170px;
+    //border: 4px solid rgb(248, 1, 1);
+    //margin: 5px;
+    // margin-top: 150px;
+    // margin-left: -400px;
+}
+
+
