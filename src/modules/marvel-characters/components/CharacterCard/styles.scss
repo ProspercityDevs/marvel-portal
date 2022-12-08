@@ -4,7 +4,6 @@
     overflow: hidden;
     background: var(--color-primary-dark);
     color: var(--color-accent);
-    border: 4px solid red;
 }
 
 .mvl-character-card__image-container{
@@ -57,10 +56,6 @@
     background-color: rgb(255, 0, 0);
     transition: .3s;
     border: 6px solid green;
-}
-.mvl-character-card__image-container:hover{
-    transform: scale(1.05);
-
     .mvl-character-card__image-container{
         transform: scale(1.05);
     }
