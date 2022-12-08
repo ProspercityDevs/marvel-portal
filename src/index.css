@@ -36,8 +36,7 @@ code {
 } */
 
 /* texto de la fecha de creaciòn de marvel */
-.mvl-card--explore 
-.card-body.is-sliding:before {
+.mvl-card--explore.card-body.is-sliding:before {
   background: #0ac222;
   bottom: 100%;
   content: "";
