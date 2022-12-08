@@ -34,6 +34,8 @@
 
 .mvl-character-card__body{
     padding: var(--space-sm);
+    height: 0px;
+
 }
 
 .mvl-character-card[data-is-skeleton=true]{
@@ -58,7 +60,20 @@
 }
 .mvl-character-card__image-container:hover{
     transform: scale(1.05);
+
+    .mvl-character-card__image-container{
+        transform: scale(1.05);
+    }
+    .mvl-character-card__body{
+        padding: var(--space-sm);
+        background-color: rgb(214, 15, 15);
+        opacity: 1;
+        height: 200px;
+        transition: 0.3s ease-in-out ;
+    }
+
 }
+
 .mvl-character-card__data{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
