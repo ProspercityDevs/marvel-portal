@@ -12,19 +12,19 @@ export function NavMenu() {
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" target="_blank">
             CHARACTERS
           </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/" target="_blank">
             COMICS
           </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/" target="_blank">
             CREATORS
           </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/" target="_blank">
             EVENTS
           </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/" target="_blank">
             SERIES
           </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/" target="_blank">
             STORIES
           </NavLink>
         </div>
