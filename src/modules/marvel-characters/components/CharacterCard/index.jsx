@@ -16,9 +16,10 @@ export default function CharacterCard({ image, name, isSkeleton }) {
       <div className="mvl-character-card__body">
         {/* aca se trae la descripcion de lo solicitado */}
         <h4 className="u-no-margin">{name}</h4>
-        <h6 className="etiqueta-marvel">
+        <h6 className="marvel-label">
           1939<br></br>Timely Comics
         </h6>
+        {/* <h6>Current Year { new Date().getFullYear().toString() }</h6> */}
       </div>
     </div>
   );

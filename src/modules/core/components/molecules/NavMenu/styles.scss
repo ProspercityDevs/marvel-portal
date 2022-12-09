@@ -41,11 +41,9 @@
     gap: 16px;
 }
 
-
 .mvl-navbar--right{
 
 }
-
 
 .mvl-navbar__actions{
     display: flex;
@@ -71,12 +69,11 @@
     padding-left: 1.875rem;
     border-radius: 0;
     }
-    :focus {
-        outline-color:yellow;
-        }
+    :focus {outline-color:yellow}
      
-    {/* DESDE ACA agregamos cositas para la cortinilla roj4 EN EL CARD*/}
-    .mvl-card--explore .card-thumb-frame figure img {
+    /* DESDE ACA agregamos cositas para la cortinilla roj4 EN EL CARD
+    .mvl-card--explore 
+    .card-thumb-frame figure img {
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
         -webkit-transition: all .2s linear;
@@ -84,21 +81,22 @@
         overflow: hidden;
         -o-object-position: top center;
         object-position: top center;
-    }
+        }*/
+        .card-body.is-sliding:before {
+            background: #e62429;
+            bottom: 100%;
+            content: "{name}";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            -webkit-transition-timing-function: cubic-bezier(.75,0,.125,1);
+            transition-timing-function: cubic-bezier(.75,0,.125,1);
+            -webkit-transition: -webkit-transform .3s;
+            transition: -webkit-transform .3s;
+            transition: transform .3s;
+            transition: transform .3s,-webkit-transform .3s;
+            width: 100%;
+            z-index: -1;
+        }
 
-    .mvl-card--explore .card-body.is-sliding:before {
-        background: #e62429;
-        bottom: 100%;
-        content: "{name}";
-        height: 100%;
-        left: 0;
-        position: absolute;
-        -webkit-transition-timing-function: cubic-bezier(.75,0,.125,1);
-        transition-timing-function: cubic-bezier(.75,0,.125,1);
-        -webkit-transition: -webkit-transform .3s;
-        transition: -webkit-transform .3s;
-        transition: transform .3s;
-        transition: transform .3s,-webkit-transform .3s;
-        width: 100%;
-        z-index: -1;
-    }
+       
