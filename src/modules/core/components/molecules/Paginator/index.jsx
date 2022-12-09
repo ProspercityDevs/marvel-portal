@@ -32,15 +32,21 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
 
   return (
     <div className="mvl-paginator">
-      <span className="mvl-paginator__text">
-        Page <strong>{currentPage} </strong> of <strong>{totalPages}</strong>
-      </span>
       <div className="mvl-paginator__actions">
+      
         <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
-          <BiChevronLeft />
+        <BiChevronLeft /> Before
         </button>
+        <span className="mvl-paginator__text">
+        Page <strong>{currentPage} </strong> <strong>{currentPage} </strong> of <strong>{totalPages}</strong>
+      </span>
+        
+        <span className="mvl-paginator__text">
+        ...
+      </span>
+        
         <button disabled={isLastPage(currentPage, totalPages)} onClick={onNextpageClick}>
-          <BiChevronRight />
+          Next<BiChevronRight className='right'/>
         </button>
       </div>
     </div>

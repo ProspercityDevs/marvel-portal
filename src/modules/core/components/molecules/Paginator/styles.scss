@@ -3,15 +3,19 @@
     gap: var(--space-lg);
     padding: var(--space-md);
     width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
     box-sizing: border-box;
     position: sticky;
     bottom: 0;
     background: var(--color-body);
-    z-index: 3;
+    z-index: 10;
 }
 
 .mvl-paginator__actions{
     display: flex;
     gap: var(--space-xs);
+}
+
+.right{
+
 }
