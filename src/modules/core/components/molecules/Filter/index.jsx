@@ -1,4 +1,6 @@
+import React from 'react';
 import './styles.scss';
+import MovieFilter from './MovieFilter';
 
 export default function Filter() {
   return (
@@ -29,6 +31,7 @@ export default function Filter() {
               </div>
             </div>
           </div>
+          <MovieFilter />
         </div>
         <div>
           <h5>Resultados busqueda</h5>
