@@ -3,7 +3,7 @@ import './styles.scss';
 import { RiArrowDropDownFill } from 'react-icons/ri';
 import MovieList from './MovieList';
 
-export default function MavieFilter() {
+export default function MovieFilter() {
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
