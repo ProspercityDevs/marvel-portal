@@ -10,7 +10,7 @@ export function NavMenu() {
         </NavLink>
 
         <div className="mvl-navbar__actions">
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/characters" target="_blank">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
             CHARACTERS
           </NavLink>
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/comics" target="_blank">

@@ -2,7 +2,7 @@ import React from 'react';
 import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid';
 import './styles.scss';
 
-export function CharacterPage() {
+export function CharactersPage() {
   return (
     <div className="mvl-characters-page">
       <header className="mvl-characters-page-header">
