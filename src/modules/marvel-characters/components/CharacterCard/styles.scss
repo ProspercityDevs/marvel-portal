@@ -5,6 +5,12 @@
     color: var(--color-accent);
     border-color: red;
     border-style: solid;
+    cursor: pointer;
+}
+
+.mvl-character-card:hover .mvl-character-card__image{
+    transform: scale(1.1);
+    height: 97%;
 }
 
 .mvl-character-card__image-container{
@@ -27,11 +33,19 @@
     height: 100%;
     object-fit: cover;
     object-position: left bottom;
-    transform: scaleX(1);
+    transform: scaleX(1) 2s;
+    border-bottom: 2px solid red;
 }
 
 .mvl-character-card__body{
     padding: var(--space-sm);
+    height: 2px;
+    transition: height 2s;
+}
+
+.mvl-character-card:hover .mvl-character-card__body{
+    height: 355px;
+    background: red;
 }
 
 .mvl-character-card[data-is-skeleton=true]{
@@ -48,22 +62,17 @@
         z-index: 3;
     }
 }
+
 .mvl-character-card:hover{
-    background: rgb(202, 25, 25);
-    color: var(--color-accent);
-    box-shadow: 5px 10px 20px 1px rgb(153, 66, 175);   /* darle sombra a los bordes*/
-    transition: all 0.7s linear;    /* que el efecto sea lento*/
-    cursor: pointer;        /*  para que cambie el cursor cuando este el cursos por encima del boton */
-    .mvl-character-card__image{
-        width: 100%;
-        height: 97%;
-        object-fit: cover;
-        object-position: left bottom;
-        transform: scaleX(1);
-        transform: scaleX(1.1) scaleY(1.1);
-        transition: all 0.1s linear;    /* que el efecto sea lento*/
-    }
+     color: var(--color-accent);
+     box-shadow: 5px 10px 20px 1px rgb(153, 66, 175);
+     transition: all 0.7s linear;
+  
+     .mvl-character-card__image{
+         width: 100%;
+         height: 97%;
+         object-fit: cover;
+         object-position: left bottom;
+         transition: all 0.1s linear;
+     }
 }
-
-
-
