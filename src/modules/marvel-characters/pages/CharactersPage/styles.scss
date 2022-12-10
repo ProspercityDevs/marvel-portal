@@ -6,7 +6,7 @@
 }
 
 .mvl-characters-page-header{
-    background-image: url("/assets/images/characters_banner.jpeg");
+    background-image: url("/assets/images/gif_marvel.gif");
     min-height: 300px;
     display: flex;
     justify-content: center;
@@ -17,9 +17,21 @@
 }
 
 .mvl-section-card{
+    background-position: left;
+    background-repeat: no-repeat;
+    background-image: url("/assets/images/marvel.jpeg");
+    background-position-x: 5%;
     min-height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--color-border);
+    font-size: 30px;
+    border: 2px solid var(--color-border);
+    transition: .5s border;
+    
+}
+
+.mvl-section-card:hover{
+    border: 5px solid var(--color-border);
+    
 }
