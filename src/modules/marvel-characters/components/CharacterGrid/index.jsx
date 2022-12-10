@@ -39,7 +39,7 @@ export default function CharacterGridPaginated() {
 
   return (
     <>
-      <Filter query={queryParams} onQueryChange={onQueryChange} />
+      <Filter query={queryParams} onQueryChange={onQueryChange} totalItems={totalItems} />
       <div className="mvl-grid mvl-grid-6">
         <CharacterGrid
           characters={characters}
