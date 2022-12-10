@@ -12,7 +12,7 @@ export function CharacterPage() {
 
       <div className="container">
         <section className="mvl-section-card">
-          <p> **ALPHA TEAM** {new Date().toLocaleDateString()} </p>
+          <p> **ALPHA TEAM**{new Date().toLocaleDateString()} </p>
         </section>
 
         <h1>MARVEL CHARACTERS LIST</h1>
