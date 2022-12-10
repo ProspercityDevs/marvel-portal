@@ -1,0 +1,171 @@
+
+
+.container{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+}
+
+.container2{
+    position: relative;
+    width: 1000px;
+    height: 800px;
+
+}
+
+.selec-btn{
+    display: flex;
+    align-items: center;
+}
+
+.btn-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
+
+
+.arrow-dwn{
+    height: 21px;
+    width: 22px;
+    font-size: 18px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: rgb(15, 14, 14);
+    display: flex;
+    transition: 0.3s;
+}
+
+.arrow-dwn{
+    transform: rotate(-180deg);
+}
+
+.list-items{
+    position: relative;
+    margin-top: 10;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgb(224, 38, 38);
+    /* display: none; /* Ocultar opciones*/
+}
+ 
+.list-items{    /* Una vez dado click se despleja el menu*/
+    display: block;
+}
+
+.item:hover{
+    background-color: rgb(179, 20, 20);
+}
+
+.item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+
+.item-text {
+    font-size: 16;
+    font-weight: 50;
+    height: 30px;
+    color: black;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 4px;
+    border: 1.5px solid rgb(110, 101, 101);
+}
+/*
+.checkbox{
+    color: red;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+*/
+
+.check-icon1{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open1 {
+    display: block;
+}
+.check-icon2{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open2 {
+    display: block;
+}
+
+.check-icon3{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open3 {
+    display: block;
+}
+.check-icon4{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open4 {
+    display: block;
+}
+.modal{
+    display: none;
+}
+
+.modal-open{
+    position:absolute;
+    display: flex;
+    margin-left:-10% ;
+    margin-top: 10%;
+    width: 360px;
+    height: 300px;
+}
+
+.boton_cancel{
+    margin-top: 250px;
+    margin-left: 125px;
+    position: absolute;
+}
+
+.boton_reset{
+    margin-top: 250px;
+    margin-left: 63px;
+    position: absolute;
+}
+
+.boton_aply{
+    margin-top: 250px;
+    margin-left: 0px;
+    position: absolute;
+}
+.icon1 {
+    transform: rotate(0);
+}
+.icon1-open {
+    transform: rotate(180deg);
+}
