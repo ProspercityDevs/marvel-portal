@@ -35,9 +35,8 @@
 //Estilo del titulo seccion FEATURED SHARACTERS
 
 .prueba {
-   display: block;
-   margin-top: -150px;    
-   margin-right: -550px; 
+   margin-top: -350px;    
+   margin-right: -380px;  //DEscartado 
 }
 
 .Title-featured-characters{  
@@ -45,7 +44,7 @@
     // margin-top: -80px;    
     // margin-left: -600px;
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 700;    //DEscartado
 }
 
 //Funcion pseudo-elementos ::before y ::after para rayas diagonales.
@@ -76,22 +75,99 @@
     display: grid;    //Hacemos grip layout.
     grid-template-columns: auto auto auto auto auto auto;
     grid-column-gap: 10px;
-    margin-top: 150px;
-    margin-left: 200px;
-    justify-content: center;
+    margin-top: 80px;
+    margin-left: -25px;
+    justify-content: center; //Descartado
 }
 
-.Cards-img{
-    
+//Estilos del contenedor general de casa personaje.
+
+.Cards-General-Characters {
+    height: 355px;
+    width: 158px;
+    overflow: hidden;
+    background: var(--color-primary-dark);
+    color: var(--color-accent);
+    cursor: pointer;
+}
+
+.Cards-General-Characters ::after {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: #fff;
+    border-style: solid;
+    border-top-color: transparent;
+    border-width: 12px 12px 0 0;
+    bottom: -177px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: auto;
+    z-index: 40;
+}
+
+//Estilos del contenedor de la imagen 
+
+.Card-img {    
+    background: black;  
+    height: 50%;
+    position: relative;
+}
+
+.Card-img::before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: red;
+    position: absolute;
+    bottom: -5px;
+    z-index: 2;
 }
 
 .Img-Cards{
-    width: 155px;
-    height: 170px;
-    //border: 4px solid rgb(248, 1, 1);
-    //margin: 5px;
-    // margin-top: 150px;
-    // margin-left: -400px;
+    width: 160px;
+    height: 180px;
+    object-fit: cover;
+    object-position: left bottom;
+    transform: scaleX(1);
+    border-bottom: 2px solid red;
+}
+
+//EStilos del contener del titulo. 
+
+.Cards-Title-Characters {
+    padding: var(--space-sm);
+    height: 2px;
+    transition: height 2s;
+    // background: #151515;
+    // color: #e62429;
+    // transition: color .3s;
+}
+
+.Title-Featured-Character {
+    font-weight: 900;
+    margin-top: 10px;
+    font-size: 14px
+}
+
+//EStilos ontenedor subtitilo Ironheart
+
+.Cards-Title-Characters-Secondary {
+    bottom: 10px;
+    //position: absolute;
+    padding-right: 15px; 
+    margin-top: 110px;
+    font-size: 10px;
+    font-weight: 950;
+    text-transform: uppercase;
+}
+
+.Cards-Title-Characters-Secondary-text {
+    //font-size: 400 12px/1 RobotoCondensed Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
+    color: #bbb;
+    letter-spacing: 1px;
+    transition: all .17s ease-in-out;
+    //position: absolute;
 }
 
 
