@@ -15,7 +15,9 @@ function Filter({ totalItems }) {
           value=""
           autoComplete="off"
           aria-autocomplete="list"
-          aria-controls="reac-autowhatever-1"></input>
+          aria-controls="reac-autowhatever-1"
+          readOnly
+        />
       </div>
       <div className="Container-span">
         <span className="span-results">{totalItems} RESULTADOS</span>
