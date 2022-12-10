@@ -8,4 +8,3 @@ export function ComicsPage() {
     </div>
   );
 }
-
