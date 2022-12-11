@@ -23,11 +23,12 @@
 }
 
 .mvl-navbar-item--text{
-    color: var(--color-accent);
+    color: var(--color-primary-light);
     text-decoration: none;
+    background-color: var(--color-primary-dark);
     font-weight: bold;
     &:hover{
-        color: var(--color-primary-light);
+    color: var(--color-accent);
     }
 }
 
@@ -40,11 +41,9 @@
     gap: 16px;
 }
 
-
 .mvl-navbar--right{
 
 }
-
 
 .mvl-navbar__actions{
     display: flex;
@@ -55,3 +54,49 @@
     max-height: 100%;
 }
 
+
+  
+.typeahead__input {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font: 800 26px/1 RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 0;
+    border-bottom: 2px solid #151515;
+    width: 45%;
+    padding-bottom: .4375rem;
+    padding-left: 1.875rem;
+    border-radius: 0;
+    }
+    :focus {outline-color:yellow}
+     
+    /* DESDE ACA agregamos cositas para la cortinilla roj4 EN EL CARD
+    .mvl-card--explore 
+    .card-thumb-frame figure img {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transition: all .2s linear;
+        transition: all .2s linear;
+        overflow: hidden;
+        -o-object-position: top center;
+        object-position: top center;
+        }*/
+        .card-body.is-sliding:before {
+            background: #e62429;
+            bottom: 100%;
+            content: "{name}";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            -webkit-transition-timing-function: cubic-bezier(.75,0,.125,1);
+            transition-timing-function: cubic-bezier(.75,0,.125,1);
+            -webkit-transition: -webkit-transform .3s;
+            transition: -webkit-transform .3s;
+            transition: transform .3s;
+            transition: transform .3s,-webkit-transform .3s;
+            width: 100%;
+            z-index: -1;
+        }
+
+       

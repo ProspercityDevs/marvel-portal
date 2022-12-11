@@ -1,0 +1,17 @@
+/* mejorar la barra de busqueda */
+.input-nav {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font: 800 26px/1 RobotoCondensed, Trebuchet MS, Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 0;
+  border-bottom: 2px solid #151515;
+  width: 100%;
+  padding-bottom: 0.4375rem;
+  padding-left: 1.875rem;
+  border-radius: 0;
+}
+:focus {
+  outline-color: var(--color-warning);
+}
