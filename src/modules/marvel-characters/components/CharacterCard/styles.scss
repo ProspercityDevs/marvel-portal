@@ -1,10 +1,13 @@
 .mvl-character-card{
+    box-sizing: border-box;
+    max-width: 100%;
     height: 355px;
     overflow: hidden;
     background: var(--color-primary-dark);
     color: var(--color-accent);
     border-color: red;
     border-style: solid;
+
 }
 
 .mvl-character-card__image-container{
