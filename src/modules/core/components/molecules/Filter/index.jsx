@@ -1,6 +1,11 @@
 import './styles.scss';
+import PropTypes from 'prop-types';
 
-export default function Filter() {
+Filter.propTypes = {
+  totalItems: PropTypes.number.isRequired
+};
+
+export default function Filter({ totalItems }) {
   return (
     <div>
       <section className="page__component page__component--search page__component--search_bar section__color__ firstComponent">
@@ -31,7 +36,7 @@ export default function Filter() {
           </div>
         </div>
         <div>
-          <h5>Resultados busqueda</h5>
+          <h5 className="results_totalItems">{totalItems} RESULTS </h5>
         </div>
       </section>
     </div>
