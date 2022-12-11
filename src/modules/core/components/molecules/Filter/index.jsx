@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { RiSearch2Line } from 'react-icons/ri';
 
 Filter.propTypes = {
   totalItems: PropTypes.number.isRequired
@@ -8,6 +9,7 @@ function Filter({ totalItems }) {
   return (
     <div className="mvl-character-gri-filters">
       <div>
+        <RiSearch2Line />
         <input
           type="search"
           placeholder="SEARCH"
