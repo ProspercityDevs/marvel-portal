@@ -24,7 +24,7 @@ export default function MovieFilter() {
     <div className="container">
       <div className="selec-btn">
         <button className="btn-text" onClick={openModal}>
-          Movies <AiFillCaretDown className={`icon1 ${estado && 'icon1-open'}`} />
+          MOVIE <AiFillCaretDown className={`icon1 ${estado && 'icon1-open'}`} />
         </button>
       </div>
 

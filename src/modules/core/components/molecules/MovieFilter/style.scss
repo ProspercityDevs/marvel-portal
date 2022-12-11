@@ -10,18 +10,19 @@
     position: relative;
     width: 1000px;
     height: 800px;
-
 }
 
 .selec-btn{
     display: flex;
-    align-items: center;
 }
 
 .btn-text{
     font-size: 16px;
     font-weight: 400;
-    color: black;
+    color: rgba(202, 71, 71, 0.97);
+    border:none;
+    background-color: #fff;
+    font-weight: 500;
 }
 
 
@@ -44,19 +45,19 @@
 .list-items{
     position: relative;
     margin-top: 10;
-    border-radius: 8px;
     padding: 16px;
     background-color: #fff;
-    box-shadow: 0 5px 10px rgb(224, 38, 38);
     /* display: none; /* Ocultar opciones*/
 }
  
 .list-items{    /* Una vez dado click se despleja el menu*/
     display: block;
+
 }
 
 .item:hover{
-    background-color: rgb(179, 20, 20);
+    background-color: rgb(253, 252, 253);
+    
 }
 
 .item{
@@ -72,7 +73,7 @@
 
 .item-text {
     font-size: 16;
-    font-weight: 50;
+    font-weight: 500;
     height: 30px;
     color: black;
 }
@@ -81,10 +82,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20px;
-    width: 16px;
-    border-radius: 4px;
-    margin-right: 4px;
+    height: 15px;
+    width: 15px;
+    margin-right: 20px;
     border: 1.5px solid rgb(110, 101, 101);
 }
 /*
@@ -133,6 +133,47 @@
 .check-icon-open4 {
     display: block;
 }
+.check-icon5{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open5{
+    display: block;
+}
+
+.check-icon6{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open6{
+    display: block;
+}
+
+.check-icon7{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open7{
+    display: block;
+}
+
+.check-icon8{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open8{
+    display: block;
+}
+
+
 .modal{
     display: none;
 }
@@ -147,22 +188,40 @@
 }
 
 .boton_cancel{
+    font-weight: 500;
     margin-top: 250px;
     margin-left: 125px;
     position: absolute;
+    background-color: #fff;
+    right: 30px;
+    border: none;
+    color:rgb(110, 101, 101)
 }
 
 .boton_reset{
+    font-weight: 500;
     margin-top: 250px;
     margin-left: 63px;
     position: absolute;
+    right: 105px;
+    background-color: #fff;
+    border: none;
+    color:rgb(110, 101, 101)
 }
 
 .boton_aply{
+    font-weight: 500;
     margin-top: 250px;
     margin-left: 0px;
     position: absolute;
+    left: 10px;
+    background-color: #fff;
+    border: none;
+    color:rgb(110, 101, 101)
 }
+
+
+
 .icon1 {
     transform: rotate(0);
 }

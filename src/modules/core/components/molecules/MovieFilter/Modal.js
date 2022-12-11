@@ -41,11 +41,44 @@ function Modal({ estado, closeModal }) {
       setestado4(true);
     }
   };
+
+  const [estado5, setestado5] = useState(false);
+  const openModal5 = () => {
+    if (estado5 == true) {
+      setestado5(false);
+    } else {
+      setestado5(true);
+    }
+  };
+
+  const [estado6, setestado6] = useState(false);
+  const openModal6 = () => {
+    if (estado6 == true) {
+      setestado6(false);
+    } else {
+      setestado6(true);
+    }
+  };
+
+  const [estado7, setestado7] = useState(false);
+  const openModal7 = () => {
+    if (estado6 == true) {
+      setestado7(false);
+    } else {
+      setestado7(true);
+    }
+  };
+
+  
+
   const resetModal = () => {
     setestado1(false);
     setestado2(false);
     setestado3(false);
     setestado4(false);
+    setestado5(false);
+    setestado6(false);
+    setestado7(false);
   };
 
   return (
@@ -75,7 +108,29 @@ function Modal({ estado, closeModal }) {
           </span>
           <span className="item-text">AVENGERS: AGE OF ULTRON</span>
         </li>
+        <li className="item">
+          <span className="checkbox" onClick={openModal5}>
+            <BsSquareFill className={`check-icon5 ${estado5 && 'check-icon-open5'}`} />
+          </span>
+          <span className="item-text">AVENGERS: INFINITY WAR</span>
+        </li>
+
+        <li className="item">
+          <span className="checkbox" onClick={openModal6}>
+            <BsSquareFill className={`check-icon6 ${estado6 && 'check-icon-open6'}`} />
+          </span>
+          <span className="item-text">BLACK PANTER</span>
+        </li>
+        <li className="item">
+          <span className="checkbox" onClick={openModal7}>
+            <BsSquareFill className={`check-icon7 ${estado7 && 'check-icon-open7'}`} />
+          </span>
+          <span className="item-text">BLACK PANTER: WAKANDA FOREVER</span>
+        </li>
+        
+
       </ul>
+      
       <button className="boton_cancel" onClick={closeModal}>
         CANCEL
       </button>
@@ -83,6 +138,8 @@ function Modal({ estado, closeModal }) {
         RESET
       </button>
       <button className="boton_aply">APPLY</button>
+      
+      
     </div>
   );
 }
