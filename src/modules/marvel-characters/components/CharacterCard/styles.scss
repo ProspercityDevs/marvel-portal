@@ -23,6 +23,7 @@
 }
 
 .mvl-character-card__image{
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -55,7 +56,7 @@
 
 .mvl-character-card:hover{
     border: 6px solid green;
-    .mvl-character-card__image-container{
+    .mvl-character-card__image {
         transform: scale(1.05);
     }
     .mvl-character-card__body{
@@ -67,8 +68,12 @@
     }
 
 }
+.u-no-margin {
+    font-size: 15px;
+}
 
 .mvl-character-card__data{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+    font-size: 18px;
 }
