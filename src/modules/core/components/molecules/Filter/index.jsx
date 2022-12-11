@@ -1,5 +1,7 @@
+import React from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
+import MovieFilter from './MovieFilter';
 
 Filter.propTypes = {
   totalItems: PropTypes.number.isRequired
@@ -34,6 +36,7 @@ export default function Filter({ totalItems }) {
               </div>
             </div>
           </div>
+          <MovieFilter />
         </div>
         <div>
           <h5 className="results_totalItems">{totalItems} RESULTS </h5>

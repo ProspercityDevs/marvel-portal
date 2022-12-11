@@ -9,6 +9,7 @@
 
 .search-bar {
     padding: 70px 0px 0;
+    display: flex;
 }
 
 .typeahead {
@@ -90,4 +91,79 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #767676;
+.filters {
+    font-size: 1rem;
+    width: 100%;
+    display: block;
+    justify-content: flex-end;
+}
+
+.filters__movie {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.filters__movie--text {
+    font-weight: 500;
+}
+
+.filters__movie.icon {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.movies {
+    background-color: white;
+    width: 480px;
+    position: absolute;
+    border: 1px solid #dfdfdf;
+    z-index: 50;
+}
+
+.movies__list {
+    list-style-type: none;
+    max-height: 280px;
+    font-weight: 500;
+    padding: 15px 15px 25px 25px;
+    margin-bottom: 5px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.movies__list--item {
+    margin-bottom: inherit;
+}
+
+.movies__list--item input {
+    cursor: pointer;
+}
+
+.movies__list--text {
+    padding-left: 15px;
+}
+
+.movies__buttons--container {
+    display: flex;  
+    justify-content: space-between;
+    border-top: 1px  solid #dfdfdf;
+    margin: 15px;
+    padding-top: 15px;
+}
+
+.movies__buttons {
+    color: #858585;
+    display: flex;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    height: 20px;
+    justify-content: space-between;
+    border: none;
+}
+
+.movies__buttons--right {
+    display: flex;
 }
