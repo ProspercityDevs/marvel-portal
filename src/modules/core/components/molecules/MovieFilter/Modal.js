@@ -62,7 +62,7 @@ function Modal({ estado, closeModal }) {
 
   const [estado7, setestado7] = useState(false);
   const openModal7 = () => {
-    if (estado6 == true) {
+    if (estado7 == true) {
       setestado7(false);
     } else {
       setestado7(true);
