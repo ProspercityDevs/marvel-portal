@@ -10,7 +10,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:prettier/recommended',
+    /*  'plugin:prettier/recommended', */
     'prettier'
   ],
   overrides: [],
@@ -19,7 +19,7 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    'react/react-in-jsx-scope': 'off' 
+    'react/react-in-jsx-scope': 'off'
   },
   settings: {
     react: {
