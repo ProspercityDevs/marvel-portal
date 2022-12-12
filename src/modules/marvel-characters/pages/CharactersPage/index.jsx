@@ -12,7 +12,7 @@ export function CharacterPage() {
 
       <div className="container">
         <section className="Featured-Characters">
-          <div className="prueba">
+          <div className="Container-Card-Title">
             <h1 className="Title-featured-characters">FEATURED CHARACTERS</h1>
           </div>
           <div className="Container-Cards-grip-6">
