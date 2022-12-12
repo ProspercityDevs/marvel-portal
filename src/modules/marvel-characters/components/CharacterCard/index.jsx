@@ -19,10 +19,8 @@ export default function CharacterCard({ image, name, isSkeleton }) {
         <img className="mvl-character-card__image" src={image} alt="" />
       </div>
       <div className="mvl-character-card__body">
-        <h4 className="u-no-margin">{name}</h4>
-      </div>
-      <div className="mvl-character-card__data">
-        <h4 className="u-no-margin">{Fecha()}</h4>
+        <h5 className="u-no-margin">{name}</h5>
+        <h5 className="mvl-character-card__data">{Fecha()}</h5>
       </div>
     </div>
   );
