@@ -1,5 +1,5 @@
 .mvl-before-footer{
-    height: 400px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,14 +8,23 @@
 }
 
 .contenedor_left{
-    // height: 50%;
+    height: 100%;
+    width: 50%;
     float: left;
     background-image: url("/assets/images/before_footer.png");
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 1% 1%;
   }
 
   .contenedor_right{
-    height: 49%;
-    background-color: #6A737C;
+    height: 100%;
+    width: 50%;
+    float: left;
     margin: 1% 1%;
+    text-align:center;
+  }
+
+  h3 {
+    color: red;
   }
