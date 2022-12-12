@@ -1,0 +1,231 @@
+
+
+.container{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+}
+
+.container2{
+    position: relative;
+    width: 1000px;
+    height: 800px;
+}
+
+.selec-btn{
+    display: flex;
+}
+
+.btn-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(202, 71, 71, 0.97);
+    border:none;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+
+.arrow-dwn{
+    height: 21px;
+    width: 22px;
+    font-size: 18px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: rgb(15, 14, 14);
+    display: flex;
+    transition: 0.3s;
+}
+
+.arrow-dwn{
+    transform: rotate(-180deg);
+}
+
+.list-items{
+    position: relative;
+    margin-top: 10;
+    padding: 16px;
+    background-color: #fff;
+    /* display: none; /* Ocultar opciones*/
+}
+ 
+.list-items{    /* Una vez dado click se despleja el menu*/
+    display: block;
+
+}
+
+.item:hover{
+    background-color: rgb(253, 252, 253);
+    
+}
+
+.item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+
+.item-text {
+    font-size: 16;
+    font-weight: 500;
+    height: 30px;
+    color: black;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    width: 15px;
+    margin-right: 20px;
+    border: 1.5px solid rgb(110, 101, 101);
+}
+/*
+.checkbox{
+    color: red;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+*/
+
+.check-icon1{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open1 {
+    display: block;
+}
+.check-icon2{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open2 {
+    display: block;
+}
+
+.check-icon3{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open3 {
+    display: block;
+}
+.check-icon4{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open4 {
+    display: block;
+}
+.check-icon5{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open5{
+    display: block;
+}
+
+.check-icon6{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open6{
+    display: block;
+}
+
+.check-icon7{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open7{
+    display: block;
+}
+
+ .check-icon8{
+    display: none;
+     font-size: 11px;
+    font-weight: 500;
+     color: rgb(233, 84, 84);
+ }
+ 
+ .check-icon-open8{
+     display: block;
+}
+
+
+.modal{
+    display: none;
+}
+
+.modal-open{
+    position:absolute;
+    display: flex;
+    margin-left:-10% ;
+    margin-top: 10%;
+    width: 360px;
+    height: 300px;
+}
+
+.boton_cancel{
+    font-weight: 500;
+    margin-top: 250px;
+    margin-left: 125px;
+    position: absolute;
+    background-color: #fff;
+    right: 30px;
+    border: none;
+    color:rgb(110, 101, 101)
+}
+
+.boton_reset{
+    font-weight: 500;
+    margin-top: 250px;
+    margin-left: 63px;
+    position: absolute;
+    right: 105px;
+    background-color: #fff;
+    border: none;
+    color:rgb(110, 101, 101)
+}
+
+.boton_aply{
+    font-weight: 500;
+    margin-top: 250px;
+    margin-left: 0px;
+    position: absolute;
+    left: 10px;
+    background-color: #fff;
+    border: none;
+    color:rgb(110, 101, 101)
+}
+
+
+
+.icon1 {
+    transform: rotate(0);
+}
+.icon1-open {
+    transform: rotate(180deg);
+}
