@@ -1,7 +1,7 @@
 const SubPage = () => {
   return (
     <>
-      <h1>SubPage</h1>
+      <script>function mensaje() {alert('Oye, esto aún no está listo, vuelve más tarde')}</script>
     </>
   );
 };
