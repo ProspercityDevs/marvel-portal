@@ -7,6 +7,11 @@ CharacterCard.propTypes = {
   isSkeleton: PropTypes.bool
 };
 
+function Fecha() {
+  let fecha = new Date().toDateString();
+  return fecha;
+}
+
 export default function CharacterCard({ image, name, isSkeleton }) {
   return (
     <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
@@ -14,7 +19,8 @@ export default function CharacterCard({ image, name, isSkeleton }) {
         <img className="mvl-character-card__image" src={image} alt="" />
       </div>
       <div className="mvl-character-card__body">
-        <h4 className="u-no-margin">{name}</h4>
+        <h5 className="u-no-margin">{name}</h5>
+        <h5 className="mvl-character-card__data">{Fecha()}</h5>
       </div>
     </div>
   );
