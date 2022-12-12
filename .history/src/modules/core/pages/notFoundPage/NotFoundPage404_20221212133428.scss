@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.not_found_flex {
+  display: flex;
+  align-items: center;
+  width: 98vw;
+  height: 100vh;
+}
+
+.not_found_info {
+  width: 47vw;
+  align-content: center;
+  padding-left: 10vw;
+}
+
+.not_found_img {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  padding-left: 48vw;
+  background-image: url(https://i.annihil.us/u/prod/marvel/html_pages_assets/error-pages/prod/black-widow-char.e296fbe1.jpg);
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.error-image-animate {
+  background-image: url(https://i.annihil.us/u/prod/marvel/html_pages_assets/error-pages/prod/black-widow-eye.d8a46f86.png);
+  width: 8%;
+  height: 18%;
+  position: absolute;
+  left: 42vw;
+  right: 0;
+  top: 70.5vh;
+  bottom: 0; 
+  margin: 0 auto;
+  transform: rotate(274.08deg);
+}
+
