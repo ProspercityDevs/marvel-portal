@@ -23,7 +23,7 @@ export default function Filter({ totalItems }) {
 
       <div className="col">
         <div className="contenedor_totalitems">
-          <h4>Number of characters: {totalItems}</h4>
+          <h5>Number of characters: {totalItems}</h5>
         </div>
       </div>
     </div>
