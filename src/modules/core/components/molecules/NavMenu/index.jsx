@@ -1,8 +1,5 @@
 import { NavLink, Link } from 'react-router-dom';
 import './styles.scss';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-
 
 export function NavMenu() {
   return (
@@ -13,26 +10,23 @@ export function NavMenu() {
         </NavLink>
 
         <div className="mvl-navbar__actions">
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/" target="_blank">
             Characters
           </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/comics" target="_blank">
             Comics
           </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/creators" target="_blank">
             Creators
           </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/events" target="_blank">
             Events
           </NavLink>
-          <Link className="mvl-navbar-item mvl-navbar-item--text" href="ank" target="_blank">
+          <Link className="mvl-navbar-item mvl-navbar-item--text" to="/series" target="_blank">
             Series
           </Link>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/stories" target="_blank">
             Stories
-          </NavLink>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/search">
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="search-container__icon"/>
           </NavLink>
         </div>
         
