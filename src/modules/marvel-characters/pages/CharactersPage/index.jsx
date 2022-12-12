@@ -1,7 +1,7 @@
 import React from 'react';
 import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid';
 import './styles.scss';
-import FeaturedCharacters from '../../components/FeaturedCharacteres';
+import CharacterProm from '@/modules/core/components/molecules/CharacterProm';
 
 export function CharactersPage() {
   return (
