@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: var( --space-lg);
-    background-color: var(--color-primary-dark);;
+    background-color: var(--white);;
     margin-bottom: 30px ;
 }
 
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items:center;
-    color: var(--color-accent);
+    color: var(--black);
     flex-direction: column;
     width: 100%;
 }
@@ -37,5 +37,5 @@
 
 .container
 {
-    color: white;
+    color: vars(--black);
 }
