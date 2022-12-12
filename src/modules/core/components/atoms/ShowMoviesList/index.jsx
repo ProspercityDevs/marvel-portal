@@ -2,38 +2,37 @@ import React, { useState } from 'react';
 import './styles.scss';
 
 const moviesList = [
-    'ANT-MAN',
-    'ANT-MAN AND THE WASP',
-    'BLACK PANTHER',
-    'BLACK PANTHER: WAKANDA FOREVER',
-    'ANT-MAN',
-    'ANT-MAN AND THE WASP',
-    'BLACK PANTHER',
-    'BLACK PANTHER: WAKANDA FOREVER',
-    'ANT-MAN',
-    'ANT-MAN AND THE WASP',
-    'BLACK PANTHER',
-    'BLACK PANTHER: WAKANDA FOREVER',
-    'ANT-MAN',
-    'ANT-MAN AND THE WASP',
-    'BLACK PANTHER',
-    'BLACK PANTHER: WAKANDA FOREVER',
-    'ANT-MAN',
-    'ANT-MAN AND THE WASP',
-    'BLACK PANTHER',
-    'BLACK PANTHER: WAKANDA FOREVER',
-    'ANT-MAN',
-    'ANT-MAN AND THE WASP',
-    'BLACK PANTHER',
-    'BLACK PANTHER: WAKANDA FOREVER',
-    'ANT-MAN',
-    'ANT-MAN AND THE WASP',
-    'BLACK PANTHER',
-    'BLACK PANTHER: WAKANDA FOREVER'
-  ];
-  
+  'ANT-MAN',
+  'ANT-MAN AND THE WASP',
+  'BLACK PANTHER',
+  'BLACK PANTHER: WAKANDA FOREVER',
+  'ANT-MAN',
+  'ANT-MAN AND THE WASP',
+  'BLACK PANTHER',
+  'BLACK PANTHER: WAKANDA FOREVER',
+  'ANT-MAN',
+  'ANT-MAN AND THE WASP',
+  'BLACK PANTHER',
+  'BLACK PANTHER: WAKANDA FOREVER',
+  'ANT-MAN',
+  'ANT-MAN AND THE WASP',
+  'BLACK PANTHER',
+  'BLACK PANTHER: WAKANDA FOREVER',
+  'ANT-MAN',
+  'ANT-MAN AND THE WASP',
+  'BLACK PANTHER',
+  'BLACK PANTHER: WAKANDA FOREVER',
+  'ANT-MAN',
+  'ANT-MAN AND THE WASP',
+  'BLACK PANTHER',
+  'BLACK PANTHER: WAKANDA FOREVER',
+  'ANT-MAN',
+  'ANT-MAN AND THE WASP',
+  'BLACK PANTHER',
+  'BLACK PANTHER: WAKANDA FOREVER'
+];
 
-function ShowMoviesList({toggle}) {
+function ShowMoviesList() {
   const [checked, setChecked] = useState([]);
   const handleCheck = (e) => {
     let updatedList = [...checked];
@@ -45,16 +44,12 @@ function ShowMoviesList({toggle}) {
     setChecked(updatedList);
   };
 
-  const [show, setShow] = useState(false);
+  const [setShow] = useState(false);
   const handleClose = () => setShow(false);
 
-  const handleReset = () => {
+  const handleReset = () => {};
 
-  }
-
-  const handleApply = () => {
-
-  }
+  const handleApply = () => {};
 
   return (
     <div className="movies">
@@ -68,15 +63,21 @@ function ShowMoviesList({toggle}) {
       </ul>
       <div className="movies__buttons--container">
         <div className="movies__buttons--left">
-          <button className="movies__buttons" onClick={handleApply}>Apply</button>
+          <button className="movies__buttons" onClick={handleApply}>
+            Apply
+          </button>
         </div>
         <div className="movies__buttons--right">
-          <button className="movies__buttons" onClick={handleReset}>Reset</button>
-          <button className="movies__buttons" onClick={handleClose}>Close</button>
+          <button className="movies__buttons" onClick={handleReset}>
+            Reset
+          </button>
+          <button className="movies__buttons" onClick={handleClose}>
+            Close
+          </button>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default ShowMoviesList;
