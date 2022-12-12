@@ -4,10 +4,10 @@ import background from './images/imagen1.jpg';
 // import { Link } from 'react-router-dom';
 
 export default function Experiencia_u() {
-    const SubPage = () => {
-          alert('Oye, esto aún no está listo, vuelve más tarde');
+  const SubPage = () => {
+    alert('Oye, esto aún no está listo, vuelve más tarde');
   };
-  
+
   return (
     <section className="marvel-insider">
       <div className="contenedor">
