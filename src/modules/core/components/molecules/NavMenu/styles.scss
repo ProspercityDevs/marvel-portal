@@ -3,8 +3,8 @@
     background-color: var(--color-primary-dark);
     height: 60px;
     display: inline-flex;
-    width: 100vw;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-around;
     padding: 16px 100px;
     box-sizing: border-box;
 }
@@ -41,11 +41,6 @@
 }
 
 
-.mvl-navbar--right{
-
-}
-
-
 .mvl-navbar__actions{
     display: flex;
     justify-content: space-between;
@@ -54,4 +49,16 @@
 .mvl-navbar__img{
     max-height: 100%;
 }
-
+.search-container{
+    margin-left: 20px;
+    width: 100%;
+    justify-content: right;
+}
+.search-container__icon{
+    margin-left: 5px;
+    justify-self: space-around;
+    color: white;
+}
+.search-container input{
+    border-radius: 5px;
+}
