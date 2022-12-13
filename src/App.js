@@ -4,12 +4,14 @@ import { NavMenu } from '@/modules/core/components/molecules/NavMenu';
 import MainFooter from '@/modules/core/components/molecules/MainFooter';
 
 import AppRoutes from './routes';
+import BeforeFooter from './modules/core/components/molecules/BeforeFooter/Index';
 
 function App() {
   return (
     <div className="main">
       <NavMenu />
       <AppRoutes />
+      <BeforeFooter />
       <MainFooter />
     </div>
   );
