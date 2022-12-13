@@ -1,9 +1,10 @@
-import Multiselect from 'multiselect-react-dropdown';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { Multiselect } from 'multiselect-react-dropdown';
 import { useState } from 'react';
-
 export default function Filter() {
-  const [movie] = useState([
-    'ANt-MAN',
+  const [movie, setMovie] = useState([
+    'ANT-MAN',
     'ANT-MAN AND THE WASP',
     'ARMOR WARS',
     'AVENGERS: AGE OF ULTRON',
@@ -13,20 +14,17 @@ export default function Filter() {
   ]);
   return (
     <div className="mvl-character-gri-filters">
-      <input type="text" placeholder="search" />
+      <input className="mvl-container-search-left" type="text" placeholder="SEARCH" />
+      <FontAwesomeIcon icon={faMagnifyingGlass} className="search-container__icon" />
       <div className="container-checked">
         <Multiselect
+          className="MOVIE-2"
+          placeholder="MOVIE"
           isObject={false}
-          onKeyPressFn={function noRefCheck() {}}
-          onRemove={(event) => {
-            console.log(event);
-          }}
-          onSearch={(event) => {
-            console.log(event);
-          }}
-          onSelect={(event) => {
-            console.log(event);
-          }}
+          onkeyPressFn={function noRefCheck() {}}
+          onRemove={function noRefCheck() {}}
+          onSearch={function noRefCheck() {}}
+          onSelect={function noRefCheck() {}}
           options={movie}
           showCheckbox
         />
