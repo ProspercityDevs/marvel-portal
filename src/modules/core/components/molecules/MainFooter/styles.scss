@@ -6,19 +6,108 @@
     background-color: var(--color-primary-dark);
     color: var(--color-accent);
 }
+.container-imagen-m{
+    margin-left: -100px;
+    margin-top: 52px;
+    margin-right: -20px;
+}
+.container-bloque2{
+    margin-left: 50px;
+    margin-top: 52px;
+    margin-right: 50px;
+}
+.imagen-m{
+    width:  100%;
+    height: 100%;
+}
+.marvel-about{
+    font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+    font-weight: 800;
+    margin-right: 5px;
+    margin-left: 5px;
+    letter-spacing: 3px;
+    margin-left: -10px;
+}
 
+.cuadro2{
+    display: block;
+    font-family: "Roboto","Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-right: 20px;
+}
 
-// .section-columns > div{
-//     display: flex;
-// }
-// #insider-sellpage, #insider-sellpage p, body {
-//     font: 400 16px/1.3 Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
-//     letter-spacing: .5px;
-// }
-// #insider-sellpage .flex-wrapper{
-//     display: flex;
-//     flex-wrap: wrap;
-//     max-width: 1240px;
-//     padding: 0 30px;
-//     margin: 0 auto;
-// }
+.list1-footer{
+    list-style: none;
+}
+
+.list2-footer{
+    list-style: none;
+}
+
+.text-footer{
+    display: block;
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.main.footer__promotion-image-wrapper{
+    margin-right: 50px;
+}
+
+.main-footer__promotion-info {
+    margin-right: 50px;
+}
+
+.ul-follow{
+    list-style: none;
+}
+
+.main-footer__follow{
+    margin-left: 10px;
+    margin-right: -900px;
+    margin-top: 5px;
+    width: 85%;
+}
+
+.main.footer__promotion-image-wrapper{
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.main-footer__promotion-info{
+    margin-left: 50px;
+    margin-top: 5px;
+}
+.vector-redes{
+    width:  15%;
+    height: 5%;
+}
+
+.imagen-insider{
+    width:  20%;
+    height: 5%;
+    margin-top: -30px;
+}
+
+.imagen-UNLIMIT{
+    width:  35%;
+    height: 20%;
+    margin-top: 50px;
+    margin-left: -50px;
+}
+
+.main-footer__promotion-link{
+    margin-top: -70px;
+    margin-right: -200px;
+    margin-left: 50px;
+}
+
+.main-footer__promotion-info{
+    margin-top: -100px;
+    margin-right: 5px;
+}
