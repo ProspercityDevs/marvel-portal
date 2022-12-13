@@ -9,6 +9,8 @@
     box-sizing: border-box;
 }
 
+
+
 .mvl-navbar--left{
     display: inline-flex;
     align-items: center;
@@ -41,10 +43,10 @@
     gap: 16px;
 }
 
-.mvl-navbar--right{
-
+.mvl-navbar-item--text:hover{
+    border-bottom: solid 2px var(--color-logo);
+    
 }
-
 .mvl-navbar__actions{
     display: flex;
     justify-content: space-between;
