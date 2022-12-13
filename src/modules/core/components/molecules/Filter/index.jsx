@@ -1,7 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-import Multiselect from "multiselect-react-dropdown"; 
+import {Multiselect} from "multiselect-react-dropdown"; 
 import { useState } from 'react';
 
 
@@ -19,7 +19,7 @@ export default function Filter() {
           <input className="mvl-container-search-left" type="text" placeholder="SEARCH"/> 
            <FontAwesomeIcon icon= {faMagnifyingGlass} className="search-container__icon"/>
 <div className="container-checked"  >
-<Multiselect className="MOVIE-2" placeholder="MOVIE" 
+<Multiselect className="MOVIE-2" placeholder="MOVIE"
 isObject={false}
 onkeyPressFn={function noRefCheck() {}}
 onRemove= {function noRefCheck() {}}
