@@ -5,6 +5,7 @@ import MainFooter from '@/modules/core/components/molecules/MainFooter';
 import BeforeFooter from './modules/core/components/molecules/BeforFooter';
 
 import AppRoutes from './routes';
+import BeforeFooter from './modules/core/components/molecules/BeforeFooter/Index';
 
 function App() {
   return (
