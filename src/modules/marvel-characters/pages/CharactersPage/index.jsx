@@ -26,7 +26,7 @@ export function CharacterPage() {
 function clock() {
   const element = (
     <div>
-      <h2>The time is: {new Date().toLocaleTimeString()}.</h2>
+      <h2>The time is: {new Date().toLocaleTimeString()} .</h2>
     </div>
   );
   return element;
