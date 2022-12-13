@@ -25,6 +25,7 @@
   background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
+  display: flex;
 }
 
 .error-image-animate {
@@ -35,9 +36,9 @@
   position: absolute;
   left: 44.5vw;
   right: 0;
-  top: 58vh;
+  top: 58.5vh;
   bottom: 0; 
   margin: 0 auto;
   transform: rotate(274.08deg);
+  display: flex;
 }
-

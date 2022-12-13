@@ -91,6 +91,8 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #767676;
+}
+
 .filters {
     font-size: 1rem;
     width: 100%;
@@ -146,7 +148,7 @@
 
 .movies__buttons--container {
     display: flex;  
-    justify-content: space-between;
+    justify-content: space-between;;
     border-top: 1px  solid #dfdfdf;
     margin: 15px;
     padding-top: 15px;
@@ -166,5 +168,4 @@
 
 .movies__buttons--right {
     display: flex;
-}
 }

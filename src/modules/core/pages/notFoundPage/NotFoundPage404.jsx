@@ -9,10 +9,10 @@ const NotFoundPage404 = () => {
             <div>
               <h1>404 PAGE NOT FOUND</h1>
               <br />
-              <h4>Not even the Eye of Uatu sees you request...</h4>
+              <h4>Not even the Eye of Uatu sees your request...</h4>
               <br />
               <p>
-                Check that you tiped the address correctly, go back to your previus page or try
+                Check that you typed the address correctly, go back to your previous page or try
                 using our site searchg to find something specific.
               </p>
             </div>
