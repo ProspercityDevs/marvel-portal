@@ -4,6 +4,11 @@
     overflow: hidden;
     background: var(--color-primary-dark);
     color: var(--color-accent);
+    border-color: red;
+    border-width: 5px;
+    border-style: solid;
+    border-bottom-right-radius: 50px;
+  
 }
 
 .mvl-character-card__image-container{
@@ -14,12 +19,17 @@
         content: '';
         width: 100%;
         height: 5px;
-        background: red;
+        background:red;
         position: absolute;
-        bottom: -5px;
+        bottom:0;
         z-index: 2;
+       
+        
+        
     }
 }
+
+
 
 .mvl-character-card__image{
     width: 100%;
