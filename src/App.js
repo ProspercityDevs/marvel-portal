@@ -1,16 +1,14 @@
 import '@/assets/styles/main.scss';
-
-import { NavMenu } from '@/modules/core/components/molecules/NavMenu';
-import MainFooter from '@/modules/core/components/molecules/MainFooter';
-
-import AppRoutes from './routes';
-
+import HomePage from './modules/core/pages/HomePage';
+import SubPage from './modules/core/pages/SubPage';
+import { Routes, Route } from 'react-router-dom';
 function App() {
   return (
-    <div className="main">
-      <NavMenu />
-      <AppRoutes />
-      <MainFooter />
+    <div>
+      <Routes>
+        <Route path="/" exact element={<HomePage />}></Route>
+        <Route path="/join" exact element={<SubPage />}></Route>
+      </Routes>
     </div>
   );
 }

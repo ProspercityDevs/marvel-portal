@@ -1,5 +1,5 @@
 import './styles.scss';
-//import background from './images/marvel_m_footer.png';
+
 export default function MainFooter() {
   return (
     <footer className="mvl-main-footer">
@@ -35,7 +35,7 @@ export default function MainFooter() {
             <h4>MARVEL INSIDER</h4>
             <p>Get Rewarded for Being a Marvel Fan</p>
           </div>
-          <div className="main.footer__promotion-image">
+          <div className="main.footer__promotion-image-wrapper">
             <img
               className="imagen-UNLIMIT"
               src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/mu-logo-w-nav-2x-2021-02.png"></img>
