@@ -6,13 +6,13 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 export function NavMenu() {
   return (
     <nav className="mvl-navbar">
-      <div className="mvl-navbar--left">
+      <div className="mvl-navbar--left" href="localhost:3000">
         <NavLink className="mvl-navbar-item mlv-navbar__image" to="/">
           <img src="/images/marvel_logo.png" className="mvl-navbar__img" alt="compny logo"  />
         </NavLink>
 
         <div className="mvl-navbar__actions">
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/" target="_blank"
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/search" target="_blank">
             Characters
           </NavLink>
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/comics" target="_blank">
