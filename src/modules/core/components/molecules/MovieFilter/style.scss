@@ -14,15 +14,20 @@
 
 .selec-btn{
     display: flex;
+    justify-content: right;
 }
 
 .btn-text{
     font-size: 16px;
     font-weight: 400;
-    color: rgba(202, 71, 71, 0.97);
+    color: black;
     border:none;
     background-color: #fff;
     font-weight: 500;
+}
+
+.btn-text:hover{
+    color: rgba(202, 71, 71, 0.97);
 }
 
 
@@ -52,7 +57,7 @@
  
 .list-items{    /* Una vez dado click se despleja el menu*/
     display: block;
-
+    right: 0;
 }
 
 .item:hover{
@@ -181,6 +186,7 @@
 .modal-open{
     position:absolute;
     display: flex;
+    right: 0;
     margin-left:-10% ;
     margin-top: 10%;
     width: 360px;

@@ -69,6 +69,7 @@ function Modal({ estado, closeModal }) {
     }
   };
 
+
   
 
   const resetModal = () => {
