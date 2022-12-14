@@ -1,11 +1,10 @@
-import React from "react";
+import React from 'react';
 
-function CreatorsPage(){
-    return(
-        <div>
-            <h1>CreatorsPage</h1>
-        </div>
-        
-    )
+function CreatorsPage() {
+  return (
+    <div>
+      <h1>CreatorsPage</h1>
+    </div>
+  );
 }
-export {CreatorsPage}
+export { CreatorsPage };

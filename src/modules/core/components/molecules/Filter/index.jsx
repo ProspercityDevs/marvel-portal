@@ -3,7 +3,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Multiselect } from 'multiselect-react-dropdown';
 import { useState } from 'react';
 export default function Filter() {
-  const [movie, setMovie] = useState([
+  const [movie] = useState([
     'ANT-MAN',
     'ANT-MAN AND THE WASP',
     'ARMOR WARS',
