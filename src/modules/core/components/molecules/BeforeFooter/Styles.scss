@@ -18,10 +18,19 @@
 .contenedor_right {
   height: 100%;
   width: 50%;
-  float: left;
+  float: right;
   margin: 1% 1%;
   text-align: center;
 }
 h3 {
   color: red;
+}
+
+.boton_join {
+  background-color: red;
+  color: white;
+  height: 50px;
+  width: 150px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
