@@ -1,9 +1,11 @@
 .mvl-character-card{
+    box-sizing: border-box;
+    max-width: 100%;
     height: 355px;
     overflow: hidden;
     background: var(--color-primary-dark);
     color: var(--color-accent);
-    border-color: red;
+    border-color: var(--color-logo);
     border-style: solid;
     cursor: pointer;
 }
@@ -21,7 +23,7 @@
         content: '';
         width: 100%;
         height: 5px;
-        background: red;
+        background: var(--color-logo);
         position: absolute;
         bottom: -5px;
         z-index: 2;
@@ -34,7 +36,7 @@
     object-fit: cover;
     object-position: left bottom;
     transform: scaleX(1) 2s;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--color-logo);
 }
 
 .mvl-character-card__body{
@@ -45,7 +47,7 @@
 
 .mvl-character-card:hover .mvl-character-card__body{
     height: 355px;
-    background: red;
+    background: var(--color-logo);
 }
 
 .mvl-character-card[data-is-skeleton=true]{

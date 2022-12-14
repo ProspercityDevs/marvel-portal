@@ -1,0 +1,60 @@
+.mvl-featuredCharacters-card-section {
+    width: 100%;
+    display: inline-grid;
+    gap: 10px;
+    grid-template-columns: repeat(6, minmax(15%, 1fr));
+}
+
+
+.mvl-featuredCharacters-card{
+    width: 158.33px;
+    height: 355px;
+    overflow: hidden;
+    background: var(--color-primary-dark);
+    color: var(--color-accent);
+}
+
+.mvl-featuredCharacters-card__image-container{
+    background: rgb(47, 130, 55);
+    height: 50%;
+    position: relative;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 5px;
+        background: var(--color-logo);
+        position: absolute;
+        bottom: -5px;
+        z-index: 2;
+    }
+}
+
+.mvl-featuredCharacters-card__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+    transform: scaleX(1);
+    cursor: pointer;
+    
+}
+
+.mvl-featuredCharacters-card__body{
+    padding: var(--space-sm);
+    height: 0px;
+}
+
+.mvl-featuredCharacters-card:hover{
+    .mvl-featuredCharacters-card__image{
+        transform: scale(1.05);
+    }
+    .mvl-featuredCharacters-card__body{
+        padding: var(--space-sm);
+        background-color: rgb(214, 15, 15);
+        opacity: 1;
+        height: 200px;
+        transition: 0.3s ease-in-out ;
+    }
+
+}
