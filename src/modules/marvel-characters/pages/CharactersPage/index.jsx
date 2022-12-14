@@ -3,8 +3,11 @@ import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid
 import FeaturedCharacters from '../../components/FeaturedCharacteres';
 import './styles.scss';
 import CharacterProm from '@/modules/core/components/molecules/CharacterProm';
+import ShowMoviesList from 'src/modules/core/components/atoms/ShowMoviesList';
+import ButtonArrow from 'src/modules/core/components/atoms/ButtonArrow';
 
 export function CharactersPage() {
+  const [ toggle, setToggle] = React.useState(false);
   return (
     <>
       <div className="mvl-characters-page">

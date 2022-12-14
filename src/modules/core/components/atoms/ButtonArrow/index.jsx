@@ -16,7 +16,7 @@ function ButtonArrow() {
         <div className="filters__movie--text">MOVIE</div>
         <RiArrowDropDownFill className="filters__movie icon" />
       </div>
-      {toggle && <ShowMoviesList show={toggle} />}
+      {toggle && <ShowMoviesList />}
     </div>
   );
 }
