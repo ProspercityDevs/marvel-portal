@@ -8,6 +8,8 @@ export default function FeaturedCharacters() {
       <div className="mvl-featuredCharacters-card">
         <div className="mvl-featuredCharacters-card__image-container">
           <img
+
+          
             className="mvl-featuredCharacters-card__image"
             src={img(`./Shuri.jpg`)}
             alt="imagen de Shuri"
