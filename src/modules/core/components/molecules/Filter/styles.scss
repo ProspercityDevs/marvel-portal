@@ -1,0 +1,62 @@
+.mvl-character-gri-input {
+    position: relative;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    width: 100%;
+    outline-color: #F27405;
+    font-size: 26px;
+    padding: 1px 2px 7px 30px;
+    background-image: url("/assets/images/search.png");
+    background-size: 23px;
+    background-repeat: no-repeat;
+    background-position: 2px 4px ;
+}
+
+.contenedor_1 {
+    height: 130px;
+}
+
+.contenerdor_1:focus-within {
+    /* el focus-within   se utiliza, para simbolizar el click*/
+    border: 2.1px solid orange;
+    /* borde inferior*/
+}
+
+.icon {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+input[type=text] {
+    border: none;
+    /* bordes */
+    width: 50%;
+    height: 35px;
+    font-size: 30px;
+    /* tama;o de letra */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 545;
+    /*  negrilla  letra */
+}
+
+input:focus {
+    outline: 0;
+    /*  quitar los bordes luego del click */
+}
+
+.contenerdor_2 {
+    display: flex;
+}
+
+.contenedor_totalitems {
+    display: flex;
+    text-decoration: dotted;
+    font-size:xx-small;
+    margin : auto;
+    //border: 2px solid rgb(241, 240, 237);
+    
+
+    
+}
+

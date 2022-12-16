@@ -19,12 +19,13 @@ export default function CharacterGridPaginated() {
 
   useEffect(() => {
     fetchCharactersAtPage();
-  }, []);
+  }, []); // para que no se ejecute continuamente,
 
   async function fetchCharactersAtPage(page = 1) {
     setLoading(true);
     const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
     setTotalItems(data.total);
+    console.log('Personajes', data.total);
     setCharacters(data.results);
     setLoading(false);
   }
@@ -39,7 +40,7 @@ export default function CharacterGridPaginated() {
 
   return (
     <>
-      <Filter query={queryParams} onQueryChange={onQueryChange} />
+      <Filter query={queryParams} onQueryChange={onQueryChange} totalItems={totalItems} />
       <div className="mvl-grid mvl-grid-6">
         <CharacterGrid
           characters={characters}
