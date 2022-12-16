@@ -9,26 +9,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-/* agregar border a las tarjetas */
-.mvl-character-card {
-  border: 3px solid red;
-}
-/* texto de la fecha de creaciòn de marvel */
 
-/* cambios en la barra de navegacion */
- 
+/* cambios en la barra de busqueda SEARCH */
 .input-nav {
-  width: 100%;
+  width: 40%;
   border-radius: 0;
   font-size: 2rem;
   border: 0;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid rgb(201, 28, 28);
   padding-bottom: 0.4375rem;
-  
+  background-color: rgb(255, 255, 255);
 }
-:focus {
-  outline-color: yellow;
-} 
-/* .mvl-characters-page{
-  background-color: black;
-} */

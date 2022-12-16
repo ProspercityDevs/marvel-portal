@@ -7,14 +7,14 @@
     justify-content: space-between;
     padding: 16px 100px;
     box-sizing: border-box;
-    cursor: pointer;
 }
+
+
 
 .mvl-navbar--left{
     display: inline-flex;
     align-items: center;
     height: 100%;
-    width: 400px;
 }
 
 .mvl-navbar-item{
@@ -22,7 +22,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 15px;
 }
 
 .mvl-navbar-item--text{
@@ -30,7 +29,6 @@
     text-decoration: none;
     background-color: var(--color-primary-dark);
     font-weight: bold;
-    font-size: 1rem;
     &:hover{
     color: var(--color-accent);
     }
@@ -45,12 +43,10 @@
     gap: 16px;
 }
 
-
-// .mvl-navbar--right{
-
-// }
-
-
+.mvl-navbar-item--text:hover{
+    border-bottom: solid 2px var(--color-logo);
+    
+}
 .mvl-navbar__actions{
     display: flex;
     justify-content: space-between;
@@ -59,6 +55,8 @@
 .mvl-navbar__img{
     max-height: 100%;
 }
+
+
   
 .typeahead__input {
     box-sizing: border-box;
@@ -73,8 +71,34 @@
     padding-left: 1.875rem;
     border-radius: 0;
     }
-    :focus {
-        outline-color:yellow;
-        }
+    :focus {outline-color:yellow}
      
-    
+    /* DESDE ACA agregamos cositas para la cortinilla roj4 EN EL CARD
+    .mvl-card--explore 
+    .card-thumb-frame figure img {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transition: all .2s linear;
+        transition: all .2s linear;
+        overflow: hidden;
+        -o-object-position: top center;
+        object-position: top center;
+        }*/
+        .card-body.is-sliding:before {
+            background: #e62429;
+            bottom: 100%;
+            content: "{name}";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            -webkit-transition-timing-function: cubic-bezier(.75,0,.125,1);
+            transition-timing-function: cubic-bezier(.75,0,.125,1);
+            -webkit-transition: -webkit-transform .3s;
+            transition: -webkit-transform .3s;
+            transition: transform .3s;
+            transition: transform .3s,-webkit-transform .3s;
+            width: 100%;
+            z-index: -1;
+        }
+
+       
