@@ -3,7 +3,8 @@
     gap: var(--space-lg);
     padding: var(--space-md);
     width: 100%;
-    justify-content: flex-end;
+    //justify-content: flex-end;
+    justify-content: center;
     box-sizing: border-box;
     position: sticky;
     bottom: 0;
@@ -14,4 +15,9 @@
 .mvl-paginator__actions{
     display: flex;
     gap: var(--space-xs);
+}
+
+.boton{
+    background-color: blue($color: #000000);
+    
 }

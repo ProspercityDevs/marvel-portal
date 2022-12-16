@@ -26,26 +26,30 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
     setCurrentPage(prevPage);
   }
 
+ 
+
+
   useEffect(() => {
     onPageChange(currentPage);
   }, [currentPage]);
 
   return (
     <div className="mvl-paginator">
-      <span className="mvl-paginator__text">
-        Page <strong>{currentPage} </strong> of <strong>{totalPages}</strong>
-      </span>
+     
       <div className="mvl-paginator__actions">
-        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
-          <BiChevronLeft />
+        <button className='boton' disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
+          <BiChevronLeft />Previous
         </button>
-        <button disabled={isLastPage(currentPage, totalPages)} onClick={onNextpageClick}>
-          <BiChevronRight />
+        <span className="mvl-paginator__text">
+         <strong>{currentPage} </strong> of <strong>{totalPages}</strong>...
+      </span>
+        <button className='boton' disabled={isLastPage(currentPage, totalPages)} onClick={onNextpageClick}>
+        Next<BiChevronRight />
         </button>
       </div>
     </div>
   );
-}
+};
 
 function isFirstPage(currentPage) {
   return currentPage === 1;
