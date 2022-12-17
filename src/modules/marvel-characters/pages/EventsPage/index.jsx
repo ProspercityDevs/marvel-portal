@@ -1,11 +1,10 @@
-import React from "react";
+import React from 'react';
 
-function EventsPage(){
-    return(
-        <div>
-            <h1>EventsPage</h1>
-        </div>
-        
-    )
+function EventsPage() {
+  return (
+    <div>
+      <h1>EventsPage</h1>
+    </div>
+  );
 }
-export {EventsPage}
+export { EventsPage };

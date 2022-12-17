@@ -11,12 +11,13 @@ import { StoriesPage } from './modules/marvel-characters/pages/StoriesPage';
 const AppRoutes = () => (
   <Routes>
     <Route exact path="/" element={<CharacterPage />} />
+    <Route exact path="/search" element={<CharacterPage />} />
     <Route exact path="/comics" element={<ComicsPage />} />
     <Route exact path="/creators" element={<CreatorsPage />} />
     <Route exact path="/events" element={<EventsPage />} />
     <Route exact path="/series" element={<SeriesPage />} />
     <Route exact path="/stories" element={<StoriesPage />} />
-    <Route element={<NotFoundPage404 />} />
+    <Route path="*" element={<NotFoundPage404 />} />
   </Routes>
 );
 

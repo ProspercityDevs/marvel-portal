@@ -1,11 +1,10 @@
-import React from "react";
+import React from 'react';
 
-function StoriesPage(){
-    return(
-        <div>
-            <h1>StoriesPage</h1>
-        </div>
-        
-    )
+function StoriesPage() {
+  return (
+    <div>
+      <h1>StoriesPage</h1>
+    </div>
+  );
 }
-export {StoriesPage}
+export { StoriesPage };
