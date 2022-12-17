@@ -2,6 +2,13 @@ import './styles.scss';
 import { RiArrowDropDownFill } from 'react-icons/ri';
 import { useState } from 'react';
 import ModalMovies from '../ModalMovies';
+import PropTypes from 'prop-types';
+
+
+ModalMovies.propTypes = {
+  estado: PropTypes.bool,
+  closeModalMovies: PropTypes.object
+};
 
 function ButtonArrowMovies() {
   const [estado, setEstado] = useState(false);

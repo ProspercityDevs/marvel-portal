@@ -1,14 +1,16 @@
 import React from 'react';
 import './styles.scss';
-import PropTypes from 'prop-types';
 
-MovieList.propTypes = {
-    name: PropTypes.string,
-    checked: PropTypes.bool
+function MovieList( ) {
+    return(
+        <>
+            <ul>
+                <li>
+                    <input type="checkbox" />
+                </li>
+            </ul>
+        </>
+    );        
 };
-
-function MovieList( ){
-    console.log('MovieList');
-}
 
 export default MovieList;
