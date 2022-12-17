@@ -1,24 +1,31 @@
-import React, { useState } from 'react';
 import './styles.scss';
 import { RiArrowDropDownFill } from 'react-icons/ri';
+import { useState } from 'react';
 import ShowMoviesList from '../ShowMoviesList';
 
-function ButtonArrow() {
-  const [toggle, setToggle] = useState(false);
+export default function ButtonArrow() {
+  const [estado, setEstado] = useState(false);
 
-  const handleToggle = () => {
-    setToggle(!toggle);
+  const openShowMoviesList = () => {
+    if (estado == true) {
+      setEstado(false);
+    } else {
+      setEstado(true);
+    }
+  };
+
+  const closeShowMoviesList = () => {
+    setEstado(false);
   };
 
   return (
-    <div className="filters">
-      <div className="filters__movie" onClick={handleToggle}>
-        <div className="filters__movie--text">MOVIE</div>
-        <RiArrowDropDownFill className="filters__movie icon" />
+    <div className="container">
+      <div className="selec-btn">
+        <button className="btn-text" onClick={openShowMoviesList}>
+          MOVIE <RiArrowDropDownFill className={`icon1 ${estado && 'icon1-open'}`} />
+        </button>
       </div>
-      {toggle && <ShowMoviesList />}
+      <ShowMoviesList estado={estado} closeShowMoviesList={closeShowMoviesList} />
     </div>
   );
 }
-
-export default ButtonArrow;

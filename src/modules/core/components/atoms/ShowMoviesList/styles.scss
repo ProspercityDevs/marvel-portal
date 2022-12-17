@@ -1,164 +1,113 @@
-.page__component.firstComponent, .page__component:first-child {
-    margin-top: 0;
-    padding: 0;
-    margin-bottom: 51px;
-}
-
-
-.search-bar {
-    padding: 70px 0px 0;
-    display: flex;
-}
-
-.typeahead {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+.list-items{
     position: relative;
-    width: 100%;
-    border-bottom: 1px solid #151515;
+    margin-top: 10;
+    padding: 16px;
+    background-color: #fff;
+    /* display: none; /* Ocultar opciones*/
 }
-
-
-.typeahead__icon {
-    position: absolute;
-    top: 10px;
-}
-
-.icon--svg.icon--search {
-    fill: none;
-    stroke-width: 2px;
-    stroke-linecap: square;
-}
-
-.icon--svg--black-stroke {
-    stroke: #151515;
-}
-
-.icon--svg {
-    fill: #151515;
-}
-
-.input-text{
-    border: none;
-    width: 100%;
-    border: 0;
-    border-bottom: 2px solid #151515;
-    width: 100%;
-    padding-bottom: 0.4375rem;
-    padding-left: 1.875rem;
-    border-radius: 0;
+ 
+.list-items{    /* Una vez dado click se despleja el menu*/
+    display: block;
 
 }
 
-.typeahead__container {
-    width: 100%;
-}
-
-
-.typeahead__input {
-    border: 0;
-    // border-bottom: 2px solid #151515;
-    width: 100%;
-    padding-bottom: 0.4375rem;
-    padding-left: 2rem;
-    border-radius: 0;
-    font-family: "robotto";
-}
-
-.search-icon{
-    width: 26px;
-    position: absolute;
-    margin-right: 18px;
-    margin-top: -7px;
+.item:hover{
+    background-color: rgb(253, 252, 253);
     
 }
 
-.typeahead__input {
-    font: 800 26px/1 RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+.item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
 }
 
-.typeahead__input:focus {
-    outline-color: #e8b63e
+
+.item-text {
+    font-size: 16;
+    font-weight: 500;
+    height: 30px;
+    color: black;
 }
 
-.filters {
-    font-size: 1rem;
-    width: 100%;
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    width: 15px;
+    margin-right: 20px;
+    border: 1.5px solid rgb(110, 101, 101);
+}
+
+
+.check-icon1{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open1 {
     display: block;
-    justify-content: flex-end;
 }
-
-.filters__movie {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    cursor: pointer;
-}
-
-.filters__movie--text {
+.check-icon2{
+    display: none;
+    font-size: 11px;
     font-weight: 500;
+    color: red;
+}
+.check-icon-open2 {
+    display: block;
 }
 
-.filters__movie.icon {
-    width: 1.4rem;
-    height: 1.4rem;
-}
-
-.movies {
-    background-color: white;
-    width: 480px;
-    position: absolute;
-    right: 0;
-    border: 1px solid #dfdfdf;
-    z-index: 50;
-}
-
-.movies__list {
-    list-style-type: none;
-    max-height: 280px;
+.check-icon3{
+    display: none;
+    font-size: 11px;
     font-weight: 500;
-    padding: 15px 15px 25px 25px;
-    margin-bottom: 5px;
-    overflow: auto;
-    box-sizing: border-box;
+    color: red;
+}
+.check-icon-open3 {
+    display: block;
+}
+.check-icon4{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open4 {
+    display: block;
+}
+.check-icon5{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open5{
+    display: block;
 }
 
-.movies__list--item {
-    margin-bottom: inherit;
+.check-icon6{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open6{
+    display: block;
 }
 
-.movies__list--item input {
-    cursor: pointer;
+.check-icon7{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
 }
-
-.movies__list--text {
-    padding-left: 15px;
-    color: var(--color-primary-dark);
-}
-
-.movies__buttons--container {
-    display: flex;  
-    justify-content: space-between;
-    border-top: 1px  solid #dfdfdf;
-    margin: 15px;
-    padding-top: 15px;
-}
-
-.movies__buttons {
-    color: #858585;
-    display: flex;
-    background-color: transparent;
-    text-transform: uppercase;
-    font-weight: 800;
-    cursor: pointer;
-    height: 20px;
-    justify-content: space-between;
-    border: none;
-}
-
-.movies__buttons--right {
-    display: flex;
+.check-icon-open7{
+    display: block;
 }
