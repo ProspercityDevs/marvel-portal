@@ -21,8 +21,11 @@
 .footer-links{
     display: flex;
     justify-content: space-between;
+    margin-left: -15%;
 }
-
+.footer-logo {
+    margin-left: -5%;
+}
 .footer-links ul{
     list-style-type: none;
 }
@@ -35,6 +38,8 @@
     margin: 0;
     width: auto;
     align-items: center;
+    font-size: 10px;
+    margin-left: -15%;
 }
 
 .footer-promo h4,p{
@@ -43,6 +48,10 @@
 }
 .footer-promo p{
     color: dimgrey;
+}
+.footer-media{
+    font-size: 12px;
+    margin-left: -12%;
 }
 .footer-media-links{
     list-style-type: none;
@@ -58,4 +67,8 @@
 .logos{
     max-width: 60px;
     max-height: 60px;
+}
+
+.list {
+    font-size: 15px;
 }
