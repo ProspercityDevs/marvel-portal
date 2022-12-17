@@ -1,11 +1,11 @@
 import './styles.scss';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { BsSquareFill } from 'react-icons/bs';
+import MoviesList from '../../molecules/MoviesList';
 
-ShowMoviesList.propTypes = {
+ModalMovies.propTypes = {
   estado: PropTypes.bool,
-  closeShowMoviesList: PropTypes.object
+  closeModalMovies: PropTypes.bool
 };
 
 const moviesList = [
@@ -29,10 +29,10 @@ const moviesList = [
   { name: 'ETERNALS', checked: false },
 ];
 
-function ShowMoviesList({ estado, closeShowMoviesList }) {
+function ModalMovies({ estado, closeModalMovies }) {
   const [estado1, setEstado1] = useState(false);
 
-  const openShowMoviesList = () => {
+  const openModalMovies = () => {
     if (estado1 == true) {
       setEstado1(false);
     } else {
@@ -40,27 +40,34 @@ function ShowMoviesList({ estado, closeShowMoviesList }) {
     }
   };
   
-  const resetShowMoviesList = () => {
+  const resetModalMovies = () => {
     setEstado1(false);
     
   };
 
   return (
-     <div className={`ShowMoviesList ${estado && 'ShowMoviesList-open'}`}>
-       <ul className="list-items">
-         <li className="item" onClick={openShowMoviesList}>
+    <div className={`ModalMovies ${estado && 'ModalMovies-open'}`}>
+       {/* <ul className="list-items">
+         <li className="item" onClick={openModalMovies}>
            <span className="checkbox">
-             <BsSquareFill className={`check-icon1 ${estado && 'check-icon-open1'}`} />
+             <BsSquareFill className={`check-icon1 ${moviesList[1].checked && 'check-icon-open1'}`} />
            </span>
-           <span className="item-text">ANT-MAN</span>
-         </li>
-        
-       </ul>
+           <span className="item-text">{moviesList[1].name}</span>
+         </li>        
+       </ul> */}
+    <MoviesList>
+          {
+            MoviesList.map(Movie=>(
+              <MovieItem key={Movie.name} MovieName={Movie.name} checked={Movie.checked} />
+            )
+          )};          
+    </MoviesList>
 
-       <button className="boton_cancel" onClick={closeShowMoviesList}>
+
+       <button className="boton_cancel" onClick={closeModalMovies}>
          CANCEL
        </button>
-       <button className="boton_reset" onClick={resetShowMoviesList}>
+       <button className="boton_reset" onClick={resetModalMovies}>
          RESET
        </button>
        <button className="boton_aply">APPLY</button>
@@ -68,5 +75,4 @@ function ShowMoviesList({ estado, closeShowMoviesList }) {
    );
 }
 
-export default ShowMoviesList;
-
+export default ModalMovies;
