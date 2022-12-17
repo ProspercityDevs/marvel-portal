@@ -22,16 +22,16 @@ export default function Filter({ totalItems }) {
             </div>
           </div>
         </div>
-        
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <div className="filtros">
-              <MovieFilter />
-            </div>
-            <hr className="linea" />
-          </div>
 
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="filtros">
+                <MovieFilter />
+              </div>
+              <hr className="linea" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
