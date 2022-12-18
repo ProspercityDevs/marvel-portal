@@ -1,7 +1,8 @@
 import './styles.scss';
-
-import { useState } from 'react';
+import PropTypes from 'prop-types';
+//import { useState } from 'react';
 import MoviesList from '../../molecules/MoviesList';
+import MovieItem from '../MovieItem';
 
 const moviesList = [
   { name: 'ANT-MAN', checked: false },
@@ -21,35 +22,34 @@ const moviesList = [
   { name: 'CAPTAIN MARVEL', checked: false },
   { name: 'DOCTOR STRANGE', checked: false },
   { name: 'DOCTOR STRANGE IN THE MULTIVERSE OF MADNESS', checked: false },
-  { name: 'ETERNALS', checked: false },
-];
+  { name: 'ETERNALS', checked: false }
+ ];
 
-function ModalMovies({ estado, closeModalMovies }) {
+ModalMovies.propTypes = {
+  estado: PropTypes.bool,
+  closeModalMovies: PropTypes.object
+};
 
-  
-  // const resetModalMovies = () => {
-  //   setEstado1(false);
-    
+function ModalMovies({ estado, closeModalMovies }) {  
   return (
     <>
-      <MoviesList>
+      <MoviesList checked={false} >
         {
-          MoviesList.map(
-            Movie=>(
-              <MovieItem key={Movie.name} MovieName={Movie.name} checked={Movie.checked} />
+          moviesList.map(
+            (Movie)=>(
+            <MovieItem key={Movie.name} name={Movie.name} checked={Movie.checked} />
             )
-        )};                                    
-      </MoviesList>    
-
-       <button className="boton_cancel" onClick={closeModalMovies}>
-         CANCEL
-       </button>
-       {/* <button className="boton_reset" onClick={resetModalMovies}>
-         RESET
-       </button> */}
-       <button className="boton_aply">APPLY</button>
-    </>
-   );
+          )};
+      </MoviesList>
+      <button className="boton_cancel" onClick={closeModalMovies}>
+          CANCEL
+      </button>
+        {/* <button className="boton_reset" onClick={resetModalMovies}>
+          RESET
+        </button>  */}
+      <button className="boton_aply">APPLY</button>
+  </>
+  )
 };
 
 export default ModalMovies;

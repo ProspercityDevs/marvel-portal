@@ -1,16 +1,19 @@
 import React from 'react';
+import MovieItem from '../../atoms/MovieItem';
 import './styles.scss';
+import PropTypes from 'prop-types';
 
-function MovieList( ) {
-    return(
-        <>
-            <ul>
-                <li>
-                    <input type="checkbox" />
-                </li>
-            </ul>
-        </>
-    );        
+MoviesList.propTypes = {
+  checked: PropTypes.bool,
+  name: PropTypes.string
 };
 
-export default MovieList;
+function MoviesList({ checked, name }) {
+  return (
+    <>
+      <MovieItem checked={checked} MovieName={name} />
+    </>
+  );
+}
+
+export default MoviesList;
