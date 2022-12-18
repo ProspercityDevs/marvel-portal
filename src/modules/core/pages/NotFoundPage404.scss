@@ -51,3 +51,23 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+
+.eye_container {
+    margin-top: 390px;
+    margin-right: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .eye {
+      position: relative;
+      height: 170px;
+      width: 170px;
+      background-image: url(/assets/images/eye.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
+    }
+  }
+
