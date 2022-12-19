@@ -62,15 +62,12 @@ function Modal({ estado, closeModal }) {
 
   const [estado7, setestado7] = useState(false);
   const openModal7 = () => {
-    if (estado6 == true) {
+    if (estado7 == true) {
       setestado7(false);
     } else {
       setestado7(true);
     }
   };
-
-
-  
 
   const resetModal = () => {
     setestado1(false);
@@ -128,10 +125,8 @@ function Modal({ estado, closeModal }) {
           </span>
           <span className="item-text">BLACK PANTER: WAKANDA FOREVER</span>
         </li>
-        
-
       </ul>
-      
+
       <button className="boton_cancel" onClick={closeModal}>
         CANCEL
       </button>
@@ -139,8 +134,6 @@ function Modal({ estado, closeModal }) {
         RESET
       </button>
       <button className="boton_aply">APPLY</button>
-      
-      
     </div>
   );
 }

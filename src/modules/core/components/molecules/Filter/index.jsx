@@ -1,7 +1,12 @@
 import './styles.scss';
 import MovieFilter from '../MovieFilter';
+import propTypes from 'prop-types';
 
-export default function Filter() {
+Filter.propTypes = {
+  totalItems: propTypes.number.isRequired
+};
+
+export default function Filter({ totalItems }) {
   return (
     <div className="mvl-character-gri-filters">
       <div className="col">
@@ -15,9 +20,12 @@ export default function Filter() {
           <MovieFilter />
         </div>
       </div>
+
+      <div className="col">
+        <div className="contenedor_totalitems">
+          <h4>Number of characters: {totalItems}</h4>
+        </div>
+      </div>
     </div>
   );
 }
-
- 
- 

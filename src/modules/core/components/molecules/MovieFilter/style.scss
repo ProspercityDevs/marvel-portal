@@ -14,7 +14,7 @@
 
 .selec-btn{
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
 .btn-text{
@@ -24,6 +24,7 @@
     border:none;
     background-color: #fff;
     font-weight: 500;
+    text-align:end ;
 }
 
 .btn-text:hover{
@@ -69,7 +70,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    cursor:pointer;
     transition: 0.3s;
     padding: 0 15px;
     border-radius: 8px;
@@ -77,6 +78,7 @@
 
 
 .item-text {
+    display: flex;
     font-size: 16;
     font-weight: 500;
     height: 30px;
@@ -92,18 +94,11 @@
     margin-right: 20px;
     border: 1.5px solid rgb(110, 101, 101);
 }
-/*
-.checkbox{
-    color: red;
-    font-size: 11px;
-    transform: scale(0);
-    transition: all 0.3s ease-in-out;
-}
-*/
+
 
 .check-icon1{
     display: none;
-    font-size: 11px;
+    font-size: 8px;
     font-weight: 500;
     color: red;
 }
@@ -112,7 +107,7 @@
 }
 .check-icon2{
     display: none;
-    font-size: 11px;
+    font-size: 8px;
     font-weight: 500;
     color: red;
 }
@@ -122,7 +117,7 @@
 
 .check-icon3{
     display: none;
-    font-size: 11px;
+    font-size: 8px;
     font-weight: 500;
     color: red;
 }
@@ -131,7 +126,7 @@
 }
 .check-icon4{
     display: none;
-    font-size: 11px;
+    font-size: 8px;
     font-weight: 500;
     color: red;
 }
@@ -140,7 +135,7 @@
 }
 .check-icon5{
     display: none;
-    font-size: 11px;
+    font-size: 8px;
     font-weight: 500;
     color: red;
 }
@@ -150,7 +145,7 @@
 
 .check-icon6{
     display: none;
-    font-size: 11px;
+    font-size: 8px;
     font-weight: 500;
     color: red;
 }
@@ -160,24 +155,13 @@
 
 .check-icon7{
     display: none;
-    font-size: 11px;
+    font-size: 8px;
     font-weight: 500;
     color: red;
 }
 .check-icon-open7{
     display: block;
 }
-
-.check-icon8{
-    display: none;
-    font-size: 11px;
-    font-weight: 500;
-    color: red;
-}
-.check-icon-open8{
-    display: block;
-}
-
 
 .modal{
     display: none;
@@ -189,8 +173,9 @@
     right: 0;
     margin-left:-10% ;
     margin-top: 10%;
-    width: 360px;
+    width: 500px;
     height: 300px;
+    background-color:#fff;
 }
 
 .boton_cancel{
@@ -199,9 +184,9 @@
     margin-left: 125px;
     position: absolute;
     background-color: #fff;
-    right: 30px;
     border: none;
-    color:rgb(110, 101, 101)
+    color:rgb(110, 101, 101);
+    right: 140px
 }
 
 .boton_reset{
@@ -209,10 +194,10 @@
     margin-top: 250px;
     margin-left: 63px;
     position: absolute;
-    right: 105px;
     background-color: #fff;
     border: none;
-    color:rgb(110, 101, 101)
+    color:rgb(110, 101, 101);
+    right: 210px
 }
 
 .boton_aply{
