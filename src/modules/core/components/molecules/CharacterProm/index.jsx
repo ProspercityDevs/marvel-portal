@@ -27,9 +27,7 @@ export default function CharacterProm() {
           ÙNETE AHORA
         </button>
         <br />
-        <a href="" onClick={() => mostrarAlert2()}>
-          Los terminos y condiciones aplican
-        </a>
+        <a onClick={() => mostrarAlert2()}>Los terminos y condiciones aplican</a>
       </div>
     </div>
   );
