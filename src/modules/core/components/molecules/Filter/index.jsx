@@ -23,6 +23,9 @@ function Filter({ totalItems }) {
         />
       </div>
       <MovieFilter />
+      <div>
+        <h5 className="results_totalItems">{totalItems} RESULTS</h5>
+      </div>
     </div>
   );
 }

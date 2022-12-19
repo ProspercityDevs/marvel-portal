@@ -48,7 +48,7 @@ export default function MovieFilter() {
   const close = () => {
     setToggle(false);
   };
-  
+
   const handleToggle = () => {
     setToggle((prevToggle) => !prevToggle);
   };
@@ -104,4 +104,4 @@ const movies = [
   'THOR: THE DARK WORLD',
   'UNTITLED DEADPOOL MOVIE',
   'X-MEN: DARK PHOENIX'
- ];
+];
