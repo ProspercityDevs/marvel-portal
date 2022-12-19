@@ -12,6 +12,8 @@
   margin-left: 25px;
   background-image: url('/assets/images/footerImg.png ');
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .footer-win {
   margin: auto;
@@ -30,6 +32,7 @@
   cursor: pointer;
   font-weight: 200px;
   border-radius: 7px;
+  border-style: none;
 }
 .title-footer {
   margin-top: 60px;
