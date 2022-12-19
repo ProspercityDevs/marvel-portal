@@ -25,15 +25,14 @@ const moviesList = [
   { name: 'ETERNALS', checked: false }
  ];
 
-ModalMovies.propTypes = {
-  estado: PropTypes.bool,
-  closeModalMovies: PropTypes.object
+ MoviesList.propTypes = {
+  moviesList: PropTypes.array,
 };
 
-function ModalMovies({ estado, closeModalMovies }) {  
+function ModalMovies() {  
   return (
     <>
-      <MoviesList checked={false} >
+      <MoviesList moviesList={moviesList} >
         {
           moviesList.map(
             (Movie)=>(
@@ -41,9 +40,9 @@ function ModalMovies({ estado, closeModalMovies }) {
             )
           )};
       </MoviesList>
-      <button className="boton_cancel" onClick={closeModalMovies}>
+      {/* <button className="boton_cancel" onClick={closeModalMovies}> 
           CANCEL
-      </button>
+      </button> */}
         {/* <button className="boton_reset" onClick={resetModalMovies}>
           RESET
         </button>  */}

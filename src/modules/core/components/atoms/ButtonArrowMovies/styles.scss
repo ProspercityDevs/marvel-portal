@@ -1,91 +1,24 @@
-.container{
-    position: relative;
-    width: 100%;
-    background-color: #fff;
-}
-
-.selec-btn{
+.movies_filter {
     display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
-.btn-text{
-    font-size: 16px;
-    font-weight: 400;
-    color: rgba(202, 71, 71, 0.97);
-    border:none;
-    background-color: #fff;
+.movies_filter--text {
     font-weight: 500;
+    cursor: pointer;
 }
 
-
-.arrow-dwn{
-    height: 21px;
-    width: 22px;
-    font-size: 18px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    color: rgb(15, 14, 14);
-    display: flex;
-    transition: 0.3s;
+.movies_filter-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    transition-duration: 0.5s;
+    cursor: pointer;
 }
 
-.arrow-dwn{
-    transform: rotate(-180deg);
-}
-
-
-.ShowMoviesList{
-    display: none;
-}
-
-.ShowMoviesList-open{
-    position:absolute;
-    display: flex;
-    margin-left:-10% ;
-    margin-top: 10%;
-    width: 360px;
-    height: 300px;
-}
-
-.boton_cancel{
-    font-weight: 500;
-    margin-top: 250px;
-    margin-left: 125px;
-    position: absolute;
-    background-color: #fff;
-    right: 30px;
-    border: none;
-    color:rgb(110, 101, 101)
-}
-
-.boton_reset{
-    font-weight: 500;
-    margin-top: 250px;
-    margin-left: 63px;
-    position: absolute;
-    right: 105px;
-    background-color: #fff;
-    border: none;
-    color:rgb(110, 101, 101)
-}
-
-.boton_aply{
-    font-weight: 500;
-    margin-top: 250px;
-    margin-left: 0px;
-    position: absolute;
-    left: 10px;
-    background-color: #fff;
-    border: none;
-    color:rgb(110, 101, 101)
-}
-
-
-
-.icon1 {
-    transform: rotate(0);
-}
-.icon1-open {
-    transform: rotate(180deg);
+.movies_filter_icon-open {
+    color: red;
+    rotate: 180deg 0;
+    opacity: 1;
+    transition-duration: 0.5s;
 }
