@@ -22,7 +22,9 @@ export default function CharacterProm() {
       <div className="footer-win">
         <h2 className="title-footer">INFORMACION PRIVILEGIADA DE MARVEL</h2>
         <h1 className="prom-footer">¡Mira, gana, canjea!</h1>
-        <h4 className="info-footer">Obtenga recompensas por hacer lo que ya hace como fan.</h4>
+        <h4 className="info-footer">
+          Obtenga recompensas por hacer lo que ya hace como fan <br /> <br />
+        </h4>
         <button onClick={() => mostrarAlert()} className="button-footer">
           ÙNETE AHORA
         </button>
