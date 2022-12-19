@@ -8,7 +8,7 @@ const NotFoundPage404 = () => {
         <div className="not_found_flex">
           <div className="not_found_info">
             <div className="not_found_text">
-              <h1>404 PAGE NOT FOUND</h1>
+              <h2>404 PAGE NOT FOUND</h2>
               <br />
               <h4>Not even the Eye of Uatu sees your request...</h4>
               <br />

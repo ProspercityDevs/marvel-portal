@@ -1,7 +1,6 @@
 import './styles.scss';
 import PropTypes from 'prop-types';
 
-
 CharacterCard.propTypes = {
   image: PropTypes.string,
   name: PropTypes.string,
