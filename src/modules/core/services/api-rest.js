@@ -1,14 +1,3 @@
-import { defaultMapper } from '@/modules/core/services';
-
-export async function getAndMap(url, { queryParams = {}, mappedBy = defaultMapper }) {
-  const data = await get(url, { queryParams });
-  const mappedResults = data.results.map(mappedBy);
-  return {
-    ...data,
-    results: mappedResults
-  };
-}
-
 export async function get(url, { queryParams = {} } = {}) {
   const params = objectToURLString(queryParams);
   return myFetch(`${url}${params}`, { method: 'GET' });
