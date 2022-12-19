@@ -6,7 +6,7 @@ export function NavMenu() {
     <nav className="mvl-navbar">
       <div className="mvl-navbar--left">
         <NavLink className="mvl-navbar-item mlv-navbar__image" to="/">
-          <img src="/images/marvel_logo.png" className="mvl-navbar__img" alt="compny logo" />
+          <img src="/assets/images/marvel_logo.png" className="mvl-navbar__img" alt="company logo" />
         </NavLink>
         <div className="mvl-navbar__actions">
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">

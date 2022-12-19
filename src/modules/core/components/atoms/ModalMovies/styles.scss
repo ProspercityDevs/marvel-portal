@@ -1,0 +1,113 @@
+.list-items{
+    position: relative;
+    margin-top: 10;
+    padding: 16px;
+    background-color: #fff;
+    /* display: none; /* Ocultar opciones*/
+}
+ 
+.list-items{    /* Una vez dado click se despleja el menu*/
+    display: block;
+
+}
+
+.item:hover{
+    background-color: rgb(253, 252, 253);
+    
+}
+
+.item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+
+.item-text {
+    font-size: 16;
+    font-weight: 500;
+    height: 30px;
+    color: black;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    width: 15px;
+    margin-right: 20px;
+    border: 1.5px solid rgb(110, 101, 101);
+}
+
+
+.check-icon1{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open1 {
+    display: block;
+}
+.check-icon2{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open2 {
+    display: block;
+}
+
+.check-icon3{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open3 {
+    display: block;
+}
+.check-icon4{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open4 {
+    display: block;
+}
+.check-icon5{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open5{
+    display: block;
+}
+
+.check-icon6{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open6{
+    display: block;
+}
+
+.check-icon7{
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+.check-icon-open7{
+    display: block;
+}
