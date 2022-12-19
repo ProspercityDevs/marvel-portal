@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { RiSearch2Line } from 'react-icons/ri';
-import ButtonMovies from '../../atoms/ButtonArrow';
+import MovieFilter from './MovieFilter';
 
 Filter.propTypes = {
   totalItems: PropTypes.number.isRequired
@@ -22,9 +22,9 @@ function Filter({ totalItems }) {
           readOnly
         />
       </div>
-      <ButtonMovies />
-      <div className="Container-span">
-        <span className="span-results">{totalItems} RESULTADOS</span>
+      <MovieFilter />
+      <div>
+        <h5 className="results_totalItems">{totalItems} RESULTS</h5>
       </div>
     </div>
   );
