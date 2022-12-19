@@ -42,7 +42,7 @@ export default function MovieFilter() {
             <button className="movies__buttons">Apply</button>
           </div>
           <div className="movies__buttons--right">
-            <button className="movies__buttons">Reset</button>
+            <button className="movies__buttons" onClick={handleReset}>Reset</button>
             <button className="movies__buttons" onClick={close}>
               Close
             </button>
@@ -55,6 +55,19 @@ export default function MovieFilter() {
   const close = () => {
     setToggle(false);
   };
+
+  const reset = () => {
+     setReset(false);
+  };
+
+  const handleReset = (e) => {
+     if (e.target.checked) {
+      e.target.checked=false;
+      updatedList.splice(checked.indexOf(e.target.value), 1);
+    } 
+    updatedList=[];
+   };
+ 
 
   //Este es el "return" de <MovieFilter />
   return (
