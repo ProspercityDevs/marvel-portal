@@ -5,6 +5,11 @@ import { RiArrowDropDownFill } from 'react-icons/ri';
 export default function MovieFilter() {
   const [toggle, setToggle] = useState(false);
   const [checked, setChecked] = useState([]);
+
+  const handleToggle = () => {
+    setToggle((prevToggle) => !prevToggle);
+  };
+
   let updatedList = [...checked];
 
   const handleCheck = (e) => {
@@ -14,6 +19,8 @@ export default function MovieFilter() {
       updatedList.splice(checked.indexOf(e.target.value), 1);
     }
     setChecked(updatedList);
+    // console.log(checked);
+    console.log(updatedList);
   };
 
   //Función para el contenedor de películas
@@ -47,10 +54,6 @@ export default function MovieFilter() {
 
   const close = () => {
     setToggle(false);
-  };
-
-  const handleToggle = () => {
-    setToggle((prevToggle) => !prevToggle);
   };
 
   //Este es el "return" de <MovieFilter />
