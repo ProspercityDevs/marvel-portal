@@ -2,9 +2,9 @@ import '@/assets/styles/main.scss';
 
 import { NavMenu } from '@/modules/core/components/molecules/NavMenu';
 import MainFooter from '@/modules/core/components/molecules/MainFooter';
+import BeforeFooter from './modules/core/components/molecules/BeforeFooter/Index';
 
 import AppRoutes from './routes';
-import BeforeFooter from './modules/core/components/molecules/BeforeFooter/Index';
 
 function App() {
   return (

@@ -3,10 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "bulma": "^0.9.4",
     "create-react-app": "^5.0.1",
+    "multiselect-react-dropdown": "^2.0.25",
     "react": "^18.2.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
