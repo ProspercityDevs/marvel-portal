@@ -1,7 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+
 .page404 {
-    height:518px;
+    height: 700px;
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}    
+
+.text404 {
+    float: left;
+    height: 95%;
+    width: 45%;
+    margin: 1% 1%;
+    background-color: white;
+}
+
+.image404 {
+    height: 95%;
+    width: 50%;
+    float: right;
     background-image:url(/assets/images/404.jpeg);
     background-repeat: no-repeat;
-    background-position:75%;
+    background-size: 70%;
 }
+
+h1 {
+    font-size: 1.5cm;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+
+.contenedor1{
+    margin-top: 40%;
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.eye_container {
+    margin-top: 390px;
+    margin-right: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .eye {
+      position: relative;
+      height: 170px;
+      width: 170px;
+      background-image: url(/assets/images/eye.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
+    }
+  }
+

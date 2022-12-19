@@ -1,4 +1,4 @@
-import './Styles.scss';
+import './styles.scss';
 import swal from 'sweetalert';
 export default function BeforeFooter() {
   const mostrarAlerta=()=>{
@@ -17,6 +17,7 @@ export default function BeforeFooter() {
         <h2>Watch, Earn, Redeem!</h2>
         <h4> Get rewarded for doing what you already do as a fan.</h4>
         <button className='boton_join' onClick={()=>mostrarAlerta()}>JOIN NOW</button>
+        <h5>Terms and Conditions Apply.</h5>
       </div>
     </div>
   );
