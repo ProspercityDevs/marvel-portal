@@ -20,25 +20,41 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
     const nextPage = getNextPage(currentPage, totalPages);
     setCurrentPage(nextPage);
   }
+  function onNextNextpageClick() { 
+    const nextNextPage = getNextPage(currentPage+1, totalPages);
+    setCurrentPage(nextNextPage);
+  }
+
+  function onNextTriplepageClick() {
+    const nextTriplePage = getNextPage(currentPage+2, totalPages);
+    setCurrentPage(nextTriplePage);
+  }
 
   function onPreviousPageClick() {
     const prevPage = getPreviousePage(currentPage);
     setCurrentPage(prevPage);
   }
-
+  function onFinalPage(){
+    setCurrentPage(totalPages);
+  }
   useEffect(() => {
     onPageChange(currentPage);
   }, [currentPage]);
-
+ 
   return (
     <div className="mvl-paginator">
-      <span className="mvl-paginator__text">
-        Page <strong>{currentPage} </strong> of <strong>{totalPages}</strong>
-      </span>
+    
       <div className="mvl-paginator__actions">
         <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
           <BiChevronLeft />
         </button>
+        <button className='page-active'>{currentPage}</button>
+        <button disabled={isLastPage(currentPage, totalPages)} onClick={onNextpageClick}>{currentPage+1}</button>
+        <button disabled={isLastPage(currentPage, totalPages)} onClick={ onNextNextpageClick}>{currentPage+2}</button>
+        <button disabled={isLastPage(currentPage, totalPages)} onClick={ onNextTriplepageClick}>{currentPage+3}</button>
+        <button>...</button>
+        <button disabled={isLastPage(currentPage, totalPages)} onClick={onFinalPage}>{totalPages}</button>
+       
         <button disabled={isLastPage(currentPage, totalPages)} onClick={onNextpageClick}>
           <BiChevronRight />
         </button>
