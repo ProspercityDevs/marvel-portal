@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { RiSearch2Line } from 'react-icons/ri';
-import ResultsTotalItems from '../../atoms/ResultsTotalItems';
 import MovieFilter from './MovieFilter';
 
 Filter.propTypes = {
@@ -24,7 +23,6 @@ function Filter({ totalItems }) {
         />
       </div>
       <MovieFilter />
-      <ResultsTotalItems totalItems={totalItems}/>
     </div>
   );
 }
