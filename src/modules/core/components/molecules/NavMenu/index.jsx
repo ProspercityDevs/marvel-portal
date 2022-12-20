@@ -12,7 +12,7 @@ export function NavMenu() {
         </NavLink>
 
         <div className="mvl-navbar__actions">
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/search" target="_blank">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/" target="_blank">
             Characters
           </NavLink>
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/comics" target="_blank">
@@ -30,19 +30,16 @@ export function NavMenu() {
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/stories" target="_blank">
             Stories
           </NavLink>
+
         </div>
         
       </div>
 
-      <div className="mvl-navbar--right"></div>
-
-      <div className="mvl-container-2 ">
-      <div className="mvl-container-search-left-2">
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text-2" to="/Search" target="_bank" >
+      <div className="mvl-navbar--right">
+      <NavLink className="mv1-search-container" to="/Search" target="_blank" >
           <FontAwesomeIcon icon= {faMagnifyingGlass} className="search-container__icon-2" 
             aria-hidden="true"/> 
           </NavLink>
-        </div>
       </div>
     </nav>
   );
