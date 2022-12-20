@@ -1,4 +1,4 @@
-import { useEffect,useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
 
@@ -12,19 +12,17 @@ Pagination.propTypes = {
 };
 
 export default function Pagination({ totalItems, pageSize = 24, initialPage = 1, onPageChange }) {
- 
-  const [itemOffset, setItemOffset] = useState(initialPage);
-  const currentPage = itemOffset + pageSize;
+  const [currentItem, setCurrentItem] = useState(initialPage);
   const pageCount = Math.ceil(totalItems/pageSize);
+  
+  useEffect(() => {
+    onPageChange(currentItem);
+  }, [currentItem]);
 
-  
-  const handlePageClick = () => {
-    useEffect(() => {
-      onPageChange(currentPage);
-    }, [currentPage]);
-  
-    const newOffset = (event.selected * pageSize) % totalItems.length;
-    setItemOffset(newOffset);
+  const handlePageClick = (event) => { 
+    const newOffset = (event.selected+1);
+    setCurrentItem(newOffset);
+    console.log(newOffset);
   };
 
   return (
@@ -32,17 +30,18 @@ export default function Pagination({ totalItems, pageSize = 24, initialPage = 1,
 
       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel=">"
         onPageChange={handlePageClick}
+        marginPagesDisplayed={1}
         pageRangeDisplayed={3}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel="<"
         renderOnZeroPageCount={null}
         containerClassName = "pagination"
         nextLinkClassName='page-num'
         pageLinkClassName='page-num'
         previousLinkClassName='page-num'
-        activeLinkClassName='page-num'
+        activeLinkClassName='active'
       />
     </>
   );
