@@ -1,18 +1,18 @@
-.mvl-paginator{
-    display: flex;
-    gap: var(--space-lg);
-    padding: var(--space-md);
-    width: 100%;
-    justify-content: flex-end;
-    box-sizing: border-box;
-    position: sticky;
-    bottom: 0;
-    background: var(--color-body);
-    z-index: 3;
-    color: black;
+.mvl-paginator {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-md);
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  position: sticky;
+  bottom: 0;
+  background: var(--color-body);
+  z-index: 3;
+  color: black;
 }
 
-.mvl-paginator__actions{
-    display: flex;
-    gap: var(--space-xs);
+.mvl-paginator__actions {
+  display: flex;
+  gap: var(--space-xs);
 }
