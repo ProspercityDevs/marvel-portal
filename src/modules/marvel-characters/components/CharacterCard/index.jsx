@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
 
@@ -7,7 +8,11 @@ CharacterCard.propTypes = {
   isSkeleton: PropTypes.bool
 };
 
+ 
 export default function CharacterCard({ image, name, isSkeleton }) {
+
+  const currentDate = new Date().toDateString();
+  
   return (
     <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
       <div className="mvl-character-card__image-container">
@@ -17,8 +22,8 @@ export default function CharacterCard({ image, name, isSkeleton }) {
         <div className="mvl-character-card__body">
           <h4 className="u-no-margin">{name}</h4>
           <h6 className="marvel-label">1939 Timely Comics</h6>
-          <h6 className="marvel-label">{new Date().toDateString()}</h6>
-          <h4 className="u-no-margin">{name}</h4>
+          <h6 className="marvel-label">{currentDate}</h6>
+          <h4 className="u-no-margin">Alias</h4>
         </div>
       </div>
     </div>
