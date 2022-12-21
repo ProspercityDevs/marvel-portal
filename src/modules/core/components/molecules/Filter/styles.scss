@@ -1,86 +1,36 @@
-.page__component.firstComponent, .page__component:first-child {
+.page__component.firstComponent,
+.page__component:first-child {
   margin-top: 0;
   padding: 0;
   margin-bottom: 51px;
+}
+
+.mvl-character-gri-filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50%, 1fr));
+  grid-template-rows: 1fr;
+}
+
+.filter_search {
+  border-bottom: 2px solid #151515;
+}
+
+.input-nav {
+  width: 94%;
+  border-radius: 0;
+  font-size: 1.5rem;
+  border: 0;
+  padding-bottom: 0.4375rem;
+  margin-left: 10px;
 }
 
 .search-bar {
   padding: 70px 0px 0;
   display: flex;
 }
-
-.typeahead {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  width: 100%;
-  border-bottom: 1px solid #151515;
-}
-
-.typeahead__icon {
-  position: absolute;
-  top: 10px;
-}
-
-.icon--svg.icon--search {
-  fill: none;
-  stroke-width: 2px;
-  stroke-linecap: square;
-}
-
-.icon--svg--black-stroke {
-  stroke: #151515;
-}
-
-.icon--svg {
-  fill: #151515;
-}
-
-.input-text{
-  border: none;
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid #151515;
-  width: 100%;
-  padding-bottom: 0.4375rem;
-  padding-left: 1.875rem;
-  border-radius: 0;
-}
-
-.typeahead__container {
-  width: 100%;
-}
-
-.typeahead__input {
-  border: 0;
-  // border-bottom: 2px solid #151515;
-  width: 100%;
-  padding-bottom: 0.4375rem;
-  padding-left: 2rem;
-  border-radius: 0;
-  font-family: "robotto";
-}
-
-.search-icon{
-  width: 26px;
-  position: absolute;
-  margin-right: 18px;
-  margin-top: -7px;
-}
-
-.typeahead__input {
-  font: 800 26px/1 RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.typeahead__input:focus {
-  outline-color: #e8b63e
-}
 //Total characters style
 .results_totalItems {
-  font: 400 13px/1 Roboto Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
+  font: 400 13px/1 Roboto Bold, Trebuchet MS, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #767676;
@@ -152,9 +102,9 @@
 }
 //Buttons container styles
 .movies__buttons--container {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
-  border-top: 1px  solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
   margin: 1px 20px 15px 15px;
   padding-top: 15px;
 }
