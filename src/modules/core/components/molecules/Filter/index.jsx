@@ -9,7 +9,7 @@ Filter.propTypes = {
 function Filter({ totalItems }) {
   return (
     <div className="mvl-character-gri-filters">
-      <div>
+      <div className="filter_search">
         <RiSearch2Line />
         <input
           type="search"
