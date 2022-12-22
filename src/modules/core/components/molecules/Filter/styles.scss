@@ -12,7 +12,11 @@
 }
 
 .filter_search {
-  border-bottom: 2px solid #151515;
+  border-bottom: 2px solid #151515;  
+}
+
+.filter_search:focus-within{
+  border: 2 px solid var(--color-warning);
 }
 
 .input-nav {
@@ -63,7 +67,7 @@
 }
 
 .filters__movie__icon-open {
-  color: red;
+  color: var(--color-logo);
   rotate: 180deg 0;
   opacity: 1;
   transition-duration: 0.5s;
@@ -74,7 +78,7 @@
   width: 480px;
   position: absolute;
   border: 1px solid #dfdfdf;
-  z-index: 50;
+  z-index: 5;
   right: 0;
 }
 
