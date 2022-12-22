@@ -22,7 +22,6 @@ export default function Pagination({ totalItems, pageSize = 24, initialPage = 1,
   const handlePageClick = (event) => { 
     const newOffset = (event.selected+1);
     setCurrentItem(newOffset);
-    console.log(newOffset);
   };
 
   return (

@@ -2,7 +2,7 @@ import { getAndMap } from '@/modules/core/services';
 import { defaultMapper } from '@/modules/core/services';
 
 const BASE_URL = `https://gateway.marvel.com/v1/public/`;
-const PAGENATE_BY = 20;
+const PAGENATE_BY = 24;
 
 const credentials = {
   apikey: process.env.REACT_APP_PUBLIC_KEY
