@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { RiSearch2Line } from 'react-icons/ri';
-import MovieFilter from './MovieFilter';
+import MovieFilter from './SerieFilter';
 
 Filter.propTypes = {
   totalItems: PropTypes.number.isRequired
@@ -15,11 +15,11 @@ function Filter({ totalItems }) {
           type="search"
           placeholder="SEARCH"
           className="input-nav"
-          value=""
+          //value=""
           autoComplete="on"
           aria-autocomplete="list"
           aria-controls="reac-autowhatever-1"
-          readOnly
+          //readOnly
         />
       </div>
       <MovieFilter />
