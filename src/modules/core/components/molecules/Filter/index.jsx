@@ -16,7 +16,7 @@ function Filter({ totalItems }) {
           placeholder="SEARCH"
           className="input-nav"
           value=""
-          autoComplete="off"
+          autoComplete="on"
           aria-autocomplete="list"
           aria-controls="reac-autowhatever-1"
           readOnly
