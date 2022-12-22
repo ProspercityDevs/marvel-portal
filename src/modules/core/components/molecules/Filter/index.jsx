@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { RiSearch2Line } from 'react-icons/ri';
+// import { RiSearch2Line } from 'react-icons/ri';
+import SearchBar from '../../atoms/SearchBar';
 import MovieFilter from './MovieFilter';
 
 Filter.propTypes = {
@@ -10,7 +11,8 @@ function Filter({ totalItems }) {
   return (
     <div className="mvl-character-gri-filters">
       <div className="filter_search">
-        <RiSearch2Line />
+        <SearchBar />
+        {/* <RiSearch2Line />
         <input
           type="search"
           placeholder="SEARCH"
@@ -20,7 +22,7 @@ function Filter({ totalItems }) {
           aria-autocomplete="list"
           aria-controls="reac-autowhatever-1"
           readOnly
-        />
+        /> */}
       </div>
       <MovieFilter />
       <div>
