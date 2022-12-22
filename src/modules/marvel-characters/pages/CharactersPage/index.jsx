@@ -5,6 +5,9 @@ import './styles.scss';
 import CharacterProm from '@/modules/core/components/molecules/CharacterProm';
 
 export function CharactersPage() {
+
+  
+
   return (
     <>
       <div className="mvl-characters-page">
