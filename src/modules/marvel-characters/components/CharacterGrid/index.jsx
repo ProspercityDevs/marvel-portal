@@ -20,12 +20,13 @@ export default function CharacterGridPaginated() {
   useEffect(() => {
     fetchCharactersAtPage();
   }, []);
-
   async function fetchCharactersAtPage(page = 1) {
+    const  domain=`characters`; 
     setLoading(true);
-    const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
+    const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, domain);
     setTotalItems(data.total);
     setCharacters(data.results);
+    console.log(data.creators.items);
     setLoading(false);
   }
 
@@ -60,7 +61,7 @@ export default function CharacterGridPaginated() {
 CharacterGrid.propTypes = {
   characters: PropTypes.array.isRequired,
   isLoading: PropTypes.bool,
-  itemsPerPage: PropTypes.number
+  itemsPerPage: PropTypes.number,
 };
 
 function CharacterGrid({ characters, isLoading, itemsPerPage }) {
@@ -72,7 +73,7 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
     return <EmptyState />;
   }
 
-  return characters.map(({ name, image }, index) => (
+  return characters.map(({ name, image}, index) => (
     <CharacterCard name={name} image={image} key={index} isSkeleton={isLoading} />
   ));
 }

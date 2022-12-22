@@ -16,7 +16,7 @@ export function CharacterPage() {
         <FeaturedCharacters />
         <section className="mvl-section-card"></section>
         <h1>MARVEL CHARACTERS LIST</h1>
-        <CharactersGrid />
+        <CharactersGrid />    
       </div>
     </div>
   );
