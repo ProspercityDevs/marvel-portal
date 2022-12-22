@@ -1,17 +1,23 @@
 .filter_search {
-    border-bottom: 2px solid #151515;  
-  }
-  
-  .filter_search:focus-within{
-    border: 2.2 px solid var(--color-warning);
-  }
+  border: 1px solid transparent;
+  border-bottom: 1px solid #151515;
+}
 
-  .input-nav {
-    width: 94%;
-    border-radius: 0;
-    font-size: 1.5rem;
-    border: 0;
-    padding-bottom: 0.4375rem;
-    margin-left: 10px;
-  }
-  
+.icon_search {
+  position: static;
+}
+
+.filter_search:focus-within {
+  border: 1px solid var(--color-warning);
+}
+
+.input-nav {
+  width: 94%;
+  border-radius: 0;
+  font-size: 1.5rem;
+  border: 0;
+  padding-bottom: 0.4375rem;
+  margin-left: 10px;
+  outline: none;
+  position: static;
+}

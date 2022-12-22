@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { useState } from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
@@ -8,11 +9,8 @@ CharacterCard.propTypes = {
   isSkeleton: PropTypes.bool
 };
 
- 
 export default function CharacterCard({ image, name, isSkeleton }) {
-
   const currentDate = new Date().toDateString();
-  
   return (
     <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
       <div className="mvl-character-card__image-container">

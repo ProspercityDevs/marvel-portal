@@ -11,15 +11,7 @@
   grid-template-rows: 1fr;
 }
 
-.filter_search {
-  border-bottom: 2px solid #151515;  
-}
-
-.filter_search:focus-within{
-  border: 2 px solid var(--color-warning);
-}
-
-.input-nav {
+/* .input-nav {
   width: 94.8%;
   border-radius: 0;
   font-size: 1.5rem;
@@ -27,12 +19,12 @@
   padding-bottom: 0.4375rem;
   margin-left: 10px;
   letter-spacing: 1px;
-}
+} */
 
-.search-bar {
+/* .search-bar {
   padding: 70px 0px 0;
   display: flex;
-}
+} */
 //Total characters style
 .results_totalItems {
   font: 400 13px/1 Roboto Bold, Trebuchet MS, Helvetica, Arial, sans-serif;
