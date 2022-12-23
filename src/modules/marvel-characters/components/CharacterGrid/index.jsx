@@ -21,12 +21,11 @@ export default function CharacterGridPaginated() {
     fetchCharactersAtPage();
   }, []);
   async function fetchCharactersAtPage(page = 1) {
-    const  domain=`characters`; 
+    const  domain=`series`; 
     setLoading(true);
     const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, domain);
     setTotalItems(data.total);
     setCharacters(data.results);
-    console.log(data.creators.items);
     setLoading(false);
   }
 
@@ -73,8 +72,8 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
     return <EmptyState />;
   }
 
-  return characters.map(({ name, image}, index) => (
-    <CharacterCard name={name} image={image} key={index} isSkeleton={isLoading} />
+  return characters.map(({ name, image, description}, index) => (
+    <CharacterCard name={name} image={image} description={description} key={index} isSkeleton={isLoading} />
   ));
 }
 
