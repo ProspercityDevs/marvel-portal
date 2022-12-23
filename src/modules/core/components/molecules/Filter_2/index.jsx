@@ -23,25 +23,6 @@ const moviesList = [
 ];
 
 function ShowMoviesList() {
-  const [checked, setChecked] = useState([]);
-  const [isChecked, setIsChecked] = useState(false);
-  const handleCheck = (e) => {
-    let upDateChecked=[];
-    if(checked.length===0){
-      upDateChecked.push(e.target.value);
-      setChecked(upDateChecked);
-      setIsChecked(!isChecked)
-      return 
-    }else{
-      upDateChecked=checked[checked.length-1];
-      setChecked(checked.forEach(()=>setIsChecked(!isChecked)));
-      return
-    }
-    
-  };
- 
-  console.log(checked);
-
   const [setShow] = useState(false);
   const handleClose = () => setShow(false);
 
@@ -54,7 +35,7 @@ function ShowMoviesList() {
       <ul className="movies__list">
         {moviesList.map((item, index) => (
           <li key={index} className="movies__list--item">
-            <input value={item} type="checkbox" checked={isChecked} onChange={()=>handleCheck(index)} />
+            <input value={item} type="radio" name="series"/>
             <label className="movies__list--text">{item}</label>
           </li>
         ))}
