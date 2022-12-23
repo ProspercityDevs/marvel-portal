@@ -6,8 +6,8 @@ import React from 'react';
 
 function SearchPage() {
   return (
-    <div className="Container_Search">
-    <input className="mvl-container-search" type="text" placeholder="SEARCH" />
+    <div className="Container_Searchtwo">
+    <input className="mvl-container-search-two" type="text" placeholder="SEARCH" />
     <FontAwesomeIcon icon={faMagnifyingGlass} className="search_Icon" />
     </div>
   );
