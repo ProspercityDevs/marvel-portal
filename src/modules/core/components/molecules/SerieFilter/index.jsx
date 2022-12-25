@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles.scss';
 import { RiArrowDropDownFill } from 'react-icons/ri';
 
-export default function MovieFilter() {
+export default function SerieFilter() {
   const [toggle, setToggle] = useState(false);
   const [checked, setChecked] = useState([]);
 
