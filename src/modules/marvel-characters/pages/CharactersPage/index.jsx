@@ -1,5 +1,5 @@
 import React from 'react';
-import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid';
+import CharacterGridPaginated  from '@/modules/marvel-characters/components/CharacterGrid';
 import './styles.scss';
 import FeaturedCharacters from '../../components/FeaturedCharacters';
 
@@ -16,7 +16,7 @@ export function CharacterPage() {
         <FeaturedCharacters />
         <section className="mvl-section-card"></section>
         <h1>MARVEL CHARACTERS LIST</h1>
-        <CharactersGrid />    
+        <CharacterGridPaginated />    
       </div>
     </div>
   );

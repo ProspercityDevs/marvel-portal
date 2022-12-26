@@ -138,7 +138,7 @@
     
                 <a className='Sub_Barra'>Your US State Privacy Rights</a>
     
-                <a className='Sub_Barra'>Children s Online Privacy Policy</a>
+                <a className='Sub_Barra'>Childrens Online Privacy Policy</a>
     
                 <a className='Sub_Barra'>License Agreement</a>
     

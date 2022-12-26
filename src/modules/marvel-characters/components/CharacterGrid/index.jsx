@@ -8,6 +8,7 @@ import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
 import Filter from '@/modules/core/components/molecules/Filter';
 
+
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
@@ -21,7 +22,7 @@ export default function CharacterGridPaginated() {
     fetchCharactersAtPage();
   }, []);
   async function fetchCharactersAtPage(page = 1) {
-    const  domain=`series`; 
+    const domain=`characters`
     setLoading(true);
     const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, domain);
     setTotalItems(data.total);
@@ -62,6 +63,7 @@ CharacterGrid.propTypes = {
   isLoading: PropTypes.bool,
   itemsPerPage: PropTypes.number,
 };
+
 
 function CharacterGrid({ characters, isLoading, itemsPerPage }) {
   if (isLoading && characters.length === 0) {

@@ -23,7 +23,8 @@ export async function getAllPaginated(
   });
 }
 
-export async function getAll(domain, { mappedBy = defaultMapper, queryParams = {} }) {
+
+export  async function getAll(domain, { mappedBy = defaultMapper, queryParams = {} }) {
   return getAndMap(`${BASE_URL}${domain}`, {
     mappedBy,
     queryParams: {

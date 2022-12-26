@@ -17,6 +17,12 @@ export async function getCharatersAtPage(
 }
 
 export function getCharactersForGrid(page, itemsPerPage, domain) {
+  if(domain==null){
+    domain=`characters`;
+    return getCharatersAtPage(page, itemsPerPage, domain, {
+      mappedBy: mapCharacterToCard
+    });
+  }
   return getCharatersAtPage(page, itemsPerPage, domain, {
     mappedBy: mapCharacterToCard
   });

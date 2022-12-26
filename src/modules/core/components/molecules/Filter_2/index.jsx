@@ -1,28 +1,11 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './styles.scss';
+import {SeriesGridPaginated} from '../../../../marvel-characters/components/CharacterGrid/seriesGrid.jsx';
 
-const moviesList = [
-  'ANT-MAN',
-  'ANT-MAN AND THE WASP',
-  'BLACK PANTHER',
-  'BLACK PANTHER: WAKANDA FOREVER',
-  'ANT-MAN AND THE WASP: QUANTUMANIA',
-  'ARMOR WARS',
-  'AVENGERS: AGE OF ULTRON',
-  'AVENGERS: INFINITY WAR',
-  'BLACK PANTHER',
-  'BLACK PANTHER: WAKANDA FOREVER',
-  'BLACK WIDOW',
-  'CAPTAIN AMERICA: CIVIL WAR',
-  'CAPTAIN AMERICA: THE FIRST AVENGER',
-  'CAPTAIN AMERICA: THE WINTER SOLDIER',
-  'CAPTAIN MARVEL',
-  'DOCTOR STRANGE',
-  'DOCTOR STRANGE IN THE MULTIVERSE OF MADNESS',
-  'ETERNALS'
-];
 
 function ShowMoviesList() {
+  
+  const series=SeriesGridPaginated();
   const [setShow] = useState(false);
   const handleClose = () => setShow(false);
 
@@ -33,10 +16,10 @@ function ShowMoviesList() {
   return (
     <div className="movies">
       <ul className="movies__list">
-        {moviesList.map((item, index) => (
+      {series.map((item, index) => (
           <li key={index} className="movies__list--item">
-            <input value={item} type="radio" name="series"/>
-            <label className="movies__list--text">{item}</label>
+            <input value={item.name} type="radio" name="series"/>
+            <label className="movies__list--text">{item.name}</label>
           </li>
         ))}
       </ul>
