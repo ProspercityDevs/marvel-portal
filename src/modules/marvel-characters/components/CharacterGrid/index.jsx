@@ -2,44 +2,67 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { getCharactersForGrid } from '@/modules/marvel-characters/services';
+import { getCharactersForGrid2 } from '../../services';
 
 import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
 import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
-import Filter from '@/modules/core/components/molecules/Filter';
+// import Filter from '@/modules/core/components/molecules/Filter';
+
 
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
-export default function CharacterGridPaginated() {
+CharacterGridPaginated.propTypes = {
+  n: PropTypes.number,
+  busqueda: PropTypes.string
+  
+};
+
+export default function CharacterGridPaginated( {n, busqueda} ) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
-  const [queryParams, setQueryParams] = useState({});
+  // const [queryParams, setQueryParams] = useState({});
+
+  const name = {
+    nameStartsWith: busqueda
+  };
+
+  console.log("prueba", n);
 
   useEffect(() => {
     fetchCharactersAtPage();
   }, []);
 
   async function fetchCharactersAtPage(page = 1) {
-    setLoading(true);
-    const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
-    setTotalItems(data.total);
-    setCharacters(data.results);
-    setLoading(false);
+    if (n == 1) {
+      setLoading(true);
+      const data = await getCharactersForGrid2(page, ITEMS_PER_PAGE);
+      setTotalItems(data.total);
+      setCharacters(data.results);
+      setLoading(false);
+    }
+    if (n == 2) {
+      setLoading(true);
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, name);
+      setTotalItems(data.total);
+      setCharacters(data.results);
+      setLoading(false);
+    }
   }
 
   const onPageChange = (newPage) => {
     fetchCharactersAtPage(newPage);
   };
 
-  const onQueryChange = (query) => {
-    setQueryParams(query);
-  };
+  // const onQueryChange = (query) => {
+  //   setQueryParams(query);
+  // };
 
   return (
     <>
-      <Filter query={queryParams} onQueryChange={onQueryChange} />
+      {/* <Filter query={queryParams} onQueryChange={onQueryChange} /> */}
       <div className="mvl-grid mvl-grid-6">
         <CharacterGrid
           characters={characters}

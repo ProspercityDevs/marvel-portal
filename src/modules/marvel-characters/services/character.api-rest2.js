@@ -1,24 +1,23 @@
-import { getAllPaginated } from '@/modules/core/services/marvel.api-rest';
 import { defaultMapper } from '@/modules/core/services';
 import { mapCharacterToCard } from '@/modules/marvel-characters/services';
+import { getAllPaginated } from 'src/modules/core/services/marvel.api-rest2.js';
 
 const domain = `characters`;
 
-export async function getCharatersAtPage(
+export async function getCharatersAtPage2(
   page,
   itemsPerPage,
-  name,
   { mappedBy = defaultMapper, queryParams = {} }
 ) {
-  return getAllPaginated(domain, page, name, {
+  return getAllPaginated(domain, page, {
     mappedBy,
     itemsPerPage,
     ...queryParams
   });
 }
 
-export function getCharactersForGrid(page, itemsPerPage, name) {
-  return getCharatersAtPage(page, itemsPerPage, name, {
+export function getCharactersForGrid2(page, itemsPerPage) {
+  return getCharatersAtPage2(page, itemsPerPage, {
     mappedBy: mapCharacterToCard
   });
 }
