@@ -8,7 +8,7 @@ export default function serieFilter() {
     setToggle((prevToggle) => !prevToggle);
   };
 
-  //Función para el contenedor de películas
+  //Función para el contenedor de series
   function serieList() {
     return (
       <div className="series">
