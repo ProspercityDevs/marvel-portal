@@ -15,3 +15,27 @@
     display: flex;
     gap: var(--space-xs);
 }
+.pagination{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+    gap: 5px;
+}
+.pagination .page-num{
+    padding: 8px  15px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.pagination .page-num:hover{
+    background-color: black;
+    color: white;
+}
+.pagination .active{
+    background-color: black;
+    color: white;
+}
