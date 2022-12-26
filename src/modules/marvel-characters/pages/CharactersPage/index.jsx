@@ -3,6 +3,8 @@ import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid
 import FeaturedCharacters from '../../components/FeaturedCharacteres';
 import './styles.scss';
 import CharacterProm from '@/modules/core/components/molecules/CharacterProm';
+// import CharactersList from '../../components/CharactersList';
+import SeriesList from 'src/modules/core/components/molecules/SeriesList';
 
 export function CharactersPage() {
   return (
@@ -17,6 +19,7 @@ export function CharactersPage() {
           <h1>FEATURED CHARACTERS</h1>
           <FeaturedCharacters />
           <h1>MARVEL CHARACTERS LIST</h1>
+          <SeriesList />
           <CharactersGrid />
         </div>
       </div>

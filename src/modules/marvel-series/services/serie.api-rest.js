@@ -1,6 +1,7 @@
 import { getAllPaginated } from '@/modules/core/services/marvel.api-rest';
 import { defaultMapper } from '@/modules/core/services';
-import { mapSerieToItemList } from '@/modules/marvel-characters/services';
+import { mapSerieToCard } from '../../marvel-series/services';
+import { mapSerieToList } from '../../marvel-series/services';
 
 const domain = `series`;
 
@@ -16,8 +17,14 @@ export async function getSeriesAtPage(
   });
 }
 
+export function getSeriesForGrid(page, itemsPerPage) {
+  return getSeriesAtPage(page, itemsPerPage, {
+    mappedBy: mapSerieToCard
+  });
+}
+
 export function getSeriesForList(container, itemsPerList) {
   return getSeriesAtList(container, itemsPerList, {
-    mappedBy: mapSerieToItemList
+    mappedBy: mapSerieToList
   });
 }

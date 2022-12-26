@@ -1,22 +1,20 @@
 import SearchBar from '../../atoms/SearchBar';
 import TotalResults from '../../atoms/TotalResults';
 import PropTypes from 'prop-types';
+import SerieFilter from '../MovieFilter';
 
-import MovieFilter from '../MovieFilter';
+Filter.propTypes = {
+  totalItems: PropTypes.number.isRequired
+};
 
- Filter.propTypes = {
-   totalItems: PropTypes.number.isRequired
- };
-
-
-function Filter( {totalItems}) {
+function Filter({ totalItems }) {
   return (
     <div className="mvl-character-gri-filters">
       <div className="filter_search">
-        <SearchBar />       
+        <SearchBar />
       </div>
-      <MovieFilter />
-      <TotalResults totalItems={totalItems}/>
+      <SerieFilter />
+      <TotalResults totalItems={totalItems} />
     </div>
   );
 }
