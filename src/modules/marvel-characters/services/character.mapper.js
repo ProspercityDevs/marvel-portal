@@ -2,7 +2,7 @@ import { getCharacterImage } from './character.handler';
 
 export function mapCharacterToCard(character) {
   return {
-    name: character.name,
+    name: character.title,
     image: getCharacterImage(character),
     id: character.id
   };
