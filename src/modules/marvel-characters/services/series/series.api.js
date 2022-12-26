@@ -24,5 +24,8 @@ async function getSeriesAtPage(
 function mapSeriesToCard(series) {
   return {
     name: series.title,
+    id: series.id,
+    characters: series.characters.items
+    
   };
 }

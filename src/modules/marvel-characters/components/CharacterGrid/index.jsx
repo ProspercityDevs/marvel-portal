@@ -12,19 +12,22 @@ import Filter from '@/modules/core/components/molecules/Filter';
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
-export default function CharacterGridPaginated() {
+CharacterGridPaginated.propTypes = {
+  domain: PropTypes.string
+}
+  
+export default function CharacterGridPaginated({domain}) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [queryParams, setQueryParams] = useState({});
-
+  console.log("characters"+domain);
   useEffect(() => {
     fetchCharactersAtPage();
   }, []);
   async function fetchCharactersAtPage(page = 1) {
-    const domain=`characters`
     setLoading(true);
-    const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, domain);
+    const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, domain, );
     setTotalItems(data.total);
     setCharacters(data.results);
     setLoading(false);
@@ -57,6 +60,7 @@ export default function CharacterGridPaginated() {
     </>
   );
 }
+
 
 CharacterGrid.propTypes = {
   characters: PropTypes.array.isRequired,

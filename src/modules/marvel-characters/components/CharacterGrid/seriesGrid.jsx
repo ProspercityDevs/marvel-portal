@@ -18,7 +18,7 @@ export function SeriesGridPaginated() {
     setSeries(data.results);
     
   }
-  
+  console.log( series);
   return series
   };
 

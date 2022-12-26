@@ -1,9 +1,10 @@
 import React from 'react';
-import CharacterGridPaginated  from '@/modules/marvel-characters/components/CharacterGrid';
+import  CharacterGridPaginated  from '@/modules/marvel-characters/components/CharacterGrid/index';
 import './styles.scss';
 import FeaturedCharacters from '../../components/FeaturedCharacters';
 
 export function CharacterPage() {
+ 
   return (
     <div className="mvl-characters-page">
       <header className="mvl-characters-page-header">
@@ -16,7 +17,7 @@ export function CharacterPage() {
         <FeaturedCharacters />
         <section className="mvl-section-card"></section>
         <h1>MARVEL CHARACTERS LIST</h1>
-        <CharacterGridPaginated />    
+        <CharacterGridPaginated domain={"characters"}/>    
       </div>
     </div>
   );
