@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { getCharactersForGrid } from '@/modules/marvel-characters/services/character';
 
 import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
-// import Paginator from '@/modules/core/components/molecules/Paginator';
+import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
 
 
@@ -20,7 +20,7 @@ export default function CharacterGridPaginated({domain}) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
-  // const [queryParams, setQueryParams] = useState({});
+  const [queryParams, setQueryParams] = useState({});
 
   useEffect(() => {
     fetchCharactersAtPage();
@@ -37,9 +37,9 @@ export default function CharacterGridPaginated({domain}) {
     fetchCharactersAtPage(newPage);
   };
 
-  // const onQueryChange = (query) => {
-  //   setQueryParams(query);
-  // };
+    const onQueryChange = (query) => {
+      setQueryParams(query);
+    };
 
   return (
     <>
@@ -51,12 +51,12 @@ export default function CharacterGridPaginated({domain}) {
           itemsPerPage={ITEMS_PER_PAGE}
         />
       </div>
-      {/* <Paginator
+      <Paginator
         initialPage={INITIAL_PAGE}
         itemsPerPage={ITEMS_PER_PAGE}
         totalItems={totalItems}
         onPageChange={onPageChange}
-      /> */}
+      />
       </div>
     </>
   );
