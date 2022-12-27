@@ -1,17 +1,19 @@
-import React from 'react';
-import './styles.scss'
+import './styles.scss';
+import PropTypes from 'prop-types';
 
 SerieItem.propTypes = {
-  name: PropTypes.string,
+  title: PropTypes.string,
   isSkeleton: PropTypes.bool
 };
 
-export default function SerieItem({ name, isSkeleton }) {
+export default function SerieItem({ title, isSkeleton }) {
   return (
-    <li key={index} className="series__list--item">
-              <label className="series__list--text">
-                <input value={item} type="checkbox" onChange={handleCheck} />
-                {item}
-              </label>
-    </li>  );
+    <div className="mvl-character-list" data-is-skeleton={isSkeleton}>
+        <div className="mvl-character-card__body-container">
+        <div className="mvl-character-card__body">
+          <h4 className="u-no-margin">{title}</h4>
+        </div>
+      </div>
+    </div>
+  );
 }

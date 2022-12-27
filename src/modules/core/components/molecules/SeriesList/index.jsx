@@ -68,8 +68,8 @@ function SerieList({ series, isLoading, itemsPerPage }) {
     return <EmptyState />;
   }
 
-  return series.map(({ name }, index) => (
-    <SerieItem name={name} key={index} isSkeleton={isLoading} />
+  return series.map(({ title }, index) => (
+    <SerieItem title={title} key={index} isSkeleton={isLoading} />
   ));
 }
 

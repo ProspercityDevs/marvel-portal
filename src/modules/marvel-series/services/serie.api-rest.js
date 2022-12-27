@@ -23,8 +23,8 @@ export function getSeriesForGrid(page, itemsPerPage) {
   });
 }
 
-export function getSeriesForList(container, itemsPerList) {
-  return getSeriesAtList(container, itemsPerList, {
+export function getSeriesForList(page, itemsPerPage) {
+  return getSeriesAtPage(page, itemsPerPage, {
     mappedBy: mapSerieToList
   });
 }

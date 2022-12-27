@@ -3,7 +3,7 @@ import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid
 import FeaturedCharacters from '../../components/FeaturedCharacteres';
 import './styles.scss';
 import CharacterProm from '@/modules/core/components/molecules/CharacterProm';
-// import CharactersList from '../../components/CharactersList';
+//import CharactersList from '../../components/CharactersList';
 import SeriesList from 'src/modules/core/components/molecules/SeriesList';
 
 export function CharactersPage() {

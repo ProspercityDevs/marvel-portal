@@ -11,7 +11,7 @@ export function mapSerieToCard(serie) {
 // Se agrega función para retornar la lísta de personajes
 export function mapSerieToList(serie) {
   return {
-    name: serie.name,
+    title: serie.title,
     id: serie.id
   };
 };
