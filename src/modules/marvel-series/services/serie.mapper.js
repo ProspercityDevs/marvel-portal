@@ -2,7 +2,7 @@ import { getSerieImage } from './serie.handler';
 
 export function mapSerieToCard(serie) {
   return {
-    name: serie.title,
+    title: serie.title,
     image: getSerieImage(serie),
     id: serie.id
   };
