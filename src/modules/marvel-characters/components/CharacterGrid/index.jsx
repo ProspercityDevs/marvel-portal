@@ -21,7 +21,7 @@ export default function CharacterGridPaginated({domain}) {
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
   // const [queryParams, setQueryParams] = useState({});
-  console.log("characters"+domain);
+
   useEffect(() => {
     fetchCharactersAtPage();
   }, []);
@@ -43,8 +43,8 @@ export default function CharacterGridPaginated({domain}) {
 
   return (
     <>
-      
-      <div className="mvl-grid mvl-grid-6" id="container-grid">
+      <div id="container-grid">
+      <div className="mvl-grid mvl-grid-6" >
         <CharacterGrid
           characters={characters}
           isLoading={isLoading}
@@ -57,6 +57,7 @@ export default function CharacterGridPaginated({domain}) {
         totalItems={totalItems}
         onPageChange={onPageChange}
       /> */}
+      </div>
     </>
   );
 }

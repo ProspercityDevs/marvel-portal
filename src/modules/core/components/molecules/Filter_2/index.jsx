@@ -61,9 +61,6 @@ HandleApply.propTypes = {
   domain: PropTypes.string
 }
 function HandleApply (domain) {
-  document.querySelector(".movies").click(function(){
-    document.querySelector(".movies,.movies__list").toggleClass(close);
-  });
 
   console.log("hande "+domain);
   const containerGrid = document.getElementById('container-grid');
