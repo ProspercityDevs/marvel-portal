@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
 import './styles.scss';
 import PropTypes from 'prop-types';
 import {SeriesGridPaginated} from '../../../../marvel-characters/components/CharacterGrid/seriesGrid.jsx';
@@ -60,11 +61,18 @@ HandleApply.propTypes = {
   domain: PropTypes.string
 }
 function HandleApply (domain) {
-  console.log("hande "+domain)
-  return(
-    <CharacterGridPaginated domain={domain}/>
-  )
-  
+  document.querySelector(".movies").click(function(){
+    document.querySelector(".movies,.movies__list").toggleClass(close);
+  });
+
+  console.log("hande "+domain);
+  const containerGrid = document.getElementById('container-grid');
+  ReactDOM.render(
+    <CharacterGridPaginated domain={domain}/>,
+    containerGrid,
+   
+  );
+ 
 };
 
 export default ShowMoviesList;

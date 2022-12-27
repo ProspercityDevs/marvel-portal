@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { getCharactersForGrid } from '@/modules/marvel-characters/services/character';
 
 import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
-import Paginator from '@/modules/core/components/molecules/Paginator';
+// import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
-import Filter from '@/modules/core/components/molecules/Filter';
+
 
 
 const INITIAL_PAGE = 1;
@@ -20,7 +20,7 @@ export default function CharacterGridPaginated({domain}) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
-  const [queryParams, setQueryParams] = useState({});
+  // const [queryParams, setQueryParams] = useState({});
   console.log("characters"+domain);
   useEffect(() => {
     fetchCharactersAtPage();
@@ -37,26 +37,26 @@ export default function CharacterGridPaginated({domain}) {
     fetchCharactersAtPage(newPage);
   };
 
-  const onQueryChange = (query) => {
-    setQueryParams(query);
-  };
+  // const onQueryChange = (query) => {
+  //   setQueryParams(query);
+  // };
 
   return (
     <>
-      <Filter query={queryParams} onQueryChange={onQueryChange} />
-      <div className="mvl-grid mvl-grid-6">
+      
+      <div className="mvl-grid mvl-grid-6" id="container-grid">
         <CharacterGrid
           characters={characters}
           isLoading={isLoading}
           itemsPerPage={ITEMS_PER_PAGE}
         />
       </div>
-      <Paginator
+      {/* <Paginator
         initialPage={INITIAL_PAGE}
         itemsPerPage={ITEMS_PER_PAGE}
         totalItems={totalItems}
         onPageChange={onPageChange}
-      />
+      /> */}
     </>
   );
 }
