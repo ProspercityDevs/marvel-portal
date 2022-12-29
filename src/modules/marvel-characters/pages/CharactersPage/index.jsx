@@ -4,24 +4,40 @@ import FeaturedCharacters from '../../components/FeaturedCharacteres';
 import MovieFilter from 'src/modules/core/components/molecules/MovieFilter';
 import { useState } from 'react';
 import './styles.scss';
+import ModalAuto from 'src/modules/core/components/molecules/ModalAuto/ModalAuto';
 
 export function CharacterPage() {
   const [search, setSearch] = useState('');
-  // const [updated, setUpdated] = useState('');
+  const [updated, setUpdated] = useState('');
+  const [filterEnter, setFilterEnter] = useState(false);
+
   const searcher = (e) => {
     setSearch(e.target.value);
     console.log(e.target.value);
   };
-  // const handleKeyDown = (event) => {
-  //   if (event.key === 'Enter') {
-  //     setUpdated(search);
-  //   }
-  // };
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      setUpdated(search);
+      setFilterEnter(true);
+    }
+  };
+
   function Peticion() {
-    if (search.length < 1) {
-      return <CharactersGrid n={0} search={search} />;
+    if (filterEnter == true) {
+      if (updated.length < 1) {
+        return <CharactersGrid n={0} />;
+      } else {
+        return <CharactersGrid n={1} search={search} />;
+      }
     } else {
-      return <CharactersGrid n={1} search={search} />;
+      return <CharactersGrid n={0} search={search} />;
+    }
+  }
+  function Peticion2() {
+    if (search.length >= 3) {
+      return <ModalAuto search={search} />;
+    } else {
+      <option>KEEP TYPING...</option>;
     }
   }
   return (
@@ -45,12 +61,13 @@ export function CharacterPage() {
                 <input
                   value={search}
                   onChange={searcher}
-                  // onKeyDown={handleKeyDown}
+                  onKeyDown={handleKeyDown}
                   id="filter"
                   className="mvl-character-gri-input"
                   type="text"
                   placeholder="search"
                 />
+                <Peticion2 />
               </div>
               <div className="col">
                 <div className="filtros">
