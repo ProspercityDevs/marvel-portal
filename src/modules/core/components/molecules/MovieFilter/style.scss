@@ -216,19 +216,27 @@
     position:absolute;
     display: flex;
     right: 0;
-    margin-left:-10% ;
-    margin-top: 10%;
     width: 500px;
-    margin-left:-150% ;
+    margin-left:-130% ;
     margin-top: 20%;
     width: 400px;
-    height: 400px;
+    height: 300px;
     background-color: #fff;
 }
-
+.modal-open2 {
+    position:absolute;
+    display: flex;
+    right: 0;
+    width: 500px;
+    margin-left:-130% ;
+    margin-top: 180%;
+    width: 400px;
+    height: 50px;
+    background-color: #fff; 
+}
 .boton_cancel{
     font-weight: 500;
-    margin-top: 95%;
+    margin-top: 5%;
     margin-left: 125px;
     position: absolute;
     background-color: #fff;
@@ -240,7 +248,7 @@
 .boton_reset{
     display: flex;
     font-weight: 500;
-    margin-top: 95%;
+    margin-top: 5%;
     margin-left: 63px;
     position: absolute;
     background-color: #fff;
@@ -251,7 +259,7 @@
 }
 
 .boton_aply{
-    margin-top: 95%;
+    margin-top: 5%;
     font-weight: 500;
     margin-left: 0px;
     position: absolute;

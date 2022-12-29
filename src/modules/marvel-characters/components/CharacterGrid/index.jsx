@@ -94,14 +94,8 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
     return <EmptyState />;
   }
 
-  return characters.map(({ name, image, description }, index) => (
-    <CharacterCard
-      name={name}
-      image={image}
-      key={index}
-      isSkeleton={isLoading}
-      description={description}
-    />
+  return characters.map(({ name, image }, index) => (
+    <CharacterCard name={name} image={image} key={index} isSkeleton={isLoading} />
   ));
 }
 
