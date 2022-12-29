@@ -8,6 +8,8 @@ const credentials = {
   apikey: process.env.REACT_APP_PUBLIC_KEY
 };
 
+
+
 export async function getAllPaginated(
   domain,
   page,

@@ -133,9 +133,11 @@ function Modal({ estado, closeModal }) {
       <button className="boton_reset" onClick={resetModal}>
         RESET
       </button>
-      <button className="boton_aply">APPLY</button>
+      <button className="boton_aply" /*onClick={}*/> 
+        APPLY</button>
     </div>
   );
 }
 
 export default Modal;
+
