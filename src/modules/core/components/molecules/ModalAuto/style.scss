@@ -1,0 +1,12 @@
+.modalAuto {
+    display: none;
+}
+
+.modalAuto-open {
+    z-index: 5;
+    display: flex;
+    position:absolute;
+    width: 50%;
+    height: 200px;
+    background-color: #fff;
+}
