@@ -36,7 +36,7 @@ export default function SeriesListPaginated() {
   
   return (
     <>
-      <div className="mvl-grid mvl-grid-6">
+      <div className="series_list">
         <SerieList
           series={series}
           isLoading={isLoading}

@@ -10,6 +10,7 @@ import Filter from '@/modules/core/components/molecules/Filter';
 
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
+const currentDate = new Date().toDateString();
 
 export default function CharacterGridPaginated() {
   const [totalItems, setTotalItems] = useState(0);
@@ -74,7 +75,13 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
   }
 
   return characters.map(({ name, image }, index) => (
-    <CharacterCard name={name} image={image} key={index} isSkeleton={isLoading} />
+    <CharacterCard
+      name={name}
+      image={image}
+      key={index}
+      currentDate={currentDate}
+      isSkeleton={isLoading}
+    />
   ));
 }
 
@@ -84,5 +91,5 @@ const EmptyState = () => {
 
 const CharacterGridSkeleton = ({ amount }) => {
   const items = [...Array(amount).keys()];
-  return items.map((value) => <CharacterCard key={value} isSkeleton />);
+  return items.map((value) => <CharacterCard key={value} currentDate={currentDate} isSkeleton />);
 };

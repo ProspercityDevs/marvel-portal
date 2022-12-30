@@ -8,8 +8,8 @@ const credentials = {
   apikey: process.env.REACT_APP_PUBLIC_KEY
 };
 
-// const nameStartsWith3 = {
-//   nameStartsWith: 'bar'
+// const order = {
+//   orderBy: '-name'
 // };
 
 export async function getAllPaginated(
@@ -31,7 +31,7 @@ export async function getAll(domain, { mappedBy = defaultMapper, queryParams = {
   return getAndMap(`${BASE_URL}${domain}`, {
     mappedBy,
     queryParams: {
-      // ...nameStartsWith3,
+      //...order,
       ...queryParams,
       ...credentials
     }
