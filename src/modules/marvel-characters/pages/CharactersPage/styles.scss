@@ -16,11 +16,16 @@
     color: var(--black);
     flex-direction: column;
     width: 100%;
+    background-color: var(--black);
+}
+
+.mvl-characters-page-banner{
+    background-color: var(--black);
 }
 
 .mvl-section-card{
     background-image: url("/assets/images/banner-characters.png");
-    background-color: black;
+    background-color: var(--black);
     min-height: 250px;
     display: flex;
     justify-content:center;
@@ -33,9 +38,9 @@
 .main
 {
   background-color: var(--white);
+  color: var(--black);
 }
 
-.container
-{
-    color: vars(--black);
+.u-no-margin{
+    color: var(--black);   
 }

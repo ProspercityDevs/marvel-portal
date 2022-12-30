@@ -14,7 +14,7 @@ function SearchBar() {
     <div className="filter_search">
       <RiSearch2Line className="icon_search" />
       <input
-        className="input-nav"
+        className="input-search"
         placeholder="SEARCH"
         value={searchValue}
         onChange={onSearchValueChange}

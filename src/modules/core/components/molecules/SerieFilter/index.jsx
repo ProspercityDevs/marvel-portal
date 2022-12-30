@@ -24,7 +24,7 @@ export default function SerieFilter() {
     console.log(updatedList);
   };
 
-  //Función para el contenedor de películas
+  //Función para el contenedor de series
   function SeriesList() {
     return (
       <SeriesListPaginated />
