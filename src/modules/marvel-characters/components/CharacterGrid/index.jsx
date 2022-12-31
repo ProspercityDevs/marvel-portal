@@ -20,7 +20,7 @@ export default function CharacterGridPaginated({domain}) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
-  const [queryParams, setQueryParams] = useState({});
+  
 
   useEffect(() => {
     fetchCharactersAtPage();
@@ -36,11 +36,7 @@ export default function CharacterGridPaginated({domain}) {
   const onPageChange = (newPage) => {
     fetchCharactersAtPage(newPage);
   };
-
-    const onQueryChange = (query) => {
-      setQueryParams(query);
-    };
-
+  
   return (
     <>
       <div id="container-grid">
