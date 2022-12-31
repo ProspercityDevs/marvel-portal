@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 // import { Multiselect } from 'multiselect-react-dropdown';
 // import { useState } from 'react';
-import ButtonArrow from '../Filter_2/ButtonArrow';
+import ButtonArrow from '../Filter_2';
 // import {AiFillCaretDown} from "react-icons/ai";
 
 
