@@ -5,23 +5,8 @@ import SeriesListPaginated from '../SeriesList';
 
 export default function SerieFilter() {
   const [toggle, setToggle] = useState(false);
-  const [checked, setChecked] = useState([]);
-
   const handleToggle = () => {
     setToggle((prevToggle) => !prevToggle);
-  };
-
-  let updatedList = [...checked];
-
-  const handleCheck = (e) => {
-    if (e.target.checked) {
-      updatedList = [...checked, e.target.value];
-    } else {
-      updatedList.splice(checked.indexOf(e.target.value), 1);
-    }
-    setChecked(updatedList);
-    // console.log(checked);
-    console.log(updatedList);
   };
 
   //Función para el contenedor de series
@@ -31,11 +16,7 @@ export default function SerieFilter() {
     )
   }
 
-  const close = () => {
-    setToggle(false);
-  };
-
-  //Este es el "return" de <MovieFilter />
+  //Este es el "return" de <SerieFilter />
   return (
     <div className="filters">
       <div className="filters__serie" onClick={handleToggle}>

@@ -7,3 +7,17 @@
     overflow: auto;
     box-sizing: border-box;
   }
+
+  .series__list--item {
+    margin-bottom: inherit;
+  }
+ 
+  .series__list input {
+    cursor: pointer;
+    margin-right: 15px;
+  }
+ 
+  .series__list--text {
+    padding-left: 15px;
+    cursor: pointer;
+  }

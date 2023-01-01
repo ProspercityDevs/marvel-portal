@@ -8,10 +8,6 @@ const credentials = {
   apikey: process.env.REACT_APP_PUBLIC_KEY
 };
 
-// const order = {
-//   orderBy: '-name'
-// };
-
 export async function getAllPaginated(
   domain,
   page,
@@ -27,11 +23,38 @@ export async function getAllPaginated(
   });
 }
 
+export async function getInverseAllPaginated(
+  domain,
+  page,
+  order,
+  { mappedBy = defaultMapper, queryParams = {}, itemsPerPage = PAGENATE_BY }
+) {
+  return getInverseAll(domain, order, {
+    mappedBy,
+    queryParams: {
+      ...queryParams,
+      limit: itemsPerPage,
+      offset: getOffset(page, itemsPerPage)
+    }
+  });
+}
+
+
 export async function getAll(domain, { mappedBy = defaultMapper, queryParams = {} }) {
   return getAndMap(`${BASE_URL}${domain}`, {
     mappedBy,
     queryParams: {
-      //...order,
+      ...queryParams,
+      ...credentials
+    }
+  });
+}
+
+export async function getInverseAll(domain, order, { mappedBy = defaultMapper, queryParams = {} }) {
+  return getAndMap(`${BASE_URL}${domain}`, {
+    mappedBy,
+    queryParams: {
+      ...order,
       ...queryParams,
       ...credentials
     }

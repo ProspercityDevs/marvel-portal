@@ -6,7 +6,7 @@ SerieItem.propTypes = {
   isSkeleton: PropTypes.bool
 };
 
-export default function SerieItem({ title, isSkeleton }) {
+export default function SerieItem({ title,  isSkeleton }) {
   return (
     <label className="series__list--text">
       <input value={false} type="checkbox" />

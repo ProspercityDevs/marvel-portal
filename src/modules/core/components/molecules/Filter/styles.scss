@@ -23,3 +23,12 @@
   display: block;
   justify-content: flex-end;
 }
+
+.series {
+  background-color: white;
+  width: 480px;
+  position: absolute;
+  border: 1px solid #dfdfdf;
+  z-index: 5;
+  right: 0;
+}
