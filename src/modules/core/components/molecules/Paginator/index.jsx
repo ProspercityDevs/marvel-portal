@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
+import {GrNext,GrPrevious} from 'react-icons/gr'
 
 import './styles.scss';
 
@@ -29,12 +30,12 @@ export default function Pagination({ totalItems, pageSize, initialPage, onPageCh
 
       <ReactPaginate
         breakLabel="..."
-        nextLabel=">"
+        nextLabel={<GrNext />}
         onPageChange={handlePageClick}
         marginPagesDisplayed={1}
         pageRangeDisplayed={3}
         pageCount={pageCount}
-        previousLabel="<"
+        previousLabel={<GrPrevious />}
         renderOnZeroPageCount={null}
         containerClassName = "pagination"
         nextLinkClassName='page-num'

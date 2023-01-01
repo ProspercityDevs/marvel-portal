@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom/client';
 // import { RiArrowDropDownFill } from 'react-icons/ri';
 import {Dropdown, DropdownMenu, DropdownToggle} from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {SeriesGridPaginated} from '../../../../marvel-characters/components/CharacterGrid/seriesGrid.jsx';
 import CharacterGridPaginated from 'src/modules/marvel-characters/components/CharacterGrid/index';
 

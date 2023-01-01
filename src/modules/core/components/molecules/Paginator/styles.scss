@@ -1,38 +1,29 @@
-.mvl-paginator{
-    display: flex;
+
+.pagination{
     gap: var(--space-lg);
     padding: var(--space-md);
-    width: 100%;
-    justify-content: flex-end;
     box-sizing: border-box;
     position: sticky;
-    bottom: 0;
     background: var(--color-body);
     z-index: 3;
-}
-
-.mvl-paginator__actions{
-    display: flex;
-    gap: var(--space-xs);
-}
-.pagination{
-    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
     font-size: 1.5rem;
-    gap: 5px;
 }
 .pagination .page-num{
+    align-items: center;
+    text-decoration:none;
     padding: 8px  15px;
     border-radius: 3px;
     cursor: pointer;
     font-weight: 400;
+    color: black;
 }
 
 .pagination .page-num:hover{
-    background-color: black;
+    background-color: gray;
     color: white;
 }
 .pagination .active{
