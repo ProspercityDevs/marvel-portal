@@ -11,7 +11,7 @@ Pagination.propTypes = {
   onPageChange: PropTypes.func
 };
 
-export default function Pagination({ totalItems, pageSize = 24, initialPage = 1, onPageChange }) {
+export default function Pagination({ totalItems, pageSize, initialPage, onPageChange }) {
   const [currentItem, setCurrentItem] = useState(initialPage);
   const pageCount = Math.ceil(totalItems/pageSize);
   

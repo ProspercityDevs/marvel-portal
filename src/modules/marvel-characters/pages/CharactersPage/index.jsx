@@ -6,6 +6,7 @@ import Filter from '@/modules/core/components/molecules/Filter';
 
 
 export function CharacterPage() {
+  console.log('characterpage')
   return (
     <div className="mvl-characters-page">
       <header className="mvl-characters-page-header">

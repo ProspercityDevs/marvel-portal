@@ -11,7 +11,7 @@ import CharacterGridPaginated from 'src/modules/marvel-characters/components/Cha
 
 
 function ButtonArrow() {
-  const series=SeriesGridPaginated();
+  const series=SeriesGridPaginated()
   const [domain, setDomain]=useState("");
   const [toggle, setToggle] = useState(false);
   const domainDefault="characters";
