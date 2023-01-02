@@ -4,46 +4,40 @@ import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid
 import FeaturedCharacters from '../../components/FeaturedCharacteres';
 import './styles.scss';
 import CharacterProm from '@/modules/core/components/molecules/CharacterProm';
-import FilteredCharacterListPaginated, { FilteredCharactersListPaginated } from '../../components/FilteredCharactersList';
-//import SeriesList from 'src/modules/core/components/molecules/SeriesList';
-//import SerieFilter from 'src/modules/core/components/molecules/SerieFilter';
+import FilteredCharacterListPaginated from '../../components/FilteredCharactersList';
 import SearchBar from 'src/modules/core/components/atoms/SearchBar';
-//import { CharacterList } from '../../components/CharactersList';
 import PropTypes from 'prop-types';
 
 export function CharactersPage() {
+  const [searchValue, setSearchValue] = useState('');
 
-const [searchValue, setSearchValue] = useState('');
+  Autocomplete.propTypes = {
+    searchValue: PropTypes.string
+  };
 
-// console.log('Busqueda: '+searchValue);
-
-Autocomplete.propTypes ={
-  searchValue: PropTypes.string
-}
-
-function Autocomplete( {searchValue} ) {
- 
-
-  if (searchValue.length < 1) {
-    console.log('Ingrese busqueda: ' + searchValue);
-  } else {
-    if (searchValue.length >= 1 && searchValue.length < 3) {
-      console.log('Continúe ingresando: ' + searchValue);
+  function Autocomplete({ searchValue }) {
+    if (searchValue.length < 1) {
+      console.log('Ingrese busqueda: ' + searchValue);
     } else {
-      console.log('Búsqueda igual o mayor a 3: ' + searchValue);
-      return(
-        <>
-          <span>{searchValue}</span>
-          <FilteredCharacterListPaginated searchValue={searchValue} />
-        </>
-         
-      )
-      
+      if (searchValue.length >= 1 && searchValue.length < 3) {
+        console.log('Continúe ingresando: ' + searchValue);
+      } else {
+        console.log('Búsqueda igual o mayor a 3: ' + searchValue);
+        return (
+          <>
+            <div>
+              <span>{searchValue}</span>
+            </div>
+            <div>
+              <span>{searchValue.length}</span>
+            </div>
+            <FilteredCharacterListPaginated searchValue={searchValue} />
+          </>
+        );
+      }
     }
   }
 
-}
-  
   return (
     <>
       <div className="mvl-characters-page">
