@@ -7,6 +7,7 @@ import CharacterProm from '@/modules/core/components/molecules/CharacterProm';
 import FilteredCharacterListPaginated from '../../components/FilteredCharactersList';
 import SearchBar from 'src/modules/core/components/atoms/SearchBar';
 import PropTypes from 'prop-types';
+import OrderCharacters from 'src/modules/core/components/atoms/OrderCharacters';
 
 export function CharactersPage() {
   const [searchValue, setSearchValue] = useState('');
@@ -53,6 +54,7 @@ export function CharactersPage() {
             <h1 className="u-no-margin">MARVEL CHARACTERS LIST</h1>
             <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
             <Autocomplete searchValue={searchValue} />
+            <OrderCharacters />
             <CharactersGrid searchValue={searchValue} />
           </div>
         </div>
