@@ -6,10 +6,14 @@ import CharacterItem from '../../../core/components/atoms/CharacterItem';
 import './styles.scss';
 
 
-const INITIAL_PAGE = 1;
-const ITEMS_PER_PAGE = 24;
 
-export default function CharacterListPaginated() {
+const INITIAL_PAGE = 1;
+const ITEMS_PER_PAGE = 5;
+
+
+export default function FilteredCharacterListPaginated({searchValue}) {
+  
+  console.log("La búsqueda empieza con: " + searchValue);
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
@@ -20,12 +24,18 @@ export default function CharacterListPaginated() {
   }, []);
 
   async function fetchCharactersAtPage(page = 1) {
+    let letters = {
+      nameStartsWith: 'spi'
+    };
+  
+    console.log("el nameStartsWith es: " + letters.nameStartsWith);
+
     setLoading(true);
     const data = await getCharactersForList(page, ITEMS_PER_PAGE);
     setTotalItems(data.total);
     setCharacters(data.results);
     setLoading(false);
-    //console.log('Total Personajes: ', data.total);
+    console.log('Total Personajes: ', data.total);
   }
 
 //   const onPageChange = (newPage) => {

@@ -61,6 +61,16 @@ export async function getInverseAll(domain, order, { mappedBy = defaultMapper, q
   });
 }
 
+export async function getLettersFiltered(domain, { mappedBy = defaultMapper, queryParams = {} }) {
+  return getAndMap(`${BASE_URL}${domain}`, {
+    mappedBy,
+    queryParams: {
+      ...queryParams,
+      ...credentials
+    }
+  });
+}
+
 function getOffset(page, itemsPerPage) {
   const currentOffset = page - 1;
   return currentOffset * itemsPerPage;

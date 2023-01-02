@@ -4,11 +4,11 @@ import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid
 import FeaturedCharacters from '../../components/FeaturedCharacteres';
 import './styles.scss';
 import CharacterProm from '@/modules/core/components/molecules/CharacterProm';
-import CharactersList from '../../components/CharactersList';
+import FilteredCharacterListPaginated, { FilteredCharactersListPaginated } from '../../components/FilteredCharactersList';
 //import SeriesList from 'src/modules/core/components/molecules/SeriesList';
 //import SerieFilter from 'src/modules/core/components/molecules/SerieFilter';
 import SearchBar from 'src/modules/core/components/atoms/SearchBar';
-//import { CharacterListPaginated } from '../../components/CharactersList';
+//import { CharacterList } from '../../components/CharactersList';
 import PropTypes from 'prop-types';
 
 export function CharactersPage() {
@@ -17,11 +17,13 @@ const [searchValue, setSearchValue] = useState('');
 
 // console.log('Busqueda: '+searchValue);
 
-Autocompletar.propTypes ={
+Autocomplete.propTypes ={
   searchValue: PropTypes.string
 }
 
-function Autocompletar( {searchValue} ) {
+function Autocomplete( {searchValue} ) {
+ 
+
   if (searchValue.length < 1) {
     console.log('Ingrese busqueda: ' + searchValue);
   } else {
@@ -30,7 +32,11 @@ function Autocompletar( {searchValue} ) {
     } else {
       console.log('Búsqueda igual o mayor a 3: ' + searchValue);
       return(
-        <CharactersList />
+        <>
+          <span>{searchValue}</span>
+          <FilteredCharacterListPaginated searchValue={searchValue} />
+        </>
+         
       )
       
     }
@@ -52,7 +58,7 @@ function Autocompletar( {searchValue} ) {
             <FeaturedCharacters />
             <h1 className="u-no-margin">MARVEL CHARACTERS LIST</h1>
             <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
-            <Autocompletar searchValue={searchValue} />
+            <Autocomplete searchValue={searchValue} />
             <CharactersGrid searchValue={searchValue} />
           </div>
         </div>

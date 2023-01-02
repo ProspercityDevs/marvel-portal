@@ -30,7 +30,7 @@ export default function CharacterGridPaginated({ searchValue }) {
   // };
 
   const order = {
-    orderBy: '-name'
+    orderBy: 'name'
   };
 
   useEffect(() => {
