@@ -3,7 +3,8 @@
     flex-direction: column;
     align-items: center;
     gap: var( --space-lg);
-    background-color: var(--color-primary-dark);
+    background-color: var(--white);;
+    margin-bottom: 30px ;
 }
 
 .mvl-characters-page-header{
@@ -12,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items:center;
-    color: var(--color-accent);
+    color: var(--black);
     flex-direction: column;
     width: 100%;
 }
@@ -31,10 +32,10 @@
 
 .main
 {
-  background-color: black;
+  background-color: var(--white);
 }
 
 .container
 {
-    color: white;
+    color: var(--black);
 }
