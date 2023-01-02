@@ -60,9 +60,8 @@
 .main-footer__primary-links{
   .ul{
     list-style: none;
-    font-weight: 800;
-    margin: 0;
-    padding: 0;
+    margin: none;
+    padding: none;
   }
   margin-right: 60px;
   -webkit-box-flex: 1;
@@ -73,7 +72,7 @@
   margin-top: -2.5%;
 
   
-}
+} //AQUI
 
 .main-footer__link{
   display: block;
@@ -103,7 +102,7 @@
   font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
   margin-top: -2.7%;
    
-}
+} //AQUI 
 
 .main-footer__link_1{
   display: block;
@@ -124,11 +123,11 @@
 
 .main-footer__promotion{
   padding-left: 30px;
-  width: 90%;
+  // width: 90%;
   margin-right: 60px;
   left: -200vw;
   
-}
+}//AQUI
 
 .Marvel_Insider{
   justify-content: left;
@@ -241,10 +240,11 @@
   margin-top: 270px;
   position: relative;
 }
+//AQUI
 
  .main-footer__legal_flex-wrapper_main-footer__legal-main{
      justify-content: center;
-     width: 99vw;
+    //  width: 99vw;
      margin-top: -5%;
      align-items: center;
      margin-left: -13%;
