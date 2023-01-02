@@ -1,79 +1,76 @@
-.mvl-navbar{
-    padding: 10px;
-    background-color: var(--color-primary-dark);
-    height: 60px;
-    display: inline-flex;
-    width: 100vw;
-    justify-content: space-between;
-    padding: 16px 100px;
-    box-sizing: border-box;
+.mvl-navbar {
+  padding: 10px;
+  background-color: var(--color-primary-dark);
+  height: 60px;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 16px 100px;
+  box-sizing: border-box;
 }
 
-
-
-.mvl-navbar--left{
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
+.mvl-navbar--left {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
 }
 
-.mvl-navbar-item{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mvl-navbar-item {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.mvl-navbar-item--text{
-    color: var(--color-primary-light);
-    text-decoration: none;
-    background-color: var(--color-primary-dark);
-    font-weight: bold;
-    &:hover{
+.mvl-navbar-item--text {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  background-color: var(--color-primary-dark);
+  font-weight: bold;
+  &:hover {
     color: var(--color-accent);
-    }
+  }
 }
 
-.mlv-navbar__image{
-    margin-right: 60px;
+.mlv-navbar__image {
+  margin-right: 60px;
 }
 
-.mvl-navbar__actions{
-    height: 100%;
-    gap: 16px;
+.mvl-navbar__actions {
+  height: 100%;
+  gap: 16px;
 }
 
-.mvl-navbar-item--text:hover{
-    border-bottom: solid 2px var(--color-logo);
-    
+.mvl-navbar-item--text:hover {
+  border-bottom: solid 2px var(--color-logo);
 }
-.mvl-navbar__actions{
-    display: flex;
-    justify-content: space-between;
-}
-
-.mvl-navbar__img{
-    max-height: 100%;
+.mvl-navbar__actions {
+  display: flex;
+  justify-content: space-between;
 }
 
+.mvl-navbar__img {
+  max-height: 100%;
+}
 
-  
 .typeahead__input {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    font: 800 26px/1 RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border: 0;
-    border-bottom: 2px solid #151515;
-    width: 45%;
-    padding-bottom: .4375rem;
-    padding-left: 1.875rem;
-    border-radius: 0;
-    }
-    :focus {outline-color:yellow}
-     
-    /* DESDE ACA agregamos cositas para la cortinilla roj4 EN EL CARD
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font: 800 26px/1 RobotoCondensed, Trebuchet MS, Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 0;
+  border-bottom: 2px solid #151515;
+  width: 45%;
+  padding-bottom: 0.4375rem;
+  padding-left: 1.875rem;
+  border-radius: 0;
+}
+:focus {
+  outline-color: yellow;
+}
+
+/* DESDE ACA agregamos cositas para la cortinilla roj4 EN EL CARD
     .mvl-card--explore 
     .card-thumb-frame figure img {
         -webkit-transform: scaleX(1);
@@ -84,21 +81,19 @@
         -o-object-position: top center;
         object-position: top center;
         }*/
-        .card-body.is-sliding:before {
-            background: #e62429;
-            bottom: 100%;
-            content: "{name}";
-            height: 100%;
-            left: 0;
-            position: absolute;
-            -webkit-transition-timing-function: cubic-bezier(.75,0,.125,1);
-            transition-timing-function: cubic-bezier(.75,0,.125,1);
-            -webkit-transition: -webkit-transform .3s;
-            transition: -webkit-transform .3s;
-            transition: transform .3s;
-            transition: transform .3s,-webkit-transform .3s;
-            width: 100%;
-            z-index: -1;
-        }
-
-       
+.card-body.is-sliding:before {
+  background: #e62429;
+  bottom: 100%;
+  content: '{name}';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  width: 100%;
+  z-index: -1;
+}

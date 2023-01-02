@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import { RiSearch2Line } from 'react-icons/ri';
-import ButtonMovies from '../../atoms/ButtonArrow';
+// import { RiSearch2Line } from 'react-icons/ri';
+import SearchBar from '../../atoms/SearchBar';
+import MovieFilter from './SerieFilter';
 
 Filter.propTypes = {
   totalItems: PropTypes.number.isRequired
@@ -9,22 +10,23 @@ Filter.propTypes = {
 function Filter({ totalItems }) {
   return (
     <div className="mvl-character-gri-filters">
-      <div>
-        <RiSearch2Line />
+      <div className="filter_search">
+        <SearchBar />
+        {/* <RiSearch2Line />
         <input
           type="search"
           placeholder="SEARCH"
           className="input-nav"
-          value=""
-          autoComplete="off"
+          //value=""
+          autoComplete="on"
           aria-autocomplete="list"
           aria-controls="reac-autowhatever-1"
           readOnly
-        />
+        /> */}
       </div>
-      <ButtonMovies />
-      <div className="Container-span">
-        <span className="span-results">{totalItems} RESULTADOS</span>
+      <MovieFilter />
+      <div>
+        <h5 className="results_totalItems">{totalItems} RESULTS</h5>
       </div>
     </div>
   );
