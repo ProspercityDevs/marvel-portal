@@ -39,7 +39,7 @@ export default function CharacterGridPaginated({ searchValue }) {
 
   async function fetchCharactersAtPage(page = 1) {
     
-    const option = 1;
+    const option = 2;
     if (option == 1){
       setLoading(true);
       const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);

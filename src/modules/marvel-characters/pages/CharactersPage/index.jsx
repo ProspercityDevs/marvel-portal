@@ -4,23 +4,40 @@ import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid
 import FeaturedCharacters from '../../components/FeaturedCharacteres';
 import './styles.scss';
 import CharacterProm from '@/modules/core/components/molecules/CharacterProm';
-//import CharactersList from '../../components/CharactersList';
+import CharactersList from '../../components/CharactersList';
 //import SeriesList from 'src/modules/core/components/molecules/SeriesList';
 //import SerieFilter from 'src/modules/core/components/molecules/SerieFilter';
 import SearchBar from 'src/modules/core/components/atoms/SearchBar';
+//import { CharacterListPaginated } from '../../components/CharactersList';
+import PropTypes from 'prop-types';
 
 export function CharactersPage() {
 
-  const [searchValue, setSearchValue] = useState('');
+const [searchValue, setSearchValue] = useState('');
 
-  // let searchedCharacters=[];
+// console.log('Busqueda: '+searchValue);
 
-  // if(!searchValue.length>=3){
+Autocompletar.propTypes ={
+  searchValue: PropTypes.string
+}
 
-  // }else{
+function Autocompletar( {searchValue} ) {
+  if (searchValue.length < 1) {
+    console.log('Ingrese busqueda: ' + searchValue);
+  } else {
+    if (searchValue.length >= 1 && searchValue.length < 3) {
+      console.log('Continúe ingresando: ' + searchValue);
+    } else {
+      console.log('Búsqueda igual o mayor a 3: ' + searchValue);
+      return(
+        <CharactersList />
+      )
+      
+    }
+  }
 
-  // }
-
+}
+  
   return (
     <>
       <div className="mvl-characters-page">
@@ -35,8 +52,9 @@ export function CharactersPage() {
             <FeaturedCharacters />
             <h1 className="u-no-margin">MARVEL CHARACTERS LIST</h1>
             <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
+            <Autocompletar searchValue={searchValue} />
             <CharactersGrid searchValue={searchValue} />
-          </div>              
+          </div>
         </div>
       </div>
       <CharacterProm />
