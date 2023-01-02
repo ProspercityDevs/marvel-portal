@@ -9,12 +9,14 @@ const credentials = {
 export async function getAllPaginated(
   domain,
   page,
+  name={},
   { mappedBy, queryParams, itemsPerPage}
 ) {
   return getAll(domain, {
     mappedBy,
     queryParams: {
       ...queryParams,
+      ...name,
       limit: itemsPerPage,
       offset: getOffset(page, itemsPerPage)
     }
@@ -25,7 +27,6 @@ export async function getAllPaginated(
 export  async function getAll(domain,  { mappedBy, queryParams = {} }) {
   return getAndMap(`${BASE_URL}${domain}`, {
     mappedBy,
-   
     queryParams: {
       ...queryParams,
       ...credentials

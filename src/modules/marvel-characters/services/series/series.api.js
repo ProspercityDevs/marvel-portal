@@ -1,10 +1,9 @@
 import { getAllPaginated } from '@/modules/core/services/marvel.api-rest';
 
 export function getSeriesForGrid(page, itemsPerPage, domain) {
-
   return getSeriesAtPage(page, itemsPerPage, domain, {
     mappedBy: mapSeriesToCard
-  });
+  })
 }
 
 async function getSeriesAtPage(
@@ -13,7 +12,8 @@ async function getSeriesAtPage(
   domain,
   { mappedBy, queryParams = {} }
 ) {
-  return getAllPaginated(domain, page, {
+  const name="";
+  return getAllPaginated(domain, page,name, {
     mappedBy,
     itemsPerPage,
     ...queryParams
@@ -24,7 +24,39 @@ function mapSeriesToCard(series) {
   return {
     name: series.title,
     id: series.id,
-    characters: series.characters.items
-    
+    characters: series.characters.items,
+    nameCharacters:series.name
   };
 }
+
+
+
+
+
+
+export function getItemsName(page, itemsPerPage, domain) {
+  return getItemsAtPage(page, itemsPerPage, domain, {
+    mappedBy: mapItemsToCard
+  })
+}
+
+async function getItemsAtPage(
+  page,
+  itemsPerPage,
+  domain,
+  { mappedBy, queryParams = {} }
+) {
+  const name="";
+  return getAllPaginated(domain, page,name, {
+    mappedBy,
+    itemsPerPage,
+    ...queryParams
+  });
+}
+
+function mapItemsToCard(items) {
+  return {
+    name: items.name, 
+  };
+}
+

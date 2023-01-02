@@ -13,30 +13,34 @@ const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
 CharacterGridPaginated.propTypes = {
-  domain: PropTypes.string
+  domain: PropTypes.string,
+  name: PropTypes.any
 }
-export default function CharacterGridPaginated({domain}) {
-
+export default function CharacterGridPaginated({domain,name}) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(true);
+
   useEffect(() => {
     fetchCharactersAtPage();
-  }, []);
+  },[]);
+  
+  
+  async function fetchCharactersAtPage(page = INITIAL_PAGE) {
+      const data = await getCharactersForGrid(page,ITEMS_PER_PAGE, domain, name);
+      setTotalItems(data.total);
+      setCharacters(data.results);
+      setLoading(false);
+  }
   
 
-  async function fetchCharactersAtPage(page = INITIAL_PAGE) {
-    const data = await getCharactersForGrid(page,ITEMS_PER_PAGE, domain);
-    setTotalItems(data.total);
-    setCharacters(data.results);
-    setLoading(false);
-  }
   const onPageChange = (newPage) => {
     fetchCharactersAtPage(newPage);
   };
   if(isLoading){
     return <EmptyState2 />;
   };
+  
 
   return (
     <>
@@ -44,7 +48,8 @@ export default function CharacterGridPaginated({domain}) {
         <div className="mvl-grid mvl-grid-6" >
           <CharacterGrid
             characters={characters}
-            isLoading={isLoading} 
+            isLoading={isLoading}
+            // text={name} 
           />
         </div>
         <Paginator
@@ -59,17 +64,22 @@ export default function CharacterGridPaginated({domain}) {
 }
 
 
+
 CharacterGrid.propTypes = {
   characters: PropTypes.array.isRequired,
   isLoading: PropTypes.bool,
   itemsPerPage: PropTypes.number,
+  // text:PropTypes.string
 };
 
 function CharacterGrid({ characters, isLoading}) {
   if (!isLoading && characters.length === 0) {
     return <EmptyState />;
-  };
-
+  // }if(text.length>=0&&characters.length==0){
+  //   return <EmptyState />;
+  // }
+  
+  }console.log('charactersgrid')
   return characters.map(({ name, image, description}, index) => (
     <CharacterCard name={name} image={image} description={description} key={index} isSkeleton={isLoading} />
   ));

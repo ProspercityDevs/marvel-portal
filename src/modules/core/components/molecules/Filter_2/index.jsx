@@ -5,13 +5,13 @@ import ReactDOM from 'react-dom/client';
 // import { RiArrowDropDownFill } from 'react-icons/ri';
 import {Dropdown, DropdownMenu, DropdownToggle} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {SeriesGridPaginated} from '../../../../marvel-characters/components/CharacterGrid/seriesGrid.jsx';
-import CharacterGridPaginated from 'src/modules/marvel-characters/components/CharacterGrid/index';
+import { SeriesGridPaginated } from '../../../../marvel-characters/components/CharacterGrid/itemnsName.jsx';
+import CharacterGridPaginated from 'src/modules/marvel-characters/components/CharacterGrid/index.jsx';
 
 
 
 function ButtonArrow() {
-  const series=SeriesGridPaginated()
+  let series=SeriesGridPaginated();
   const [domain, setDomain]=useState("");
   const [toggle, setToggle] = useState(false);
   const domainDefault="characters";
@@ -69,11 +69,11 @@ HandleApply.propTypes = {
   domain: PropTypes.string
 }
 function HandleApply (domain) {
-
+  const name="";
   console.log("hande "+domain);
   const root2 = ReactDOM.createRoot(document.getElementById('container-grid'));
   root2.render(
-    <CharacterGridPaginated domain={domain}/>, 
+    <CharacterGridPaginated busqueda={name} domain={domain}/>, 
   );
  
 };

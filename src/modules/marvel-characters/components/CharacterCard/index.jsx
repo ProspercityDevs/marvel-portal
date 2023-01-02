@@ -19,6 +19,7 @@ export default function CharacterCard({ image, name,description, isSkeleton}) {
     }
     return subNameValue
   }
+  console.log('characterscard')
   return (
     <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
       <div className="mvl-character-card__image-container">

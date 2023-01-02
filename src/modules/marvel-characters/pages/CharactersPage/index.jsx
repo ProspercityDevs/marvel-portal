@@ -1,11 +1,12 @@
 import React from 'react';
-import  CharacterGridPaginated  from '@/modules/marvel-characters/components/CharacterGrid/index';
 import './styles.scss';
 import FeaturedCharacters from '../../components/FeaturedCharacters';
 import Filter from '@/modules/core/components/molecules/Filter';
+import  CharacterGridPaginated  from '@/modules/marvel-characters/components/CharacterGrid/index';
 
 
 export function CharacterPage() {
+  const name={};
   console.log('characterpage')
   return (
     <div className="mvl-characters-page">
@@ -22,9 +23,7 @@ export function CharacterPage() {
         <Filter />
           
       </div>
-      <div >
-      <CharacterGridPaginated domain={"characters"}/> 
-      </div>
+      <CharacterGridPaginated domain={`characters`} name={name}/>
     </div>
   );
 }
