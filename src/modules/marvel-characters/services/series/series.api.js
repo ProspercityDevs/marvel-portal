@@ -31,9 +31,6 @@ function mapSeriesToCard(series) {
 
 
 
-
-
-
 export function getItemsName(page, itemsPerPage, domain) {
   return getItemsAtPage(page, itemsPerPage, domain, {
     mappedBy: mapItemsToCard

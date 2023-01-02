@@ -10,13 +10,10 @@ function OnChangeName(text){
   const name={
     nameStartsWith:text
   }
-  
-  console.log(CharacterGridPaginated.characters)
   const root3 = ReactDOM.createRoot(document.getElementById('container-grid'));
   root3.render(
     <CharacterGridPaginated name={name} domain={`characters`}/>, 
   );
-
 }
 
 export default function Filter() {
@@ -28,15 +25,17 @@ export default function Filter() {
   const onChangeValue=((e)=>{
     setText(e.target.value);
   })
-  console.log(text)
+ 
   if(text.length>2){
     autoComplete()
   };
+
   async function autoComplete(){
     const valueInput=inputElem.value;
     const resultados =results.filter((result)=>{
       return result.name.toLowerCase().startsWith(valueInput.toLowerCase())
     });
+    const resultsElem=document.getElementById("autocomplete-results");
     resultsElem.innerHTML = resultados.map((result, index) => {
       const isSelected = index === 0;
       return `
@@ -58,11 +57,11 @@ export default function Filter() {
     }
   })
   
-  const selectItem=((node) =>{
-    if (node) {
-      inputElem.value = node.innerText;
+  const selectItem=((e) =>{
+    if (e) {
+      inputElem.value = e.innerText;
       hideResults();
-      OnChangeName(node.innerText)
+      OnChangeName(e.innerText)
     }
   })
   
@@ -71,15 +70,22 @@ export default function Filter() {
     resultsElem.classList.add('hidden');
   })
  
-  
   const handler=((e)=>{if(e.key=="Enter"){
     OnChangeName(text);
   }})
   return (
     <>
       <div className="mvl-character-gri-filters">
-        <input className="mvl-container-search-left" id="input-search" type="text" value={text} onChange={onChangeValue} onKeyDown={handler} placeholder="SEARCH"  aria-label='Search'
-      aria-autocomplete='both'/>
+        <input 
+        className="mvl-container-search-left" 
+        id="input-search" type="text" 
+        value={text} 
+        onChange={onChangeValue} 
+        onKeyDown={handler} 
+        placeholder="SEARCH"  
+        aria-label='Search'
+        aria-autocomplete='both'
+        />
         <FontAwesomeIcon icon={faMagnifyingGlass} className="search-container__icon" />
         <ul
         id='autocomplete-results'

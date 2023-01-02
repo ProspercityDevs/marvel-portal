@@ -18,6 +18,7 @@ export function CharacterPage() {
       <div className="container">
         <h1>FEATURED CHARACTERS</h1>
         <FeaturedCharacters />
+      
         <section className="mvl-section-card"></section>
         <h1>MARVEL CHARACTERS LIST</h1>
         <Filter />

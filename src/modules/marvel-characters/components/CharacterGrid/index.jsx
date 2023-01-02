@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
 import { getCharactersForGrid } from '@/modules/marvel-characters/services/character';
-
 import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
 import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
-
-
 
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;

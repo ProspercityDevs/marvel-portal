@@ -24,7 +24,7 @@ export async function getAllPaginated(
 }
 
 
-export  async function getAll(domain,  { mappedBy, queryParams = {} }) {
+export  async function getAll(domain,  { mappedBy, queryParams}) {
   return getAndMap(`${BASE_URL}${domain}`, {
     mappedBy,
     queryParams: {

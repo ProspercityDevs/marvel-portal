@@ -18,7 +18,7 @@ async function myFetch(url) {
   })
     .then((response) => response.json())
     .catch((error) => error);
-
+    console.log(response.data);
     return response.data;
 }
 
