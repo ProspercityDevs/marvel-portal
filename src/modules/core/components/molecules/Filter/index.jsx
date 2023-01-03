@@ -51,6 +51,10 @@ export default function Filter() {
       })
       .join('');
     resultsElem.classList.remove('hidden');
+
+    if (text.length === 0) {
+      resultsElem.classList.add('hidden');
+    }
   }
 
   const onChangeValue = (e) => {

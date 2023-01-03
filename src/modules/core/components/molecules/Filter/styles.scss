@@ -98,9 +98,16 @@ input {
     padding: 10px 12px;
 }
 
-#autocomplete-results{
+.autocomplete-results{
     position:absolute;
     top:-10%;
+    cursor: pointer;
+}
+
+.autocomplete-result{
+    position:top;
+    top:-10%;
+    cursor: pointer;
 }
   
 ul {

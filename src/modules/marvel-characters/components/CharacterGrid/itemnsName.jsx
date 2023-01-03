@@ -23,7 +23,7 @@ export function SeriesGridPaginated() {
   };
 
   export function ItemsName() {
-    const ITEMS_PER_PAGE = 100;
+    const ITEMS_PER_PAGE = 24;
     const [items, setItems] = useState([]);
     useEffect(() => {
       fetchItemsAtPage();
