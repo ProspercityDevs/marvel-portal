@@ -7,6 +7,7 @@ import CharacterProm from '@/modules/core/components/molecules/CharacterProm';
 import FilteredCharacterListPaginated from '../../components/FilteredCharactersList';
 import SearchBar from 'src/modules/core/components/atoms/SearchBar';
 import PropTypes from 'prop-types';
+import CharacterSpotlight from 'src/modules/core/components/molecules/CharacterSpotlight';
 
 export function CharactersPage() {
   const [searchValue, setSearchValue] = useState('');
@@ -50,6 +51,7 @@ export function CharactersPage() {
             <section className="mvl-section-card"></section>
             <h1 className="u-no-margin">FEATURED CHARACTERS</h1>
             <FeaturedCharacters />
+            <CharacterSpotlight />
             <h1 className="u-no-margin">MARVEL CHARACTERS LIST</h1>
             <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
             <Autocomplete searchValue={searchValue} />
