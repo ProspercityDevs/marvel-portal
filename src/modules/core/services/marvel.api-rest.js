@@ -12,7 +12,7 @@ export async function getAllPaginated(
   name={},
   { mappedBy, queryParams, itemsPerPage}
 ) {
-  return getAll(domain, {
+  return getAll(domain, name,{
     mappedBy,
     queryParams: {
       ...queryParams,
@@ -24,12 +24,13 @@ export async function getAllPaginated(
 }
 
 
-export  async function getAll(domain,  { mappedBy, queryParams}) {
+export  async function getAll(domain, name, { mappedBy, queryParams}) {
   return getAndMap(`${BASE_URL}${domain}`, {
     mappedBy,
     queryParams: {
+      ...name,
       ...queryParams,
-      ...credentials
+      ...credentials,
     }
   });
 }
