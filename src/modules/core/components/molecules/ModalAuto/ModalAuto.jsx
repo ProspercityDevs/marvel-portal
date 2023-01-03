@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 ModalAuto.propTypes = {
-  search: PropTypes.string
+  search: PropTypes.string,
+  modalAuto: PropTypes.func
 };
-function ModalAuto({ search }) {
-  const [estado1, setestado1] = useState(true);
 
+function ModalAuto({ search, modalAuto }) {
+  const [estado1, setestado1] = useState(true);
   const openModalAuto1 = () => {
     if (estado1 == true) {
       setestado1(false);
@@ -16,11 +17,23 @@ function ModalAuto({ search }) {
     }
   };
 
+  const name = ['hola', 'buenos dias'];
+  console.log(name);
+  function modalAutoModal(a) {
+    if (search.length > 0) {
+      modalAuto(a);
+    }
+  }
+
   return (
     <div className="principalM">
       <div className={`modalAuto ${search && 'modalAuto-open'}`}>
         <ul className="listaM">
-          <h6 onChange={openModalAuto1}>hola</h6>
+          {name.map((item) => (
+            <li key={item} onClick={() => modalAutoModal(item)} onChange={openModalAuto1}>
+              <span>{item}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

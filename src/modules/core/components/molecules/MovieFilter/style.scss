@@ -224,6 +224,7 @@
     background-color: #fff;
 }
 .modal-open2 {
+    border-top: solid 2.5px grey;
     position:absolute;
     display: flex;
     right: 0;
@@ -231,7 +232,7 @@
     margin-left:-130% ;
     margin-top: 180%;
     width: 400px;
-    height: 50px;
+    height: 60px;
     background-color: #fff; 
 }
 .boton_cancel{

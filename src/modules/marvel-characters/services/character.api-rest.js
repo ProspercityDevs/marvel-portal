@@ -8,6 +8,7 @@ export async function getCharatersAtPage(
   page,
   itemsPerPage,
   nameStarts,
+
   { mappedBy = defaultMapper, queryParams = {} }
 ) {
   return getAllPaginated(domain, page, nameStarts, {

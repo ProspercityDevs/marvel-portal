@@ -13,7 +13,6 @@ function Fecha() {
 }
 
 export default function CharacterCard({ image, name, isSkeleton }) {
-  console.log(name);
   return (
     <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
       <div className="mvl-character-card__image-container">

@@ -5,6 +5,7 @@ import MovieFilter from 'src/modules/core/components/molecules/MovieFilter';
 import { useState } from 'react';
 import './styles.scss';
 import ModalAuto from 'src/modules/core/components/molecules/ModalAuto/ModalAuto';
+import { useEffect } from 'react';
 
 export function CharacterPage() {
   const [search, setSearch] = useState('');
@@ -15,13 +16,19 @@ export function CharacterPage() {
     setSearch(e.target.value);
     console.log(e.target.value);
   };
+  const modalAuto = (a) => {
+    setSearch(a);
+  };
+
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       setUpdated(search);
       setFilterEnter(true);
     }
   };
-
+  useEffect(() => {
+    Peticion();
+  }, []);
   function Peticion() {
     if (filterEnter == true) {
       if (updated.length < 1) {
@@ -35,9 +42,7 @@ export function CharacterPage() {
   }
   function Peticion2() {
     if (search.length >= 3) {
-      return <ModalAuto search={search} />;
-    } else {
-      <option>KEEP TYPING...</option>;
+      return <ModalAuto search={search} modalAuto={modalAuto} />;
     }
   }
   return (

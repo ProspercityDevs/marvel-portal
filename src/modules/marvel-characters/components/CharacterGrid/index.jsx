@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getCharactersForGrid2 } from '@/modules/marvel-characters/services';
 import { getCharactersForGrid } from '@/modules/marvel-characters/services';
-
 import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
 import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
@@ -27,7 +26,6 @@ export default function CharacterGridPaginated({ n, search }) {
   };
 
   console.log(nameStarts);
-
   useEffect(() => {
     fetchCharactersAtPage();
   }, []); // para que no se ejecute continuamente,
