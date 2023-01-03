@@ -40,6 +40,7 @@ export default function CharacterGridPaginated({ n, search }) {
       console.log('Personajes', data.total);
       setCharacters(data.results);
       setLoading(false);
+      console.log(data.results); //se le agrego esta linea de codigo para sacar los id.
     }
     if (n == 1) {
       setLoading(true);
@@ -49,6 +50,14 @@ export default function CharacterGridPaginated({ n, search }) {
       setCharacters(data.results);
       setLoading(false);
     }
+    /*if (n == 1) {
+      setLoading(true);
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts);
+      setTotalItems(data.total);
+      console.log('Personajes', data.total);
+      setCharacters(data.results);
+      setLoading(false);
+    }*/
   }
 
   const onPageChange = (newPage) => {

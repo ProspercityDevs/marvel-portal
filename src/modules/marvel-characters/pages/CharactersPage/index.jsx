@@ -59,7 +59,7 @@ export function CharacterPage() {
             <div className="row">
               <div className="col">
                 <input
-                  value={search}
+                   value={search}
                   onChange={searcher}
                   onKeyDown={handleKeyDown}
                   id="filter"

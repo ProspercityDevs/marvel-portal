@@ -44,23 +44,12 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
           <BiChevronLeft /> Previous
         </button>
 
-        <span className="mvl-paginator__text">
-          Page <strong>{currentPage} </strong> of <strong>{totalPages}</strong>
-        </span>
 
-<<<<<<< HEAD
         <span className="mvl-paginator__text">
         Page  <strong>{currentPage} </strong> of <strong>{totalPages}</strong>
       </span>
+      
         
-        <span className="mvl-paginator__text">
-        ...
-      </span>
-        
-        <button className='botones' disabled={isLastPage(currentPage, totalPages)} onClick={onNextpageClick}>
-          Next<BiChevronRight />
-
-=======
         <span className="mvl-paginator__text">...</span>
 
         <button
@@ -69,7 +58,7 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
           onClick={onNextpageClick}>
           Next
           <BiChevronRight />
->>>>>>> 2f451ac09de3e6ef3702d9c6cec87b8635712155
+
         </button>
       </div>
     </div>
