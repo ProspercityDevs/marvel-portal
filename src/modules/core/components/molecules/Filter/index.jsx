@@ -23,11 +23,14 @@ function OnChangeName(text) {
 }
 
 export default function Filter() {
-  const [text, setText] = useState('');
+  const domain=`characters`
+  const [text, setText]=useState("");
 
-  const results = ItemsName();
-  const inputElem = document.getElementById('input-search');
-  const resultsElem = document.getElementById('autocomplete-results');
+  
+  const results=ItemsName({domain});
+  
+  const inputElem= document.getElementById("input-search");
+  const resultsElem=document.getElementById("autocomplete-results");
 
 
   async function autoComplete() {

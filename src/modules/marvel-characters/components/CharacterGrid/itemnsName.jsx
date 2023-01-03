@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react';
-
-
+import PropTypes from 'prop-types';
 import { getSeriesForGrid } from '../../services/series/series.api.js';
 import { getItemsName } from '../../services/series/series.api.js';
 
+SeriesGridPaginated.propTypes = {
+  domainTitle: PropTypes.string,
+}
 
+export function SeriesGridPaginated(domainTitle) {
 
-export function SeriesGridPaginated() {
   const ITEMS_PER_PAGE = 24;
   const [series, setSeries] = useState([]);
   useEffect(() => {
     fetchSeriesAtPage();
   }, []);
   async function fetchSeriesAtPage(page = 1) {
-    const domain=`series`;
+    const domain=domainTitle;
     const data = await getSeriesForGrid(page, ITEMS_PER_PAGE, domain);
 
     setSeries(data.results);
@@ -22,14 +24,16 @@ export function SeriesGridPaginated() {
   return series
   };
 
-  export function ItemsName() {
-    const ITEMS_PER_PAGE = 24;
+  ItemsName.propTypes = {
+    domain: PropTypes.string,
+  }
+  export function ItemsName({domain}) {
+    const ITEMS_PER_PAGE = 100;
     const [items, setItems] = useState([]);
     useEffect(() => {
       fetchItemsAtPage();
     }, []);
     async function fetchItemsAtPage(page = 1) {
-      const domain=`characters`;
       const data = await getItemsName(page, ITEMS_PER_PAGE, domain);
       setItems(data.results); 
     }
