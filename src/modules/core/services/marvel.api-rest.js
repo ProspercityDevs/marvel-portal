@@ -1,8 +1,6 @@
-import { getAndMap } from '@/modules/core/services';
-import { defaultMapper } from '@/modules/core/services';
+import { getAndMap } from './api-rest';
 
 const BASE_URL = `https://gateway.marvel.com/v1/public/`;
-const PAGENATE_BY = 20;
 
 const credentials = {
   apikey: process.env.REACT_APP_PUBLIC_KEY
@@ -11,20 +9,22 @@ const credentials = {
 export async function getAllPaginated(
   domain,
   page,
-  name,
-  { mappedBy = defaultMapper, queryParams = {}, itemsPerPage = PAGENATE_BY }
+  name={},
+  { mappedBy, queryParams, itemsPerPage}
 ) {
   return getAll(domain, name,{
     mappedBy,
     queryParams: {
       ...queryParams,
+      ...name,
       limit: itemsPerPage,
       offset: getOffset(page, itemsPerPage)
     }
   });
 }
 
-export async function getAll(domain, name,{ mappedBy = defaultMapper, queryParams = {} }) {
+
+export  async function getAll(domain, name, { mappedBy, queryParams}) {
   return getAndMap(`${BASE_URL}${domain}`, {
     mappedBy,
     queryParams: {
@@ -36,6 +36,6 @@ export async function getAll(domain, name,{ mappedBy = defaultMapper, queryParam
 }
 
 function getOffset(page, itemsPerPage) {
-  const currentOffset = page - 1;
+  const currentOffset = page-1;
   return currentOffset * itemsPerPage;
 }
