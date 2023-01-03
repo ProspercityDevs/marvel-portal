@@ -17,7 +17,7 @@ export default function MovieFilter() {
   };
 
   const closeModal = () => {
-    setestado(false);
+    setestado(false); 
   };
 
   return (
