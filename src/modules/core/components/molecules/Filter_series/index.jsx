@@ -11,10 +11,11 @@ import CharacterGridPaginated from 'src/modules/marvel-characters/components/Cha
 
 
 function ButtonArrow() {
-  let series=SeriesGridPaginated();
   const [domain, setDomain]=useState("");
   const [toggle, setToggle] = useState(false);
   const domainDefault="characters";
+  const domainTitle="series";
+  let series=SeriesGridPaginated(domainTitle);
   
   const handleSelect=(e)=>{
     setDomain("series/"+e.target.value+"/characters");
