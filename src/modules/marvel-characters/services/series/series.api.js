@@ -1,4 +1,5 @@
 import { getAllPaginated } from '@/modules/core/services/marvel.api-rest';
+import { getCharacterImage } from '../character';
 
 export function getSeriesForGrid(page, itemsPerPage, domain) {
   return getSeriesAtPage(page, itemsPerPage, domain, {
@@ -24,8 +25,7 @@ function mapSeriesToCard(series) {
   return {
     name: series.title,
     id: series.id,
-    characters: series.characters.items,
-    nameCharacters:series.name
+    image: getCharacterImage(series), 
   };
 }
 

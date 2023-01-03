@@ -11,6 +11,7 @@ export async function getAndMap(url, { queryParams, mappedBy}) {
 }
 
 async function myFetch(url) {
+  console.log(url)
   const response = await fetch(url, {  
     headers: {
       'Content-Type': 'application/json'
