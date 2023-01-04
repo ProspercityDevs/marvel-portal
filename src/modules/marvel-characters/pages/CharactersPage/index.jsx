@@ -2,11 +2,15 @@ import React from 'react';
 import './styles.scss';
 import {FeaturedGrid} from '../../components/FeaturedGrid';
 import Filter from '@/modules/core/components/molecules/Filter';
-import  CharacterGridPaginated  from '@/modules/marvel-characters/components/CharacterGrid/index';
+import  CharacterGridPaginated  from '@/modules/marvel-characters/components/ItemGrid/index';
 
 
 export function CharacterPage() {
   const name={};
+  const itemsPerPage = 24;
+  const order={
+    orderBy: "name"
+  }
   console.log('characterpage')
   return (
     <div className="mvl-characters-page">
@@ -22,7 +26,7 @@ export function CharacterPage() {
         <Filter />
           
       </div>
-      <CharacterGridPaginated domain={`characters`} name={name}/>
+      <CharacterGridPaginated domain={`characters`} name={name} order={order} itemsPerPage={itemsPerPage}/>
     </div>
   );
 }

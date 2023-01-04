@@ -13,7 +13,8 @@ async function getSeriesAtPage(
   { mappedBy, queryParams = {} }
 ) {
   const name="";
-  return getAllPaginated(domain, page,name, {
+  const order="";
+  return getAllPaginated(domain, page,name,order, {
     mappedBy,
     itemsPerPage,
     ...queryParams
@@ -43,7 +44,8 @@ async function getItemsAtPage(
   { mappedBy, queryParams = {} }
 ) {
   const name="";
-  return getAllPaginated(domain, page,name, {
+  const order="";
+  return getAllPaginated(domain, page,name,order, {
     mappedBy,
     itemsPerPage,
     ...queryParams

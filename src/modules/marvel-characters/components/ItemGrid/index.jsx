@@ -6,24 +6,26 @@ import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
 
 const INITIAL_PAGE = 1;
-const ITEMS_PER_PAGE = 24;
+
 
 CharacterGridPaginated.propTypes = {
   domain: PropTypes.string,
-  name: PropTypes.any
+  name: PropTypes.any,
+  itemsPerPage: PropTypes.number,
+  order: PropTypes.any
 }
-export default function CharacterGridPaginated({domain,name}) {
+export default function CharacterGridPaginated({itemsPerPage,domain,name, order}) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(true);
-
+  console.log(itemsPerPage)
   useEffect(() => {
     fetchCharactersAtPage();
   },[]);
   
   
   async function fetchCharactersAtPage(page = INITIAL_PAGE) {
-      const data = await getCharactersForGrid(page,ITEMS_PER_PAGE, domain, name);
+      const data = await getCharactersForGrid(page, order, domain, name,itemsPerPage);
       setTotalItems(data.total);
       setCharacters(data.results);
       setLoading(false);
@@ -45,12 +47,13 @@ export default function CharacterGridPaginated({domain,name}) {
           <CharacterGrid
             characters={characters}
             isLoading={isLoading}
+            domain={domain}
             // text={name} 
           />
         </div>
         <Paginator
           initialPage={INITIAL_PAGE}
-          pageSize={ITEMS_PER_PAGE}
+          pageSize={itemsPerPage}
           totalItems={totalItems}
           onPageChange={onPageChange}
         />
@@ -65,17 +68,19 @@ CharacterGrid.propTypes = {
   characters: PropTypes.array.isRequired,
   isLoading: PropTypes.bool,
   itemsPerPage: PropTypes.number,
+  domain: PropTypes.any
   // text:PropTypes.string
 };
 
-function CharacterGrid({ characters, isLoading}) {
+function CharacterGrid({ characters, isLoading, domain}) {
   if (!isLoading && characters.length === 0) {
     return <EmptyState />;
-  // }if(text.length>=0&&characters.length==0){
-  //   return <EmptyState />;
-  // }
   
-  }console.log('charactersgrid')
+  } else if(domain=='series' || domain=='events' || domain=='comics'){
+    return characters.map(({ title, image, description}, index) => (
+      <CharacterCard name={title} image={image} description={description} key={index} isSkeleton={isLoading} />
+    ))
+  }
   return characters.map(({ name, image, description}, index) => (
     <CharacterCard name={name} image={image} description={description} key={index} isSkeleton={isLoading} />
   ));

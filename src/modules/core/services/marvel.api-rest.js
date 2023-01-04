@@ -10,13 +10,15 @@ export async function getAllPaginated(
   domain,
   page,
   name={},
-  { mappedBy, queryParams, itemsPerPage}
-) {
+  order,
+  {mappedBy,itemsPerPage, queryParams} 
+) { console.log('itemsPerPagegetal '+itemsPerPage)
   return getAll(domain, {
     mappedBy,
     queryParams: {
       ...queryParams,
       ...name,
+      ...order,
       limit: itemsPerPage,
       offset: getOffset(page, itemsPerPage)
     }

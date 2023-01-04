@@ -2,7 +2,7 @@ import './styles.scss';
 import PropTypes from 'prop-types';
 
 CharacterCard.propTypes = {
-  image: PropTypes.string,
+  image: PropTypes.any,
   description:  PropTypes.string,
   name: PropTypes.string,
   isSkeleton: PropTypes.bool

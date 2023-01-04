@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom/client';
 // import { RiArrowDropDownFill } from 'react-icons/ri';
 import {Dropdown, DropdownMenu, DropdownToggle} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { SeriesGridPaginated } from '../../../../marvel-characters/components/CharacterGrid/itemnsName.jsx';
-import CharacterGridPaginated from 'src/modules/marvel-characters/components/CharacterGrid/index.jsx';
+import { SeriesGridPaginated } from '../../../../marvel-characters/components/ItemGrid/itemnsName.jsx';
+import CharacterGridPaginated from 'src/modules/marvel-characters/components/ItemGrid/index.jsx';
 
 
 
@@ -71,10 +71,12 @@ HandleApply.propTypes = {
 }
 function HandleApply (domain) {
   const name="";
+  const order="";
+  const itemsPerPage=24;
   console.log("hande "+domain);
   const root2 = ReactDOM.createRoot(document.getElementById('container-grid'));
   root2.render(
-    <CharacterGridPaginated busqueda={name} domain={domain}/>, 
+    <CharacterGridPaginated nam={name} domain={domain} order={order} itemsPerPage={itemsPerPage} />, 
    );
 
  

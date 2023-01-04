@@ -9,14 +9,14 @@ SeriesGridPaginated.propTypes = {
 
 export function SeriesGridPaginated(domainTitle) {
 
-  const ITEMS_PER_PAGE = 24;
+  const itemsPerPage = 24;
   const [series, setSeries] = useState([]);
   useEffect(() => {
     fetchSeriesAtPage();
   }, []);
   async function fetchSeriesAtPage(page = 1) {
     const domain=domainTitle;
-    const data = await getSeriesForGrid(page, ITEMS_PER_PAGE, domain);
+    const data = await getSeriesForGrid(page, itemsPerPage, domain);
 
     setSeries(data.results);
     

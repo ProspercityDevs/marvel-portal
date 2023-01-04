@@ -1,6 +1,6 @@
 import './styles.scss';
 import React from 'react';
-import { SeriesGridPaginated} from '../CharacterGrid/itemnsName';
+import { SeriesGridPaginated} from '../ItemGrid/itemnsName';
 
 const img = require.context('@/assets/images', true);
 

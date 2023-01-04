@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactDOM from 'react-dom/client';
-import  CharacterGridPaginated  from '@/modules/marvel-characters/components/CharacterGrid/index';
+import  CharacterGridPaginated  from '@/modules/marvel-characters/components/ItemGrid/index';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { ItemsName } from 'src/modules/marvel-characters/components/CharacterGrid/itemnsName';
+import { ItemsName } from 'src/modules/marvel-characters/components/ItemGrid/itemnsName';
 import ButtonArrow from '../Filter_2';
 import { useState } from 'react';
 // import {AiFillCaretDown} from "react-icons/ai";
@@ -10,9 +10,11 @@ function OnChangeName(text){
   const name={
     nameStartsWith:text
   }
+  const order="";
+  const itemsPerPage=24;
   const root3 = ReactDOM.createRoot(document.getElementById('container-grid'));
   root3.render(
-    <CharacterGridPaginated name={name} domain={`characters`}/>, 
+    <CharacterGridPaginated name={name} domain={`characters`} order={order} itemsPerPage={itemsPerPage} />, 
   );
 }
 

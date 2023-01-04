@@ -1,5 +1,4 @@
 
-
 export async function getAndMap(url, { queryParams, mappedBy}) {
   const params = objectToURLString(queryParams);
   const data = await myFetch(`${url}${params}`);
