@@ -18,7 +18,7 @@ export async function getCharatersAtPage2(
 }
 
 export function getCharactersForGrid2(page, itemsPerPage, orden) {
-  return getCharatersAtPage2(page, itemsPerPage, orden, {
+  return getCharatersAtPage2(page, itemsPerPage,orden,{
     mappedBy: mapCharacterToCard
   });
 }
