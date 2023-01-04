@@ -2,6 +2,7 @@
     width: 100%;
     display: block;
     gap: 10px;
+    grid-template-columns: repeat(6, minmax(15%, 1fr));
 }
 .featured-container{
     display: block;
@@ -11,8 +12,8 @@
     display: inline-grid;
     width: 195px;
     height: 355px;
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
     gap: 10px;
     background: var(--color-primary-dark);
     color: var(--color-accent);
@@ -21,7 +22,7 @@
 }
 
 .mvl-featuredCharacters-card__image-container{
-    background: rgb(47, 130, 55);
+    background: black;
     height: 70%;
     position: relative;
     &::before{
