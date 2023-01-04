@@ -1,0 +1,113 @@
+.mvl-featuredCharacters-card-section {
+    width: 100%;
+    display: block;
+    gap: 10px;
+}
+.featured-container{
+    display: block;
+}
+
+.mvl-featuredCharacters-card{
+    display: inline-grid;
+    width: 195px;
+    height: 355px;
+    padding: 10px;
+    margin: 10px;
+    gap: 10px;
+    background: var(--color-primary-dark);
+    color: var(--color-accent);
+    border-bottom-right-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.mvl-featuredCharacters-card__image-container{
+    background: rgb(47, 130, 55);
+    height: 70%;
+    position: relative;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 5px;
+        background: var(--color-logo);
+        position: absolute;
+        top: -5px;
+        z-index: 2;
+    }
+}
+
+.mvl-featuredCharacters-card__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+    transform: scaleX(1);
+    cursor: pointer;
+    
+}
+
+.mvl-featuredCharacters-card__body{
+    padding: var(--space-sm);
+    height: 0px;
+}
+
+.mvl-featuredCharacters-card:hover{
+    .mvl-featuredCharacters-card__image{
+        transform: scale(1.05);
+    }
+    .mvl-featuredCharacters-card__body{
+        padding: var(--space-sm);
+        background-color: rgb(214, 15, 15);
+        opacity: 1;
+        height: 100%;
+        border-bottom-right-radius: 50px;
+        transition: 0.3s ease-in-out ;
+    }
+
+}
+
+
+
+//                                            COMICS                                                        //
+
+
+.featured-comics{
+    width: 100%;
+    display: block;
+  
+}
+.featured-comics-items{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    height: 250px;
+    display: inline-grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, minmax(15%, 1fr));
+
+}
+.featured-comics-items__img{
+    border-radius: 2px;
+    width: 100%;
+    height: 70%;
+    object-fit:cover;
+}
+.featured-comics-items_figure{
+    background-color: whitesmoke;
+   
+    width: 100%;
+    height: 250px;
+
+}
+.parrafo{
+    padding: 5px;
+    color: gray;
+    font-weight: 1000;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+figcaption{
+    padding: 5px;
+    font-weight: 200;
+    font-family: 'Roboto Condensed', sans-serif;
+}

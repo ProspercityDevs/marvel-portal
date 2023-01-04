@@ -1,0 +1,139 @@
+.page__component.firstComponent, .page__component:first-child {
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 51px;
+}
+
+
+.search-bar {
+    padding: 70px 0px 0;
+    display: flex;
+}
+
+.typeahead {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #151515;
+}
+
+
+.typeahead__icon {
+    position: absolute;
+    top: 10px;
+}
+
+.icon--svg.icon--search {
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: square;
+}
+
+.icon--svg--black-stroke {
+    stroke: #151515;
+}
+
+.icon--svg {
+    fill: #151515;
+}
+
+.input-text{
+    border: none;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #151515;
+    width: 100%;
+    padding-bottom: 0.4375rem;
+    padding-left: 1.875rem;
+    border-radius: 0;
+
+}
+
+.typeahead__container {
+    width: 100%;
+}
+
+
+.typeahead__input {
+    border: 0;
+    // border-bottom: 2px solid #151515;
+    width: 100%;
+    padding-bottom: 0.4375rem;
+    padding-left: 2rem;
+    border-radius: 0;
+    font-family: "robotto";
+}
+
+.search-icon{
+    width: 26px;
+    position: absolute;
+    margin-right: 18px;
+    margin-top: -7px;
+    
+}
+
+.typeahead__input {
+    font: 800 26px/1 RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.typeahead__input:focus {
+    outline-color: #e8b63e
+}
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8f0fb;
+}
+input {
+    border: none;
+    background: white;
+    margin: 0;
+    font-size: 16px;
+    padding: 10px 12px;
+}
+
+.autocomplete-results{
+    position:absolute;
+    top:-10%;
+    cursor: pointer;
+}
+
+.autocomplete-result{
+    position:top;
+    top:-10%;
+    cursor: pointer;
+}
+  
+ul {
+    position: absolute;
+    bottom: 100%;
+    margin-top: -1px;
+    width: 100%;
+    z-index: 1;
+    background: #fff;
+    margin: 0;
+    list-style: none;
+    transition: none;
+    padding: 0;
+    border: 1px solid #bfc8c9;
+}
+ul li {
+    padding: 6px 12px;
+    transition: 0.2s background;
+    cursor: pointer;
+}
+ul li:hover {
+    background: #e6f0f2;
+}
+ul li + li {
+    border-top: 1px solid #bfc8c9;
+}
+.hidden {
+    display: none;
+  }
