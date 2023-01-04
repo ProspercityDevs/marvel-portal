@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 // import { RiArrowDropDownFill } from 'react-icons/ri';
 import {Dropdown, DropdownMenu, DropdownToggle} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { SeriesGridPaginated } from '../../../../marvel-characters/components/ItemGrid/itemnsName.jsx';
+import { ItemsName } from '../../../../marvel-characters/components/ItemInfo/itemnsName.jsx';
 import CharacterGridPaginated from 'src/modules/marvel-characters/components/ItemGrid/index.jsx';
 
 
@@ -14,8 +14,7 @@ function ButtonArrow() {
   const [domain, setDomain]=useState("");
   const [toggle, setToggle] = useState(false);
   const domainDefault="characters";
-  const domainTitle="series";
-  let series=SeriesGridPaginated(domainTitle);
+    let series=ItemsName("series");
   
   const handleSelect=(e)=>{
     setDomain("series/"+e.target.value+"/characters");
@@ -38,7 +37,7 @@ function ButtonArrow() {
               {series.map((item, index) => (
                 <li key={index} onClick={handleSelect} className="movies__list--item">
                   <input value={item.id} type="radio" name="series"/>
-                  <label className="movies__list--text">{item.name}</label>
+                  <label className="movies__list--text">{item.title}</label>
                 </li>
               ))}
             </ul>

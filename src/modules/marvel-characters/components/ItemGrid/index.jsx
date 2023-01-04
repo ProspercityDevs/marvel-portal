@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getCharactersForGrid } from '@/modules/marvel-characters/services/character';
-import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
+import {CharacterCard} from '@/modules/marvel-characters/components/CharacterCard';
 import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
 
@@ -29,6 +29,10 @@ export default function CharacterGridPaginated({itemsPerPage,domain,name, order}
       setTotalItems(data.total);
       setCharacters(data.results);
       setLoading(false);
+      console.log('data.results');
+      console.log(data.results);
+
+
   }
   
 
@@ -76,9 +80,13 @@ function CharacterGrid({ characters, isLoading, domain}) {
   if (!isLoading && characters.length === 0) {
     return <EmptyState />;
   
-  } else if(domain=='series' || domain=='events' || domain=='comics'){
+  } else if(domain=='series' || domain=='events' || domain=='comics' || domain=='stories'){
     return characters.map(({ title, image, description}, index) => (
       <CharacterCard name={title} image={image} description={description} key={index} isSkeleton={isLoading} />
+    ))
+  } else if(domain=='creators'){
+    return characters.map(({ fullName, image, description}, index) => (
+      <CharacterCard name={fullName} image={image} description={description} key={index} isSkeleton={isLoading} />
     ))
   }
   return characters.map(({ name, image, description}, index) => (

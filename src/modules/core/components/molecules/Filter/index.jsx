@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactDOM from 'react-dom/client';
 import  CharacterGridPaginated  from '@/modules/marvel-characters/components/ItemGrid/index';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { ItemsName } from 'src/modules/marvel-characters/components/ItemGrid/itemnsName';
+import { ItemsName } from 'src/modules/marvel-characters/components/ItemInfo/itemnsName';
 import ButtonArrow from '../Filter_2';
 import { useState } from 'react';
 // import {AiFillCaretDown} from "react-icons/ai";

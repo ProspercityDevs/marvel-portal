@@ -1,12 +1,12 @@
 import React from 'react';
-import  CharacterGridPaginated  from '@/modules/marvel-characters/components/ItemGrid/index';
+import { DefaultPage } from '../../components/InitialPage';
 
 function StoriesPage() {
-  const name={};
-  const itemsPerPage = 24;
-  const order={};
-  return (
-    <CharacterGridPaginated domain={`stories`} name={name} order={order} itemsPerPage={itemsPerPage}/>
-  );
+  const domain='stories';
+  return(
+    <DefaultPage
+      domain={domain} 
+    />
+  )
 }
 export { StoriesPage };

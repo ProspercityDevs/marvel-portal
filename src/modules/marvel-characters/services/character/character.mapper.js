@@ -6,6 +6,7 @@ export function mapCharacterToCard(item) {
     title: item.title,
     id: item.id,
     description: item.description,
-    url: item.urls
+    url: item.urls,
+    fullName: item.fullName
   };
 }

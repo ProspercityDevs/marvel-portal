@@ -52,9 +52,12 @@ async function getItemsAtPage(
   });
 }
 
-function mapItemsToCard(items) {
+function mapItemsToCard(item) {
   return {
-    name: items.name, 
+    name: item.name,
+    title: item.title,
+    id: item.id,
+    image: item.thumbnail, 
   };
 }
 

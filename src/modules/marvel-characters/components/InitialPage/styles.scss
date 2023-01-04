@@ -1,0 +1,21 @@
+.mvl-items-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.mvl-items-page-header {
+  background-image: url('/assets/images/gif_marvel.gif');
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-accent);
+  flex-direction: column;
+  width: 100%;
+}
+
+
+
+
