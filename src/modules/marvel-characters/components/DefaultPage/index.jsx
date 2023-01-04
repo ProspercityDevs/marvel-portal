@@ -2,10 +2,13 @@ import React from 'react';
 import './styles.scss';
 import {FeaturedGrid} from '../../components/FeaturedGrid';
 import Filter from '@/modules/core/components/molecules/Filter';
+import PropTypes from 'prop-types';
 import  CharacterGridPaginated  from '@/modules/marvel-characters/components/ItemGrid/index';
 
-
-export function CharacterPage(domain) {
+DefaultPage.propTypes = {
+  domain: PropTypes.string
+}
+export function DefaultPage(domain) {
   const name={};
   const itemsPerPage = 24;
   const order={
@@ -26,7 +29,7 @@ export function CharacterPage(domain) {
         <Filter />
           
       </div>
-      <CharacterGridPaginated domain={"characters"} name={name} order={order} itemsPerPage={itemsPerPage}/>
+      <CharacterGridPaginated domain={domain} name={name} order={order} itemsPerPage={itemsPerPage}/>
     </div>
   );
 }

@@ -6,6 +6,7 @@ const img = require.context('@/assets/images', true);
 
 export function FeaturedGrid() {
   const domain="characters/1017100/comics";
+  //1009368
   const comics=SeriesGridPaginated(domain)
   console.log(comics)
   console.log('comics')

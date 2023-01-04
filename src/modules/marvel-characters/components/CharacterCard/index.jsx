@@ -5,11 +5,11 @@ CharacterCard.propTypes = {
   image: PropTypes.any,
   description:  PropTypes.string,
   name: PropTypes.string,
+  domain: PropTypes.string,
   isSkeleton: PropTypes.bool
 };
 
-export default function CharacterCard({ image, name,description, isSkeleton}) {
-
+export default function CharacterCard({ image, name,description, isSkeleton, domain}) {
   const subName =(name)=>{
     let subNameValue;
     let value=name.indexOf('(');
@@ -20,6 +20,20 @@ export default function CharacterCard({ image, name,description, isSkeleton}) {
     }
     return subNameValue
   }
+    if(domain=='characters'){
+      return (
+        <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
+          <div className="mvl-character-card__image-container">
+            <img className="mvl-character-card__image" src={`${image.path}.${image.extension}`} alt={description} />
+          </div>
+          <div className="mvl-character-card__body">
+            <h4 className="u-no-margin">{name}</h4>
+            <br></br>
+            <h5 className="u-no-margin">{subName(name)}</h5>
+          </div>
+        </div>
+      );
+    }
   console.log('characterscard')
   return (
     <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
@@ -29,7 +43,7 @@ export default function CharacterCard({ image, name,description, isSkeleton}) {
       <div className="mvl-character-card__body">
         <h4 className="u-no-margin">{name}</h4>
         <br></br>
-        <h5 className="u-no-margin">{subName(name)}</h5>
+        <h5 className="u-no-margin">{description}</h5>
       </div>
     </div>
   );

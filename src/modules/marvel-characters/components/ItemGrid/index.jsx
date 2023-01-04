@@ -82,7 +82,7 @@ function CharacterGrid({ characters, isLoading, domain}) {
     ))
   }
   return characters.map(({ name, image, description}, index) => (
-    <CharacterCard name={name} image={image} description={description} key={index} isSkeleton={isLoading} />
+    <CharacterCard name={name} image={image} description={description} key={index} isSkeleton={isLoading} domain={domain}/>
   ));
 }
 
