@@ -1,0 +1,18 @@
+.modalAuto {
+    display: none;
+}
+
+.modalAuto-open {
+    border: solid 2.5px black ;
+    z-index: 5;
+    display: flex;
+    position:absolute;
+    width: 50%;
+    height: 200px;
+    background-color: #fff;
+}
+
+.listaMa {
+  cursor: pointer;
+  list-style: none;
+ }

@@ -3,6 +3,10 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
-  }
+  },
+  "cSpell.words": [
+    "Personajes",
+    "simbolizar"
+  ]
   // "editor.formatOnSave": true
 }

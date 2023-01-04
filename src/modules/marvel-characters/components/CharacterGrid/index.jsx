@@ -1,32 +1,64 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
+import { getCharactersForGrid2 } from '@/modules/marvel-characters/services';
 import { getCharactersForGrid } from '@/modules/marvel-characters/services';
-
 import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
 import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
 import Filter from '@/modules/core/components/molecules/Filter';
 
+CharacterGridPaginated.propTypes = {
+  search: PropTypes.string,
+  n: PropTypes.number
+};
+
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
-export default function CharacterGridPaginated() {
+export default function CharacterGridPaginated({ n, search }) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [queryParams, setQueryParams] = useState({});
 
+  const nameStarts = {
+    nameStartsWith: search
+  };
+
+  console.log(nameStarts);
   useEffect(() => {
     fetchCharactersAtPage();
-  }, []);
+  }, []); // para que no se ejecute continuamente,
 
   async function fetchCharactersAtPage(page = 1) {
-    setLoading(true);
-    const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
-    setTotalItems(data.total);
-    setCharacters(data.results);
-    setLoading(false);
+    if (n == 0) {
+      setLoading(true);
+      const data = await getCharactersForGrid2(page, ITEMS_PER_PAGE);
+      setTotalItems(data.total);
+      console.log('Personajes', data.total);
+      setCharacters(data.results);
+      setLoading(false);
+      console.log(data.results); //se le agrego esta linea de codigo para sacar los id.
+    }
+    if (n == 1) {
+      setLoading(true);
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts);
+      setTotalItems(data.total);
+      console.log('Personajes', data.total);
+      setCharacters(data.results);
+      setLoading(false);
+    }
+    if (n == 2) {
+      const nameStarts = {
+        series: search
+      };
+      setLoading(true);
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts);
+      setTotalItems(data.total);
+      console.log('Personajes', data.total);
+      setCharacters(data.results);
+      setLoading(false);
+    }
   }
 
   const onPageChange = (newPage) => {
@@ -39,7 +71,7 @@ export default function CharacterGridPaginated() {
 
   return (
     <>
-      <Filter query={queryParams} onQueryChange={onQueryChange} />
+      <Filter query={queryParams} onQueryChange={onQueryChange} totalItems={totalItems} />
       <div className="mvl-grid mvl-grid-6">
         <CharacterGrid
           characters={characters}
