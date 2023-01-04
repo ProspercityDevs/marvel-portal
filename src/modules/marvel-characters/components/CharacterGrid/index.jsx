@@ -15,6 +15,9 @@ CharacterGridPaginated.propTypes = {
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
+
+
+
 export default function CharacterGridPaginated({ n, search }) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
