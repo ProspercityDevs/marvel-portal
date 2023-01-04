@@ -16,7 +16,9 @@ const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
 
-
+const orden = {
+  orderBy: '-name'
+};
 
 export default function CharacterGridPaginated({ n, search }) {
   const [totalItems, setTotalItems] = useState(0);
@@ -33,19 +35,23 @@ export default function CharacterGridPaginated({ n, search }) {
     fetchCharactersAtPage();
   }, []); // para que no se ejecute continuamente,
 
+
   async function fetchCharactersAtPage(page = 1) {
     if (n == 0) {
       setLoading(true);
-      const data = await getCharactersForGrid2(page, ITEMS_PER_PAGE);
+      const data = await getCharactersForGrid2(page, ITEMS_PER_PAGE, orden);
       setTotalItems(data.total);
       console.log('Personajes', data.total);
       setCharacters(data.results);
       setLoading(false);
       console.log(data.results); //se le agrego esta linea de codigo para sacar los id.
     }
+
+  
+
     if (n == 1) {
       setLoading(true);
-      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts);
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts, orden);
       setTotalItems(data.total);
       console.log('Personajes', data.total);
       setCharacters(data.results);
@@ -56,7 +62,10 @@ export default function CharacterGridPaginated({ n, search }) {
         series: search
       };
       setLoading(true);
-      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts);
+
+      
+
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts, orden);
       setTotalItems(data.total);
       console.log('Personajes', data.total);
       setCharacters(data.results);
