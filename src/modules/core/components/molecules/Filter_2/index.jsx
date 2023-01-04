@@ -75,7 +75,8 @@ function HandleApply (domain) {
   const root2 = ReactDOM.createRoot(document.getElementById('container-grid'));
   root2.render(
     <CharacterGridPaginated busqueda={name} domain={domain}/>, 
-  );
+   );
+
  
 };
 

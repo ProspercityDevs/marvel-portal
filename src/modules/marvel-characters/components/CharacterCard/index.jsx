@@ -9,6 +9,7 @@ CharacterCard.propTypes = {
 };
 
 export default function CharacterCard({ image, name,description, isSkeleton}) {
+
   const subName =(name)=>{
     let subNameValue;
     let value=name.indexOf('(');
@@ -23,7 +24,7 @@ export default function CharacterCard({ image, name,description, isSkeleton}) {
   return (
     <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
       <div className="mvl-character-card__image-container">
-        <img className="mvl-character-card__image" src={image} alt={description} />
+        <img className="mvl-character-card__image" src={`${image.path}.${image.extension}`} alt={description} />
       </div>
       <div className="mvl-character-card__body">
         <h4 className="u-no-margin">{name}</h4>

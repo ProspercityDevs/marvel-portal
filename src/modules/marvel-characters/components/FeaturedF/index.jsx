@@ -92,7 +92,7 @@ export function FeaturedGrid() {
         <div className='featured-comics-items'>
           {comics.map((item)=>(
             <figure key={item.id} className='featured-comics-items_figure'>
-              <img className='featured-comics-items__img'src={item.image}></img>
+              <img className='featured-comics-items__img'src={`${item.image.path}.${item.image.extension}`}></img>
               <p className='parrafo'>COMICS</p>
               <figcaption>
                 {item.name}
