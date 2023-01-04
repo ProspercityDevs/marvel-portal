@@ -16,9 +16,7 @@ const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
 
-const orden = {
-  orderBy: '-name'
-};
+
 
 export default function CharacterGridPaginated({ n, search }) {
   const [totalItems, setTotalItems] = useState(0);
@@ -30,6 +28,10 @@ export default function CharacterGridPaginated({ n, search }) {
     nameStartsWith: search
   };
 
+  const orden = {
+    orderBy: '-name'
+  };
+
   console.log(nameStarts);
   useEffect(() => {
     fetchCharactersAtPage();
@@ -39,7 +41,7 @@ export default function CharacterGridPaginated({ n, search }) {
   async function fetchCharactersAtPage(page = 1) {
     if (n == 0) {
       setLoading(true);
-      const data = await getCharactersForGrid2(page, ITEMS_PER_PAGE, orden);
+      const data = await getCharactersForGrid2(page, ITEMS_PER_PAGE);
       setTotalItems(data.total);
       console.log('Personajes', data.total);
       setCharacters(data.results);

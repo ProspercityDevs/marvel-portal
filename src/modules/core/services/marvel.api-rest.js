@@ -7,7 +7,9 @@ const credentials = {
   apikey: process.env.REACT_APP_PUBLIC_KEY
 };
 
-
+// const orden = {
+//   orderBy: '-name'
+// };
 
 export async function getAllPaginated(
   domain,

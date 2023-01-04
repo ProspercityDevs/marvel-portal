@@ -12,7 +12,7 @@ export async function getCharatersAtPage(
 
   { mappedBy = defaultMapper, queryParams = {} }
 ) {
-  return getAllPaginated(domain, page, nameStarts, orden, {
+  return getAllPaginated(domain, page, nameStarts, orden,  {
     mappedBy,
     itemsPerPage,
     ...queryParams
@@ -20,7 +20,7 @@ export async function getCharatersAtPage(
 }
 
 export function getCharactersForGrid(page, itemsPerPage, nameStarts, orden) {
-  return getCharatersAtPage(page, itemsPerPage, nameStarts,orden, {
+  return getCharatersAtPage(page, itemsPerPage, nameStarts, orden, {
     mappedBy: mapCharacterToCard
   });
 }
