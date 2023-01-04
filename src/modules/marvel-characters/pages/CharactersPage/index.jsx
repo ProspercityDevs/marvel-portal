@@ -12,6 +12,14 @@ export function CharacterPage() {
   const [updated, setUpdated] = useState('');
   const [filterEnter, setFilterEnter] = useState(false);
 
+  const [letter, setLetter] = useState('');
+  const [modalF, setModalF] = useState(false);
+  const modalFmod = (a) => {
+    setModalF(a);
+  };
+  const letterMod = (a) => {
+    setLetter(a);
+  };
   const searcher = (e) => {
     setSearch(e.target.value);
     console.log(e.target.value);
@@ -30,14 +38,18 @@ export function CharacterPage() {
     Peticion();
   }, []);
   function Peticion() {
-    if (filterEnter == true) {
-      if (updated.length < 1) {
-        return <CharactersGrid n={0} />;
+    if (modalF == false) {
+      if (filterEnter == true) {
+        if (updated.length < 1) {
+          return <CharactersGrid n={0} />;
+        } else {
+          return <CharactersGrid n={1} search={search} />;
+        }
       } else {
-        return <CharactersGrid n={1} search={search} />;
+        return <CharactersGrid n={0} search={search} />;
       }
     } else {
-      return <CharactersGrid n={0} search={search} />;
+      return <CharactersGrid n={2} search={letter} />;
     }
   }
   function Peticion2() {
@@ -64,7 +76,7 @@ export function CharacterPage() {
             <div className="row">
               <div className="col">
                 <input
-                   value={search}
+                  value={search}
                   onChange={searcher}
                   onKeyDown={handleKeyDown}
                   id="filter"
@@ -76,7 +88,7 @@ export function CharacterPage() {
               </div>
               <div className="col">
                 <div className="filtros">
-                  <MovieFilter />
+                  <MovieFilter letterMod={letterMod} modalFmod={modalFmod} />
                 </div>
                 <hr className="linea" />
               </div>

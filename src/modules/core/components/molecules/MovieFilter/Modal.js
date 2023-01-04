@@ -2,13 +2,14 @@ import './style.scss';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { BsSquareFill } from 'react-icons/bs';
-import { ImFileText2 } from 'react-icons/im';
 
 Modal.propTypes = {
   estado: PropTypes.bool,
-  closeModal: PropTypes.object
+  closeModal: PropTypes.object,
+  letterMod: PropTypes.func,
+  modalFmod: PropTypes.func
 };
-function Modal({ estado, closeModal }) {
+function Modal({ estado, closeModal, letterMod, modalFmod }) {
   const [estado1, setestado1] = useState(false);
 
   const openModal1 = () => {
@@ -120,73 +121,70 @@ function Modal({ estado, closeModal }) {
     setestado10(false);
     setestado11(false);
   };
-   //series boton apply
-   function aply () {
-    let text="";
-    if(estado1 == true){
-      console.log("Fantastic Four by Dan Slott Vol. 1")
-      let str1 = "31445";
-      text =text.concat(',', str1)
+  //series boton apply
+  function apply() {
+    let text = '';
+    if (estado1 == true) {
+      console.log('Fantastic Four by Dan Slott Vol. 1');
+      let str1 = '31445';
+      text = text.concat(',', str1);
     }
-    if(estado2 == true){
-      console.log("15 Love")
-      let str2 = "13379";
-      text =text.concat(',', str2)
+    if (estado2 == true) {
+      console.log('15 Love');
+      let str2 = '13379';
+      text = text.concat(',', str2);
     }
-    if(estado3 == true){
-      console.log("2020 Ironheart")
-      let str3 = "29694";
-      text =text.concat(',', str3)
+    if (estado3 == true) {
+      console.log('2020 Ironheart');
+      let str3 = '29694';
+      text = text.concat(',', str3);
     }
-    if(estado4 == true){
-      console.log("2020 Rescue")
-      let str4 = "29696";
-      text =text.concat(',', str4)
+    if (estado4 == true) {
+      console.log('2020 Rescue');
+      let str4 = '29696';
+      text = text.concat(',', str4);
     }
-    if(estado5 == true){
-      console.log("2099 Alpha")
-      let str5 = "27980";
-      text =text.concat(',', str5)
+    if (estado5 == true) {
+      console.log('2099 Alpha');
+      let str5 = '27980';
+      text = text.concat(',', str5);
     }
-    if(estado6 == true){
-      console.log("4")
-      let str6 = "725";
-      text =text.concat(',', str6)
+    if (estado6 == true) {
+      console.log('4');
+      let str6 = '725';
+      text = text.concat(',', str6);
     }
-    if(estado7 == true){
-      console.log("5 Ronin")
-      let str7 = "15276";
-      text =text.concat(',', str7)
+    if (estado7 == true) {
+      console.log('5 Ronin');
+      let str7 = '15276';
+      text = text.concat(',', str7);
     }
-    if(estado8 == true){
-      console.log("A+X")
-      let str8 = "16450";
-      text =text.concat(',', str8)
+    if (estado8 == true) {
+      console.log('A+X');
+      let str8 = '16450';
+      text = text.concat(',', str8);
     }
-    if(estado9 == true){
-      console.log("A-Force")
-      let str9 = "20562";
-      text =text.concat(',', str9)
+    if (estado9 == true) {
+      console.log('A-Force');
+      let str9 = '20562';
+      text = text.concat(',', str9);
     }
-    if(estado10 == true){
-      console.log("A-Next")
-      let str10 = "3620"
-      text =text.concat(',', str10)
-    }
-
-    if(text.length >0){
-      console.log(text)
-      cambio_modal(true)
-      cambio_textmodal(text)
-
-    }else{
-      console.log("No has seleccionado nada aún")
-      cambio_modal(false)
-      cambio_textmodal(text)
+    if (estado10 == true) {
+      console.log('A-Next');
+      let str10 = '3620';
+      text = text.concat(',', str10);
     }
 
-    
-   };
+    if (text.length > 0) {
+      console.log(text);
+      modalFmod(true);
+      letterMod(text);
+    } else {
+      console.log('No has seleccionado nada aún');
+      modalFmod(false);
+      letterMod(text);
+    }
+  }
 
   return (
     <div className="principal">
@@ -276,13 +274,12 @@ function Modal({ estado, closeModal }) {
         <button className="boton_reset" onClick={resetModal}>
           RESET
         </button>
-        <button className="boton_aply"onClick={aply} >
+        <button className="boton_aply" onClick={apply}>
           APPLY
-          </button>
+        </button>
       </div>
     </div>
   );
 }
 
 export default Modal;
-

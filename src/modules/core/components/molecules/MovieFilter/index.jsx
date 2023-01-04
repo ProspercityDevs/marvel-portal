@@ -2,8 +2,14 @@ import './style.scss';
 import { AiFillCaretDown } from 'react-icons/ai';
 import { useState } from 'react'; // Hooks paquete, para ver los estados
 import Modal from './Modal';
+import PropTypes from 'prop-types';
 
-export default function MovieFilter() {
+MovieFilter.propTypes = {
+  letterMod: PropTypes.func,
+  modalFmod: PropTypes.func
+};
+
+export default function MovieFilter(letterMod, modalFmod) {
   const [estado, setestado] = useState(false);
 
   // useState, va hacer el estado inicial
@@ -17,7 +23,7 @@ export default function MovieFilter() {
   };
 
   const closeModal = () => {
-    setestado(false); 
+    setestado(false);
   };
 
   return (
@@ -28,7 +34,7 @@ export default function MovieFilter() {
         </button>
       </div>
 
-      <Modal estado={estado} closeModal={closeModal} />
+      <Modal letterMod={letterMod} modalFmod={modalFmod} estado={estado} closeModal={closeModal} />
     </div>
   );
 }

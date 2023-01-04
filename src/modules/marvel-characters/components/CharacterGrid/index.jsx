@@ -48,14 +48,17 @@ export default function CharacterGridPaginated({ n, search }) {
       setCharacters(data.results);
       setLoading(false);
     }
-    /*if (n == 1) {
+    if (n == 2) {
+      const nameStarts = {
+        series: search
+      };
       setLoading(true);
       const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts);
       setTotalItems(data.total);
       console.log('Personajes', data.total);
       setCharacters(data.results);
       setLoading(false);
-    }*/
+    }
   }
 
   const onPageChange = (newPage) => {

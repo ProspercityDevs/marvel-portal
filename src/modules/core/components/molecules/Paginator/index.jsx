@@ -26,16 +26,12 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
     setCurrentPage(prevPage);
   }
 
- 
-
-
   useEffect(() => {
     onPageChange(currentPage);
   }, [currentPage]);
 
   return (
     <div className="mvl-paginator">
-
       <div className="mvl-paginator__actions">
         <button
           className="botones"
@@ -44,12 +40,10 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
           <BiChevronLeft /> Previous
         </button>
 
-
         <span className="mvl-paginator__text">
-        Page  <strong>{currentPage} </strong> of <strong>{totalPages}</strong>
-      </span>
-      
-        
+          Page <strong>{currentPage} </strong> of <strong>{totalPages}</strong>
+        </span>
+
         <span className="mvl-paginator__text">...</span>
 
         <button
@@ -58,12 +52,11 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
           onClick={onNextpageClick}>
           Next
           <BiChevronRight />
-
         </button>
       </div>
     </div>
   );
-};
+}
 
 function isFirstPage(currentPage) {
   return currentPage === 1;

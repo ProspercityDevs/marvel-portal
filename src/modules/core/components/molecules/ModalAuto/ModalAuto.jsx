@@ -30,8 +30,12 @@ function ModalAuto({ search, modalAuto }) {
       <div className={`modalAuto ${search && 'modalAuto-open'}`}>
         <ul className="listaM">
           {name.map((item) => (
-            <li key={item} onClick={() => modalAutoModal(item)} onChange={openModalAuto1}>
-              <span>{item}</span>
+            <li
+              className="listaMa"
+              key={item}
+              onClick={() => modalAutoModal(item)}
+              onChange={openModalAuto1}>
+              <span className="item">{item}</span>
             </li>
           ))}
         </ul>
