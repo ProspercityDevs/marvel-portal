@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getCharactersForGrid2 } from '@/modules/marvel-characters/services';
 import { getCharactersForGrid } from '@/modules/marvel-characters/services';
-
 import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
 import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
@@ -27,7 +26,6 @@ export default function CharacterGridPaginated({ n, search }) {
   };
 
   console.log(nameStarts);
-
   useEffect(() => {
     fetchCharactersAtPage();
   }, []); // para que no se ejecute continuamente,
@@ -40,8 +38,20 @@ export default function CharacterGridPaginated({ n, search }) {
       console.log('Personajes', data.total);
       setCharacters(data.results);
       setLoading(false);
+      console.log(data.results); //se le agrego esta linea de codigo para sacar los id.
     }
     if (n == 1) {
+      setLoading(true);
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts);
+      setTotalItems(data.total);
+      console.log('Personajes', data.total);
+      setCharacters(data.results);
+      setLoading(false);
+    }
+    if (n == 2) {
+      const nameStarts = {
+        series: search
+      };
       setLoading(true);
       const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts);
       setTotalItems(data.total);

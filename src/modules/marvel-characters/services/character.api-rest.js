@@ -2,12 +2,13 @@ import { getAllPaginated } from '@/modules/core/services/marvel.api-rest';
 import { defaultMapper } from '@/modules/core/services';
 import { mapCharacterToCard } from '@/modules/marvel-characters/services';
 
-const domain = `characters`;
+const domain = `characters`; // estado inicial es: characters
 
-export async function getCharatersAtPage(
+export async function getCharatersAtPage( 
   page,
   itemsPerPage,
   nameStarts,
+
   { mappedBy = defaultMapper, queryParams = {} }
 ) {
   return getAllPaginated(domain, page, nameStarts, {

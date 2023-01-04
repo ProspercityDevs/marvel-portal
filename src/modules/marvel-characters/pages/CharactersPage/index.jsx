@@ -5,39 +5,56 @@ import MovieFilter from 'src/modules/core/components/molecules/MovieFilter';
 import { useState } from 'react';
 import './styles.scss';
 import ModalAuto from 'src/modules/core/components/molecules/ModalAuto/ModalAuto';
+import { useEffect } from 'react';
 
 export function CharacterPage() {
   const [search, setSearch] = useState('');
   const [updated, setUpdated] = useState('');
   const [filterEnter, setFilterEnter] = useState(false);
 
+  const [letter, setLetter] = useState('');
+  const [modalF, setModalF] = useState(false);
+  const modalFmod = (a) => {
+    setModalF(a);
+  };
+  const letterMod = (a) => {
+    setLetter(a);
+  };
   const searcher = (e) => {
     setSearch(e.target.value);
     console.log(e.target.value);
   };
+  const modalAuto = (a) => {
+    setSearch(a);
+  };
+
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       setUpdated(search);
       setFilterEnter(true);
     }
   };
-
+  useEffect(() => {
+    Peticion();
+  }, []);
   function Peticion() {
-    if (filterEnter == true) {
-      if (updated.length < 1) {
-        return <CharactersGrid n={0} />;
+    if (modalF == false) {
+      if (filterEnter == true) {
+        if (updated.length < 1) {
+          return <CharactersGrid n={0} />;
+        } else {
+          return <CharactersGrid n={1} search={search} />;
+        }
       } else {
-        return <CharactersGrid n={1} search={search} />;
+        return <CharactersGrid n={0} search={search} />;
       }
     } else {
-      return <CharactersGrid n={0} search={search} />;
+      return <CharactersGrid n={2} search={letter} />;
     }
   }
   function Peticion2() {
     if (search.length >= 3) {
-      return <ModalAuto search={search} />;
-    } else {
-      <option>KEEP TYPING...</option>;
+      return <ModalAuto search={search} modalAuto={modalAuto} />;
     }
   }
   return (
@@ -71,7 +88,7 @@ export function CharacterPage() {
               </div>
               <div className="col">
                 <div className="filtros">
-                  <MovieFilter />
+                  <MovieFilter letterMod={letterMod} modalFmod={modalFmod} />
                 </div>
                 <hr className="linea" />
               </div>
