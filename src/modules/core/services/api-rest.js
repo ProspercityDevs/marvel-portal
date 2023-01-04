@@ -26,5 +26,5 @@ async function myFetch(url) {
 function objectToURLString(params = {}) {
   const res = new URLSearchParams(params).toString();
   console.log(res);
-  return `?${res}`;
+  return `?orderBy=-name&${res}`;
 };
