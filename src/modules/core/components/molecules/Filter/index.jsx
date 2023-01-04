@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactDOM from 'react-dom/client';
 import CharacterGridPaginated from '@/modules/marvel-characters/components/CharacterGrid/index';
@@ -123,4 +121,3 @@ export default function Filter() {
     </>
   );
 }
->>>>>>> main
