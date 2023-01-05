@@ -7,6 +7,7 @@ import CharacterCard from '@/modules/marvel-characters/components/CharacterCard'
 import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
 import TotalResults from 'src/modules/core/components/atoms/TotalResults';
+import MovieFilter from 'src/modules/core/components/molecules/MovieFilter';
 import SerieFilter from 'src/modules/core/components/molecules/SerieFilter';
 
 const INITIAL_PAGE = 1;
@@ -66,6 +67,7 @@ export default function CharacterGridPaginated({ searchValue }) {
     <>
       <TotalResults totalItems={totalItems} />
       {/* <Filter query={queryParams} onQueryChange={onQueryChange} /> */}
+      <MovieFilter />
       <SerieFilter />
       <div className="mvl-grid mvl-grid-6">
         <CharacterGrid
