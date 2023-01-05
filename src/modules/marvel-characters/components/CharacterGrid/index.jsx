@@ -16,10 +16,11 @@ const currentDate = new Date().toDateString();
 const alias = 'Alias';
 
 CharacterGridPaginated.propTypes = {
-  searchValue: PropTypes.string
+  searchValue: PropTypes.string,
+  selectValue: PropTypes.string
 };
 
-export default function CharacterGridPaginated({ searchValue }) {
+export default function CharacterGridPaginated({ searchValue, selectValue }) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
@@ -29,31 +30,46 @@ export default function CharacterGridPaginated({ searchValue }) {
   //   search: searchValue
   // };
 
-  const order = {
-    orderBy: 'name'
-  };
+  console.log('Seleccionado el orden: ' + selectValue);
+
+   const order = {
+     orderBy: 'name'
+   };
 
   useEffect(() => {
     fetchCharactersAtPage();
   }, []);
 
+  // async function fetchCharactersAtPage(page = 1) {
+    
+  //   setLoading(true);
+  //     const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
+  //     setTotalItems(data.total);
+  //     setCharacters(data.results);
+  //     setLoading(false);
+    
+  // }
+
   async function fetchCharactersAtPage(page = 1) {
     
-    const option = 2;
-    if (option == 1){
-      setLoading(true);
-      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
-      setTotalItems(data.total);
-      setCharacters(data.results);
-      setLoading(false);
-    } else {
-      setLoading(true);
-      const data = await getInverseCharactersForGrid(page, ITEMS_PER_PAGE, order);
-      setTotalItems(data.total);
-      setCharacters(data.results);
-      setLoading(false);
-    }
-  }
+     const option = "A-Z";
+     if (option == "A-Z"){
+       setLoading(true);
+       const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
+       setTotalItems(data.total);
+       setCharacters(data.results);
+       setLoading(false);
+     } 
+  
+     if(option == "Z-A"){
+       order.orderBy='-name';
+       setLoading(true);
+       const data = await getInverseCharactersForGrid(page, ITEMS_PER_PAGE, order);
+       setTotalItems(data.total);
+       setCharacters(data.results);
+       setLoading(false);
+     }
+   }
 
   const onPageChange = (newPage) => {
     fetchCharactersAtPage(newPage);

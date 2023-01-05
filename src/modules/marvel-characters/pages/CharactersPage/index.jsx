@@ -7,10 +7,11 @@ import CharacterProm from '@/modules/core/components/molecules/CharacterProm';
 import FilteredCharacterListPaginated from '../../components/FilteredCharactersList';
 import SearchBar from 'src/modules/core/components/atoms/SearchBar';
 import PropTypes from 'prop-types';
-import OrderCharacters from 'src/modules/core/components/atoms/OrderCharacters';
+import SortBySelector from 'src/modules/core/components/atoms/SortBySelector';
 
 export function CharactersPage() {
   const [searchValue, setSearchValue] = useState('');
+  const [selectValue, setSelectValue] = useState('A-Z');
 
   Autocomplete.propTypes = {
     searchValue: PropTypes.string
@@ -53,9 +54,9 @@ export function CharactersPage() {
             <FeaturedCharacters />
             <h1 className="u-no-margin">MARVEL CHARACTERS LIST</h1>
             <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
-            <Autocomplete searchValue={searchValue} />
-            <OrderCharacters />
-            <CharactersGrid searchValue={searchValue} />
+            <Autocomplete searchValue={searchValue} setSelectValue={setSelectValue} />
+            <SortBySelector selectValue={selectValue}/>
+            <CharactersGrid searchValue={searchValue} selectValue={selectValue}/>
           </div>
         </div>
       </div>
