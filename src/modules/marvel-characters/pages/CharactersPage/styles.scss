@@ -1,46 +1,51 @@
-.mvl-characters-page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var( --space-lg);
-    background-color: var(--white);;
-    margin-bottom: 30px ;
+.mvl-characters-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  background-color: var(--white);
+  margin-bottom: 30px;
 }
 
-.mvl-characters-page-header{
-    background-image: url("/assets/images/characters_banner.jpeg");
-    min-height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    color: var(--black);
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--black);
+.mvl-characters-page-header {
+  background-image: url('/assets/images/characters_banner.jpeg');
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--black);
 }
 
-.mvl-characters-page-banner{
-    background-color: var(--black);
+.mvl-characters-page-banner {
+  background-color: var(--black);
 }
 
-.mvl-section-card{
-    background-image: url("/assets/images/banner-characters.png");
-    background-color: var(--black);
-    min-height: 250px;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    border: 1px solid var(--color-border);
-    background-image: url("/assets/images/imagenmarvel.png");
-    width: 96%;
+.mvl-section-card {
+  background-image: url('/assets/images/banner-characters.png');
+  background-color: var(--black);
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  background-image: url('/assets/images/imagenmarvel.png');
+  width: 96%;
 }
 
-.main
-{
+.main {
   background-color: var(--white);
   color: var(--black);
 }
 
-.u-no-margin{
-    color: var(--black);   
+.u-no-margin-mcl {
+  color: var(--black);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.u-no-margin {
+  color: var(--black);
 }
