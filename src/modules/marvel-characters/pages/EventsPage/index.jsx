@@ -1,10 +1,14 @@
 import React from 'react';
+import { DefaultPage } from '../../components/InitialPage';
 
 function EventsPage() {
-  return (
-    <div>
-      <h1>EventsPage</h1>
-    </div>
-  );
+  const domain='events';
+  const id=1010733;
+  return(
+    <DefaultPage
+      domain={domain} 
+      id={id}
+    />
+  )
 }
 export { EventsPage };

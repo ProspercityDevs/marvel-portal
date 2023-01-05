@@ -1,10 +1,14 @@
 import React from 'react';
+import { DefaultPage } from '../../components/InitialPage';
 
 function SeriesPage() {
-  return (
-    <div>
-      <h1>SeriesPage</h1>
-    </div>
-  );
+  const domain='series';
+  const id=1011027;
+  return(
+    <DefaultPage
+      domain={domain}
+      id={id} 
+    />
+  )
 }
 export { SeriesPage };

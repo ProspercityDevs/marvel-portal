@@ -8,12 +8,15 @@
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "bootstrap": "^5.2.3",
     "bulma": "^0.9.4",
     "create-react-app": "^5.0.1",
     "multiselect-react-dropdown": "^2.0.25",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-paginate": "^8.1.4",
+    "reactstrap": "^9.1.5",
     "sweetalert": "^2.1.2"
   },
   "devDependencies": {
