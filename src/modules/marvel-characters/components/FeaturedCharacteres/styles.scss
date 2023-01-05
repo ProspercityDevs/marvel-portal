@@ -5,6 +5,10 @@
   grid-template-columns: repeat(6, minmax(15%, 1fr));
 }
 
+.u-margin {
+  color: var(--color-accent);
+}
+
 .mvl-featuredCharacters-card {
   width: 158.33px;
   height: 355px;
