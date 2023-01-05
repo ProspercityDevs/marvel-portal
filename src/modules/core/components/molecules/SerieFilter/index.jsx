@@ -11,9 +11,7 @@ export default function SerieFilter() {
 
   //Función para el contenedor de series
   function SeriesList() {
-    return (
-      <SeriesListPaginated />
-    )
+    return <SeriesListPaginated />;
   }
 
   //Este es el "return" de <SerieFilter />

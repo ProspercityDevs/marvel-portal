@@ -62,7 +62,7 @@ export default function MainFooter() {
               <div className="menu-footer-promocion-imagen">
                 <figure className="menu-footer-imagen">
                   <img
-                    className="menu-footer-promocion-imagen ilimitado" 
+                    className="menu-footer-promocion-imagen ilimitado"
                     src="https://i.postimg.cc/25H8qP38/unlimited.png"
                     alt="Marvel Insider"
                   />
