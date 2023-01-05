@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--black);
+  color: var(--white);
   flex-direction: column;
   width: 100%;
   background-color: var(--black);
@@ -47,5 +47,9 @@
 }
 
 .u-no-margin {
+  color: var(--white);
+}
+
+.u-no-margin-feat {
   color: var(--black);
 }
