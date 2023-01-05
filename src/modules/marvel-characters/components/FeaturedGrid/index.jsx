@@ -2,9 +2,9 @@ import './styles.scss';
 import React from 'react';
 import { ItemsName } from '../ItemInfo/itemnsName';
 
-export function FeaturedGrid() {
-  const domain="characters/1009368/comics";
-  //1009368,1017100
+export function FeaturedGrid({id}) {
+  const domain="characters/"+id+"/comics";
+  //1009368,1011027,1010733 1011299  1010794 1009268 ironcap star guadia spidi deadpool
   const comics=ItemsName({domain})
 
   return (

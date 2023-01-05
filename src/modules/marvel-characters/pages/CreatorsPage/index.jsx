@@ -3,9 +3,11 @@ import { DefaultPage } from '../../components/InitialPage';
 
 function CreatorsPage() {
   const domain='creators';
+  const id=1009268;
   return(
     <DefaultPage
-      domain={domain} 
+      domain={domain}
+      id={id} 
     />
   )
 }

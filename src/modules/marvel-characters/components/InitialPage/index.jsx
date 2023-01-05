@@ -6,9 +6,10 @@ import PropTypes from 'prop-types';
 import  CharacterGridPaginated  from '@/modules/marvel-characters/components/ItemGrid/index';
 
 DefaultPage.propTypes = {
-  domain: PropTypes.string
+  domain: PropTypes.string,
+  id: PropTypes.number
 }
-export function DefaultPage({domain}) {
+export function DefaultPage({domain,id}) {
   const name={};
   const itemsPerPage = 24;
   const order="";
@@ -21,7 +22,7 @@ export function DefaultPage({domain}) {
       </header>
 
       <div className="container">
-        <FeaturedGrid />
+        <FeaturedGrid id={id}/>
         <h1>MARVEL  {domain} list</h1>
         <Filter /> 
       </div>
