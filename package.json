@@ -1,10 +1,9 @@
 {
-  "name": "marvel-portal",
+  "name": "marvel",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bulma": "^0.9.4",
-    "npm": "9.1.2",
     "react": "^18.2.0",
     "react-icons": "^4.4.0",
     "sweetalert": "^2.1.2"
@@ -17,13 +16,12 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
-    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1",
     "react-app-rewire-alias": "^1.1.7",
     "react-app-rewired": "^2.2.1",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "6",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "5.0.1",
     "sass": "^1.55.0",
     "web-vitals": "^2.1.4"
   },
@@ -35,7 +33,6 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
-    
   },
   "eslintConfig": {
     "extends": [

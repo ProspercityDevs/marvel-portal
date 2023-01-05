@@ -37,8 +37,8 @@ export default function serieFilter() {
   //Este es el "return" de <SeriesFilter />
   return (
     <div className="filters">
-      <div className="filters__serie" onClick={handleToggle}>
-        <div className="filters__serie--text">SERIES</div>
+      <div className="filters__movie" onClick={handleToggle}>
+        <div className="filters__movie--text">MOVIES</div>
         <RiArrowDropDownFill
           className={`filters__serie icon ${toggle && 'filters__serie__icon-open'}`}
         />

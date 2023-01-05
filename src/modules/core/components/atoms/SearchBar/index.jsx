@@ -1,10 +1,9 @@
 import React from 'react';
-import { useState } from 'react';
 import './styles.scss';
 import { RiSearch2Line } from 'react-icons/ri';
 
-function SearchBar() {
-  const [searchValue, setSearchValue] = useState('');
+function SearchBar({searchValue, setSearchValue}) {
+  
   const onSearchValueChange = (event) => {
     console.log(event.target.value);
     setSearchValue(event.target.value);
@@ -14,7 +13,7 @@ function SearchBar() {
     <div className="filter_search">
       <RiSearch2Line className="icon_search" />
       <input
-        className="input-nav"
+        className="input-search"
         placeholder="SEARCH"
         value={searchValue}
         onChange={onSearchValueChange}

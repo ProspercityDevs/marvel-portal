@@ -1,6 +1,6 @@
 .filter_search {
   border: 1px solid transparent;
-  border-bottom: 1px solid #151515;
+  border-bottom: 1px solid var(--black);
 }
 
 .icon_search {
@@ -11,7 +11,7 @@
   border: 1px solid var(--color-warning);
 }
 
-.input-nav {
+.input-search {
   width: 94%;
   border-radius: 0;
   font-size: 1.5rem;
