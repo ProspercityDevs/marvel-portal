@@ -14,4 +14,4 @@ export function mapSerieToList(serie) {
     title: serie.title,
     id: serie.id
   };
-}
+};

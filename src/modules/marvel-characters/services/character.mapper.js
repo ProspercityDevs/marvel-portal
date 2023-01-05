@@ -14,4 +14,5 @@ export function mapCharacterToList(character) {
     name: character.name,
     id: character.id
   };
-}
+};
+

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
@@ -13,8 +12,8 @@ export default function SeriesListPaginated() {
   const [series, setSeries] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [queryParams, setQueryParams] = useState({});
-
-  useEffect(() => {
+  
+    useEffect(() => {
     fetchSeriesAtPage();
   }, []);
 
@@ -26,19 +25,23 @@ export default function SeriesListPaginated() {
     setLoading(false);
     console.log('Total Series: ', data.total);
   }
-
+  
   // const onPageChange = (newPage) => {
   //   fetchSeriesAtPage(newPage);
   // };
-
+  
   const onQueryChange = (query) => {
     setQueryParams(query);
   };
-
+  
   return (
     <>
       <div className="series_list">
-        <SerieList series={series} isLoading={isLoading} itemsPerPage={ITEMS_PER_PAGE} />
+        <SerieList
+          series={series}
+          isLoading={isLoading}
+          itemsPerPage={ITEMS_PER_PAGE}
+        />
       </div>
       {/* <Paginator
         initialPage={INITIAL_PAGE}

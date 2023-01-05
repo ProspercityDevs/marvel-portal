@@ -20,29 +20,30 @@ export async function getCharatersAtPage(
 }
 
 export async function getInverseCharatersAtPage(
-  page,
-  itemsPerPage,
-  order,
-  { mappedBy = defaultMapper, queryParams = {} }
-) {
-  return getInverseAllPaginated(domain, page, order, {
-    mappedBy,
-    itemsPerPage,
-    ...queryParams
-  });
-}
+   page,
+   itemsPerPage,
+   order,
+   { mappedBy = defaultMapper, queryParams = {} }
+ ) {
+   return getInverseAllPaginated(domain, page, order, {
+     mappedBy,
+     itemsPerPage,
+     ...queryParams
+   });
+ }
 
-export function getCharactersForGrid(page, itemsPerPage) {
+export function getCharactersForGrid(page, itemsPerPage ) {
   return getCharatersAtPage(page, itemsPerPage, {
     mappedBy: mapCharacterToCard
   });
 }
 
-export function getInverseCharactersForGrid(page, itemsPerPage, order) {
+export function getInverseCharactersForGrid(page, itemsPerPage, order ) {
   return getInverseCharatersAtPage(page, itemsPerPage, order, {
     mappedBy: mapCharacterToCard
   });
 }
+
 
 export function getCharactersForList(page, itemsPerPage) {
   return getCharatersAtPage(page, itemsPerPage, {

@@ -39,6 +39,7 @@ export async function getInverseAllPaginated(
   });
 }
 
+
 export async function getAll(domain, { mappedBy = defaultMapper, queryParams = {} }) {
   return getAndMap(`${BASE_URL}${domain}`, {
     mappedBy,
