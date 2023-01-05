@@ -6,12 +6,11 @@ SerieItem.propTypes = {
   isSkeleton: PropTypes.bool
 };
 
-// eslint-disable-next-line no-unused-vars
-export default function SerieItem({ title, isSkeleton }) {
+export default function SerieItem({ title,  isSkeleton }) {
   return (
     <label className="series__list--text">
       <input value={false} type="checkbox" />
-      {title}
+        {title}
     </label>
 
     // <div className="mvl-character-list" data-is-skeleton={isSkeleton}>
