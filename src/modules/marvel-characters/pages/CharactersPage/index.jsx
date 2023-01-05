@@ -52,7 +52,7 @@ export function CharactersPage() {
             <h1 className="u-no-margin">FEATURED CHARACTERS</h1>
             <FeaturedCharacters />
             <CharacterSpotlight />
-            <h1 className="u-no-margin">MARVEL CHARACTERS LIST</h1>
+            <h1 className="u-no-margin-mcl">MARVEL CHARACTERS LIST</h1>
             <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
             <Autocomplete searchValue={searchValue} />
             <CharactersGrid searchValue={searchValue} />
