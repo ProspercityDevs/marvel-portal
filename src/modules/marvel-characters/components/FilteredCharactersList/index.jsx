@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getCharactersForList } from '@/modules/marvel-characters/services';
@@ -5,15 +7,11 @@ import CharacterItem from '../../../core/components/atoms/CharacterItem';
 // import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
 
-
-
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 5;
 
-
-export default function FilteredCharacterListPaginated({searchValue}) {
-  
-  console.log("La búsqueda empieza con: " + searchValue);
+export default function FilteredCharacterListPaginated({ searchValue }) {
+  console.log('La búsqueda empieza con: ' + searchValue);
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
@@ -27,8 +25,8 @@ export default function FilteredCharacterListPaginated({searchValue}) {
     let letters = {
       nameStartsWith: 'spi'
     };
-  
-    console.log("el nameStartsWith es: " + letters.nameStartsWith);
+
+    console.log('el nameStartsWith es: ' + letters.nameStartsWith);
 
     setLoading(true);
     const data = await getCharactersForList(page, ITEMS_PER_PAGE);
@@ -38,16 +36,16 @@ export default function FilteredCharacterListPaginated({searchValue}) {
     console.log('Total Personajes: ', data.total);
   }
 
-//   const onPageChange = (newPage) => {
-//     fetchCharactersAtPage(newPage);
-//   };
+  //   const onPageChange = (newPage) => {
+  //     fetchCharactersAtPage(newPage);
+  //   };
 
   const onQueryChange = (query) => {
     setQueryParams(query);
   };
 
   return (
-    <>      
+    <>
       <div className="mvl-grid mvl-grid-6">
         <CharacterList
           characters={characters}

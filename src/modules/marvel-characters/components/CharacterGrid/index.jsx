@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getCharactersForGrid } from '@/modules/marvel-characters/services';
@@ -38,9 +39,8 @@ export default function CharacterGridPaginated({ searchValue }) {
   }, []);
 
   async function fetchCharactersAtPage(page = 1) {
-    
     const option = 2;
-    if (option == 1){
+    if (option == 1) {
       setLoading(true);
       const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
       setTotalItems(data.total);
@@ -74,8 +74,8 @@ export default function CharacterGridPaginated({ searchValue }) {
           characters={characters}
           isLoading={isLoading}
           itemsPerPage={ITEMS_PER_PAGE}
-          order= {order}
-      />
+          order={order}
+        />
       </div>
       <Paginator
         initialPage={INITIAL_PAGE}
