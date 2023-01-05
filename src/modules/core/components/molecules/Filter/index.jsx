@@ -5,6 +5,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { ItemsName } from 'src/modules/marvel-characters/components/ItemInfo/itemnsName';
 import ButtonArrow from '../Filter_2';
 import { useState } from 'react';
+import {AiOutlineArrowRight} from 'react-icons/ai'
 import {Dropdown, DropdownMenu, DropdownToggle, DropdownItem} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.scss';
@@ -26,6 +27,17 @@ function OnChangeOrder(){
   const name="";
   const order={
     orderBy:"-name"
+  };
+  const itemsPerPage=24;
+  const root3 = ReactDOM.createRoot(document.getElementById('container-grid'));
+  root3.render(
+    <CharacterGridPaginated name={name} domain={`characters`} order={order} itemsPerPage={itemsPerPage} />, 
+  );
+}
+function OnChangeOrder2(){
+  const name="";
+  const order={
+    orderBy:"name"
   };
   const itemsPerPage=24;
   const root3 = ReactDOM.createRoot(document.getElementById('container-grid'));
@@ -109,11 +121,11 @@ export default function Filter() {
               value={text} 
               onChange={onChangeValue} 
               onKeyDown={handler} 
-              placeholder="SEARCH"  
+              placeholder="Search"  
               aria-label='Search'
               aria-autocomplete='both'
             />
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="search-container__icon" />
+            <FontAwesomeIcon icon={faMagnifyingGlass} onClick={()=>OnChangeName(text)} className="search-container__icon" />
           </div>
           <ul
             id='autocomplete-results'
@@ -126,19 +138,20 @@ export default function Filter() {
 
         <div className="container-checked-two">
           <ButtonArrow/>
-        </div>
+      
 
-        <div className='order'>
-          <Dropdown isOpen={toggle} toggle={handleToggle} >
-            <DropdownToggle caret>
-              a z
-            </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem onClick={OnChangeOrder}> z a</DropdownItem>
-              <DropdownItem>a z</DropdownItem>
-            </DropdownMenu>
-          
-          </Dropdown>
+          <div className='order'>
+            <Dropdown isOpen={toggle} toggle={handleToggle} >
+              <DropdownToggle caret>
+                A <AiOutlineArrowRight /> Z
+              </DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem onClick={OnChangeOrder}> Z <AiOutlineArrowRight /> A </DropdownItem>
+                <DropdownItem onClick={OnChangeOrder2}> A <AiOutlineArrowRight /> Z</DropdownItem>
+              </DropdownMenu>
+            
+            </Dropdown>
+          </div>
         </div>
       </div>
       
