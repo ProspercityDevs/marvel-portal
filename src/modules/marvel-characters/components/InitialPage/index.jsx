@@ -23,9 +23,9 @@ export function DefaultPage({domain}) {
       <div className="container">
         <FeaturedGrid />
         <h1>MARVEL  {domain} list</h1>
-        <Filter />
-          
+        <Filter /> 
       </div>
+      
       <CharacterGridPaginated domain={domain} name={name} order={order} itemsPerPage={itemsPerPage}/>
     </div>
   );

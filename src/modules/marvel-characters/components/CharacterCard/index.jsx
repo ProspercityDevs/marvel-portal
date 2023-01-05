@@ -6,10 +6,11 @@ CharacterCard.propTypes = {
   description:  PropTypes.string,
   name: PropTypes.string,
   domain: PropTypes.string,
-  isSkeleton: PropTypes.bool
+  isSkeleton: PropTypes.bool,
+  url: PropTypes.array
 };
 
-export function CharacterCard({ image, name,description, isSkeleton, domain}) {
+export function CharacterCard({ image, name, description, isSkeleton, domain, url}) {
   const subName =(name)=>{
     let subNameValue;
     let value=name.indexOf('(');
@@ -20,31 +21,38 @@ export function CharacterCard({ image, name,description, isSkeleton, domain}) {
     }
     return subNameValue
   }
+  console.log('url[0].url')
+  console.log(url[0].url)
+
     if(domain=='characters'){
       return (
-        <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
-          <div className="mvl-character-card__image-container">
-            <img className="mvl-character-card__image" src={`${image.path}.${image.extension}`} alt={description} />
+        <a className="character-card-link" href={`${url[0].url}`} target="_blank" rel="noopener noreferrer">
+          <div className="mvl-character-card"  data-is-skeleton={isSkeleton}>
+            <div className="mvl-character-card__image-container">
+              <img className="mvl-character-card__image" src={`${image.path}.${image.extension}`} alt={description} />
+            </div>
+            <div className="mvl-character-card__body">
+              <h4 className="u-no-margin">{name}</h4>
+              <br></br>
+              <h5 className="u-no-margin">{subName(name)}</h5>
+            </div>
           </div>
-          <div className="mvl-character-card__body">
-            <h4 className="u-no-margin">{name}</h4>
-            <br></br>
-            <h5 className="u-no-margin">{subName(name)}</h5>
-          </div>
-        </div>
+        </a>
       );
     }
   
   return (
-    <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
-      <div className="mvl-character-card__image-container">
-        <img className="mvl-character-card__image" src={`${image.path}.${image.extension}`} alt={description} /> 
+    <a href={`${url[0].url}`} target="_blank" rel="noopener noreferrer">
+      <div className="mvl-character-card"  data-is-skeleton={isSkeleton}>
+        <div className="mvl-character-card__image-container">
+          <img className="mvl-character-card__image" src={`${image.path}.${image.extension}`} alt={description} /> 
+        </div>
+        <div className="mvl-character-card__body">
+          <h4 className="u-no-margin">{name}</h4>
+          <br></br>
+          {/* <h5 className="u-no-margin-description">{description}</h5> */}
+        </div>
       </div>
-      <div className="mvl-character-card__body">
-        <h4 className="u-no-margin">{name}</h4>
-        <br></br>
-        <h5 className="u-no-margin">{description}</h5>
-      </div>
-    </div>
+    </a>
   );
 }

@@ -11,10 +11,11 @@ import CharacterGridPaginated from 'src/modules/marvel-characters/components/Ite
 
 
 function ButtonArrow() {
-  const [domain, setDomain]=useState("");
+  const [domain1, setDomain]=useState("");
   const [toggle, setToggle] = useState(false);
   const domainDefault="characters";
-    let series=ItemsName("series");
+  const domain="series"
+  let series=ItemsName({domain});
   
   const handleSelect=(e)=>{
     setDomain("series/"+e.target.value+"/characters");
@@ -29,7 +30,6 @@ function ButtonArrow() {
       <Dropdown isOpen={toggle} toggle={handleToggle} >
         <DropdownToggle caret>
           SERIES
-            {/* <RiArrowDropDownFill className="filters__movie icon"  /> */}
         </DropdownToggle>
         <DropdownMenu>
           <div className="movies">
@@ -43,7 +43,7 @@ function ButtonArrow() {
             </ul>
             <div className="movies__buttons--container" onClick={handleToggle}>
               <div className="movies__buttons--left">
-                <button className="movies__buttons" onClick={()=> HandleApply(domain) }>
+                <button className="movies__buttons" onClick={()=> HandleApply(domain1) }>
                   Apply
                 </button>
               </div>
@@ -66,16 +66,16 @@ function ButtonArrow() {
   );
 }
 HandleApply.propTypes = {
-  domain: PropTypes.string
+  domain1: PropTypes.string
 }
-function HandleApply (domain) {
+function HandleApply (domain1) {
   const name="";
   const order="";
   const itemsPerPage=24;
-  console.log("hande "+domain);
+  console.log("hande "+domain1);
   const root2 = ReactDOM.createRoot(document.getElementById('container-grid'));
   root2.render(
-    <CharacterGridPaginated nam={name} domain={domain} order={order} itemsPerPage={itemsPerPage} />, 
+    <CharacterGridPaginated nam={name} domain={domain1} order={order} itemsPerPage={itemsPerPage} />, 
    );
 
  

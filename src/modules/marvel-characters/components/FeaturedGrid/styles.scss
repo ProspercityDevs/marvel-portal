@@ -10,6 +10,11 @@ h1{
     width: 100 vw;
 }
 
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+  
+
 .slider::-webkit-scrollbar {
     display: none;
    }

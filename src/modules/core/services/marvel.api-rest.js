@@ -9,10 +9,10 @@ const credentials = {
 export async function getAllPaginated(
   domain,
   page,
-  name={},
+  name,
   order,
   {mappedBy,itemsPerPage, queryParams} 
-) { console.log('itemsPerPagegetal '+itemsPerPage)
+) { 
   return getAll(domain, {
     mappedBy,
     queryParams: {
