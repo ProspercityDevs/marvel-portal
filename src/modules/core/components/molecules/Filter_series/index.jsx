@@ -5,17 +5,17 @@ import ReactDOM from 'react-dom/client';
 // import { RiArrowDropDownFill } from 'react-icons/ri';
 import {Dropdown, DropdownMenu, DropdownToggle} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { SeriesGridPaginated } from '../../../../marvel-characters/components/CharacterGrid/itemnsName.jsx';
-import CharacterGridPaginated from 'src/modules/marvel-characters/components/CharacterGrid/index.jsx';
+import { ItemsName } from '../../../../marvel-characters/components/ItemInfo/itemnsName.jsx';
+import CharacterGridPaginated from 'src/modules/marvel-characters/components/ItemGrid/index.jsx';
 
 
 
 function ButtonArrow() {
-  const [domain, setDomain]=useState("");
+  const [domain1, setDomain]=useState("");
   const [toggle, setToggle] = useState(false);
   const domainDefault="characters";
-  const domainTitle="series";
-  let series=SeriesGridPaginated(domainTitle);
+  const domain="series"
+  let series=ItemsName({domain});
   
   const handleSelect=(e)=>{
     setDomain("series/"+e.target.value+"/characters");
@@ -30,7 +30,6 @@ function ButtonArrow() {
       <Dropdown isOpen={toggle} toggle={handleToggle} >
         <DropdownToggle caret>
           SERIES
-            {/* <RiArrowDropDownFill className="filters__movie icon"  /> */}
         </DropdownToggle>
         <DropdownMenu>
           <div className="movies">
@@ -38,13 +37,13 @@ function ButtonArrow() {
               {series.map((item, index) => (
                 <li key={index} onClick={handleSelect} className="movies__list--item">
                   <input value={item.id} type="radio" name="series"/>
-                  <label className="movies__list--text">{item.name}</label>
+                  <label className="movies__list--text">{item.title}</label>
                 </li>
               ))}
             </ul>
             <div className="movies__buttons--container" onClick={handleToggle}>
               <div className="movies__buttons--left">
-                <button className="movies__buttons" onClick={()=> HandleApply(domain) }>
+                <button className="movies__buttons" onClick={()=> HandleApply(domain1) }>
                   Apply
                 </button>
               </div>
@@ -67,15 +66,18 @@ function ButtonArrow() {
   );
 }
 HandleApply.propTypes = {
-  domain: PropTypes.string
+  domain1: PropTypes.string
 }
-function HandleApply (domain) {
+function HandleApply (domain1) {
   const name="";
-  console.log("hande "+domain);
+  const order="";
+  const itemsPerPage=24;
+  console.log("hande "+domain1);
   const root2 = ReactDOM.createRoot(document.getElementById('container-grid'));
   root2.render(
-    <CharacterGridPaginated busqueda={name} domain={domain}/>, 
-  );
+    <CharacterGridPaginated nam={name} domain={domain1} order={order} itemsPerPage={itemsPerPage} />, 
+   );
+
  
 };
 

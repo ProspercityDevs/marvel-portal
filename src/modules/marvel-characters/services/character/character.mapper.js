@@ -1,10 +1,12 @@
-import { getCharacterImage } from './character.handler';
 
-export function mapCharacterToCard(character) {
+export function mapCharacterToCard(item) {
   return {
-    name: character.name,
-    image: getCharacterImage(character),
-    id: character.id,
-    description: character.description
+    name: item.name,
+    image: item.thumbnail,
+    title: item.title,
+    id: item.id,
+    description: item.description,
+    url: item.urls,
+    fullName: item.fullName
   };
 }

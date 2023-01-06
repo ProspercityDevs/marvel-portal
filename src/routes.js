@@ -6,18 +6,15 @@ import { ComicsPage } from './modules/marvel-characters/pages/ComicsPage';
 import { CreatorsPage } from './modules/marvel-characters/pages/CreatorsPage';
 import { EventsPage } from './modules/marvel-characters/pages/EventsPage';
 import { SeriesPage } from './modules/marvel-characters/pages/SeriesPage';
-import { StoriesPage } from './modules/marvel-characters/pages/StoriesPage';
-import { SearchPage } from './modules/marvel-characters/pages/SearchPage';
+
 
 const AppRoutes = () => (
   <Routes>
     <Route exact path="/" element={<CharacterPage />} />
-    <Route exact path="/search" element={<SearchPage />} />
     <Route exact path="/comics" element={<ComicsPage />} />
     <Route exact path="/creators" element={<CreatorsPage />} />
     <Route exact path="/events" element={<EventsPage />} />
     <Route exact path="/series" element={<SeriesPage />} />
-    <Route exact path="/stories" element={<StoriesPage />} />
     <Route path="*" element={<NotFoundPage404 />} />
   </Routes>
 );
