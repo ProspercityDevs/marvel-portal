@@ -13,29 +13,38 @@ const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
 const currentDate = new Date().toDateString();
-const alias = 'Alias';
+// const alias = (name) => {
+//   const aliasName= [...name];
+//   alias.name.split('(');
+//   };
 
 CharacterGridPaginated.propTypes = {
-  searchValue: PropTypes.string,
-  selectValue: PropTypes.string
+  // searchValue: PropTypes.string,
+  option: PropTypes.number
 };
 
-export default function CharacterGridPaginated({ searchValue, selectValue }) {
+export default function CharacterGridPaginated({ 
+  // searchValue, 
+  option 
+}) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
   // const [queryParams, setQueryParams] = useState({});
 
   // const nameStartsWith = {
-  //   search: searchValue
+  //    search: searchValue
   // };
 
-  console.log('Seleccionado el orden: ' + selectValue);
 
-   const order = {
+
+  const order = {
      orderBy: 'name'
-   };
+  };
 
+ 
+
+  
   useEffect(() => {
     fetchCharactersAtPage();
   }, []);
@@ -50,10 +59,8 @@ export default function CharacterGridPaginated({ searchValue, selectValue }) {
     
   // }
 
-  async function fetchCharactersAtPage(page = 1) {
-    
-     const option = "A-Z";
-     if (option == "A-Z"){
+  async function fetchCharactersAtPage(page = 1 ) {
+     if (option == 1){
        setLoading(true);
        const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
        setTotalItems(data.total);
@@ -61,8 +68,7 @@ export default function CharacterGridPaginated({ searchValue, selectValue }) {
        setLoading(false);
      } 
   
-     if(option == "Z-A"){
-       order.orderBy='-name';
+     if(option == 2){
        setLoading(true);
        const data = await getInverseCharactersForGrid(page, ITEMS_PER_PAGE, order);
        setTotalItems(data.total);
@@ -124,7 +130,7 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
       image={image}
       key={index}
       currentDate={currentDate}
-      alias={alias}
+      // alias={alias}
       isSkeleton={isLoading}
     />
   ));

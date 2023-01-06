@@ -9,10 +9,35 @@ import SearchBar from 'src/modules/core/components/atoms/SearchBar';
 import PropTypes from 'prop-types';
 import SortBySelector from 'src/modules/core/components/atoms/SortBySelector';
 
+
+
 export function CharactersPage() {
   const [searchValue, setSearchValue] = useState('');
-  const [selectValue, setSelectValue] = useState('A-Z');
+  let [selectValue, setSelectValue] = useState();
 
+
+  SelectOption.propTypes = {
+    selectValue: PropTypes.number
+  };
+
+  function SelectOption( {selectValue} ) {
+     if (selectValue == 1) {
+       return (
+       <> 
+          <span>{selectValue}</span>
+          <CharactersGrid option={1} />          
+       </>
+       );
+     } else {
+       return(
+        <>
+          <span>{selectValue}</span>
+          <CharactersGrid option={2} />
+        </>
+       )       
+     }
+  }
+ 
   Autocomplete.propTypes = {
     searchValue: PropTypes.string
   };
@@ -40,6 +65,7 @@ export function CharactersPage() {
     }
   }
 
+ 
   return (
     <>
       <div className="mvl-characters-page">
@@ -56,7 +82,7 @@ export function CharactersPage() {
             <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
             <Autocomplete searchValue={searchValue} setSelectValue={setSelectValue} />
             <SortBySelector selectValue={selectValue}/>
-            <CharactersGrid searchValue={searchValue} selectValue={selectValue}/>
+            <SelectOption selectValue={selectValue} />
           </div>
         </div>
       </div>
