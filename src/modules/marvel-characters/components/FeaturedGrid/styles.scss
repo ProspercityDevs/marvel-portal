@@ -85,3 +85,64 @@ figcaption{
     font-weight: 200;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
+.mvl-featuredCharacters-card-section {
+    width: 100%;
+    display: block;
+    gap: 10px;
+    grid-template-columns: repeat(6, minmax(15%, 1fr));
+}
+.featured-container{
+    display: block;
+}
+.mvl-featuredCharacters-card{
+    display: inline-grid;
+    width: 195px;
+    height: 355px;
+    padding: 5px;
+    margin: 5px;
+    gap: 10px;
+    background: rgb(10, 10, 10);
+    color: white;
+    border-bottom-right-radius: 50px;
+    margin-bottom: 10px;
+}
+.mvl-featuredCharacters-card__image-container{
+    background: black;
+    height: 70%;
+    position: relative;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 5px;
+        background: var(--color-logo);
+        position: absolute;
+        top: -5px;
+        z-index: 2;
+    }
+}
+.mvl-featuredCharacters-card__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+    transform: scaleX(1);
+    cursor: pointer;
+}
+.mvl-featuredCharacters-card__body{
+    padding: var(--space-sm);
+    height: 0px;
+}
+.mvl-featuredCharacters-card:hover{
+    .mvl-featuredCharacters-card__image{
+        transform: scale(1.05);
+    }
+    .mvl-featuredCharacters-card__body{
+        padding: var(--space-sm);
+        background-color: rgb(214, 15, 15);
+        opacity: 1;
+        height: 100%;
+        border-bottom-right-radius: 50px;
+        transition: 0.3s ease-in-out ;
+    }
+}

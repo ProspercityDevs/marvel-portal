@@ -25,9 +25,6 @@ export function NavMenu() {
           <Link className="mvl-navbar-item mvl-navbar-item--text" to="/series" >
             Series
           </Link>
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/stories">
-            Stories
-          </NavLink>
 
         </div>
         
