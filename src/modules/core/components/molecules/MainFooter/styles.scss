@@ -1,8 +1,266 @@
-.mvl-main-footer{
-    height: 400px;
+.mvl-main-footer {
+  height: 400px;
+  display: static;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary-dark);
+  color: var(--color-accent);
+}
+
+.main-footer{
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.container-footer{
+  list-style: none;
+}
+
+.Contedor-1{
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
     display: flex;
-    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    font: 400 16px/1.3 Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+    letter-spacing: .5px;
+}
+
+.Section-1_Container-1_Links{
+  flex-wrap: nowrap;
+  padding-bottom: 0;
+  border-bottom: 0;
+  display: flex;
+  margin-bottom: 40px;
+    text-align: left;
+}
+
+.main-footer__logo{
+  justify-content: left;
+  margin-right: 60px;
+  -webkit-box-flex: 0;
+  flex: none;
+  user-select: none;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-box-align: baseline;
+  align-items: baseline;
+  margin-bottom: 30px;
+  width: 10%;
+  margin-top: -5%;
+}
+
+.main-footer__primary-links{
+  .ul{
+    list-style: none;
+    margin: none;
+    padding: none;
+  }
+  margin-right: 60px;
+  -webkit-box-flex: 1;
+  flex: 1;
+  font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+  font-weight: 800;
+  font-weight: bold;
+  margin-top: -2.5%;
+
+  
+} //AQUI
+
+.main-footer__link{
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+  color: white;
+  margin-top: 10%; 
+}
+
+.Acerca-de-Marvel{
+ flex: none; 
+}
+
+.main-footer__secondary-links{
+  .ul{
+    list-style: none;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+  }
+  margin-right: 60px;
+  -webkit-box-flex: 1;
+  flex: 1;
+  font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+  margin-top: -2.7%;
+   
+} //AQUI 
+
+.main-footer__link_1{
+  display: block;
+  font-size: 14px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+  color: white;
+  margin-top: 15%; 
+}
+
+.main-footer__promo-links{
+  display: block;
+  border-bottom: 0;
+  padding: 0;
+}
+
+
+.main-footer__promotion{
+  padding-left: 30px;
+  // width: 90%;
+  margin-right: 60px;
+  left: -200vw;
+  
+}//AQUI
+
+.Marvel_Insider{
+  justify-content: left;
+  margin-right: 20px;
+  -webkit-box-flex: 0;
+  flex: none;
+  user-select: none;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-box-align: baseline;
+  align-items: baseline;
+  margin-bottom: 30px;
+  width: 17%;
+  margin-top: -6%
+}
+
+.main-footer__promotion-info{
+  padding-left: 90px;
+  width: 90%;
+  
+  
+}
+
+.main-footer__promotion-title{
+  font-family: "RobotoCondensed Bold","Trebuchet MS",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin: 0;
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: -25%;
+  
+}
+
+.main-footer__promotion-description{
+  color: #767676;
+    font-family: "Roboto","Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+.main-footer__promotion{
+  padding-left: 30px;
+  width: 90%;
+}
+
+.Marvel_Inlimited{
+  justify-content: left;
+  margin-right: 60px;
+  -webkit-box-flex: 0;
+  flex: none;
+  user-select: none;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-box-align: baseline;
+  align-items: baseline;
+  margin-bottom: 30px;
+  width: 8%;
+  height: 100%;
+  margin-top: 5%
+}
+
+.main-footer__promotion-title-2{
+  font-family: "RobotoCondensed Bold","Trebuchet MS",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin: 0;
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: -20%;
+  
+}
+
+.main-footer__follow{
+  margin-right: -900px;
+  font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+  margin-top: -3%;
+  padding-left: 120px;
+  width: 50%;
+}
+
+.social_links_footer__social-2{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  list-style-type: none;
+  margin-bottom: 10%;
+  padding-left: 0px;
+  gap:20px;
+  width: 50%;
+
+}
+
+// .footer__social__img{
+    
+//   display: flex;
+//   flex-wrap: wrap;
+//   text-align: left;
+//   list-style-type: none;
+//   height: 18%;
+//   width: 50%;
+
+// }
+
+.main-footer__legal-wrapper{
+  margin-top: 270px;
+  position: relative;
+}
+//AQUI
+
+ .main-footer__legal_flex-wrapper_main-footer__legal-main{
+     justify-content: center;
+    //  width: 99vw;
+     margin-top: -5%;
+     align-items: center;
+     margin-left: -13%;
+  
+
+  
+ }
+
+.Sub_Barra{
+  color: #767676;
+    font-size: 10px;
+    line-height: 1.2em;
+    padding: 0 10px;
+    flex-wrap:wrap;
+    width: 10px;
+    line-height: 1;
+    font-family: "Roboto","Trebuchet MS",Helvetica,Arial,sans-serif;
     align-items: center;
-    background-color: var(--color-primary-dark);
-    color: var(--color-accent);
 }

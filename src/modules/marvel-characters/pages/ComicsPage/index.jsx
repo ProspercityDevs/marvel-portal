@@ -1,13 +1,14 @@
 import React from 'react';
 import { DefaultPage } from '../../components/InitialPage';
 
-export function CharacterPage() {
-  const id=1011299;
-  const domain='characters';
+function ComicsPage() {
+  const domain='comics';
+  const id=1009368;
   return(
     <DefaultPage
       domain={domain} 
       id={id}
     />
   )
-  }
+}
+export { ComicsPage };

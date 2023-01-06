@@ -1,0 +1,12 @@
+.mvl-grid-items {
+  width: 100%;
+  display: flex;
+}
+.mvl-grid-6{
+  grid-template-columns: repeat(4, 1fr);
+  display:inline-grid;
+  gap:20px;
+  margin: 20px 50px;
+  background-color: whitesmoke;
+  padding: 10px;
+}

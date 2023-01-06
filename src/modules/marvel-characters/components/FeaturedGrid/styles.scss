@@ -1,0 +1,87 @@
+h1{
+  margin-left: 30px;
+}
+.slider{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    width: 100 vw;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+  
+
+.slider::-webkit-scrollbar {
+    display: none;
+   }
+.slider:hover::-webkit-scrollbar {
+    display: initial;
+}
+.slider::-webkit-scrollbar-thumb {
+   background-color: rgb(219, 218, 218);
+}
+
+.featured-comics{
+    display: block;
+    width: 100%;
+    margin: 30px 0;
+    background-color: whitesmoke;
+    border-radius: 10px; 
+   
+}
+.featured-comics-items{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    margin: 10px;
+    min-width: max-content;
+    height: 250px;
+    gap: 30px;
+    grid-template-columns: repeat(4, minmax(15%, 1fr));
+}
+
+.featured-comics-items::-webkit-scrollbar {
+    display: none;
+   }
+.featured-comics-items:-webkit-scrollbar {
+    display: initial;
+}
+.featured-comics-items::-webkit-scrollbar-thumb {
+   background-color: rgb(161, 159, 159);
+}
+
+.featured-comics-items__img{
+    border-radius: 2px;
+    width: 100%;
+    height: 70%;
+    object-fit:cover;
+}
+.featured-comics-items_figure{
+    background-color: black;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+
+}
+.parrafo{
+    padding: 5px;
+    color: gray;
+    font-weight: 1000;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+figcaption{
+    color:whitesmoke;
+    padding: 5px;
+    font-weight: 200;
+    font-family: 'Roboto Condensed', sans-serif;
+}

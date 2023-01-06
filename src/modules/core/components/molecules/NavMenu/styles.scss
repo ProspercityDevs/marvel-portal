@@ -1,10 +1,10 @@
 .mvl-navbar{
     padding: 10px;
-    background-color: var(--color-primary-dark);
+    background-color: black;
     height: 60px;
+    width: 100%;
     display: inline-flex;
-    width: 100vw;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 16px 100px;
     box-sizing: border-box;
 }
@@ -23,11 +23,11 @@
 }
 
 .mvl-navbar-item--text{
-    color: var(--color-accent);
+    color: white;
     text-decoration: none;
     font-weight: bold;
     &:hover{
-        color: var(--color-primary-light);
+        color: gray;
     }
 }
 
@@ -38,11 +38,6 @@
 .mvl-navbar__actions{
     height: 100%;
     gap: 16px;
-}
-
-
-.mvl-navbar--right{
-
 }
 
 
