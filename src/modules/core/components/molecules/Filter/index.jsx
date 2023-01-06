@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import  CharacterGridPaginated  from '@/modules/marvel-characters/components/ItemGrid/index';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { ItemsName } from 'src/modules/marvel-characters/components/ItemInfo/itemnsName';
-import ButtonArrow from '../Filter_2';
+import ButtonArrow from '../Filter_series';
 import { useState } from 'react';
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import {Dropdown, DropdownMenu, DropdownToggle, DropdownItem} from 'reactstrap';
@@ -12,12 +12,22 @@ import './styles.scss';
 
 // import {AiFillCaretDown} from "react-icons/ai";
 function OnChangeName(text){
-  const name={
-    nameStartsWith:text
-  }
+  const resultsElem = document.getElementById('autocomplete-results')
   const order="";
   const itemsPerPage=24;
   const root3 = ReactDOM.createRoot(document.getElementById('container-grid'));
+
+  const name={
+    nameStartsWith:text
+  }
+  
+  if (text.length == 0){
+    resultsElem.classList.add('hidden');
+    return root3.render(
+      <CharacterGridPaginated name={text} domain={`characters`} order={order} itemsPerPage={itemsPerPage} />, 
+    );
+  }
+
   root3.render(
     <CharacterGridPaginated name={name} domain={`characters`} order={order} itemsPerPage={itemsPerPage} />, 
   );

@@ -23,7 +23,7 @@ export function DefaultPage({domain,id}) {
 
       <div className="container">
         <FeaturedGrid id={id}/>
-        <h1>MARVEL  {domain} list</h1>
+        <h1>MARVEL CHARACTER LIST</h1>
         <Filter /> 
       </div>
       
