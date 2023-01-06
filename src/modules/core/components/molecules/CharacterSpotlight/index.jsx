@@ -22,7 +22,7 @@ export default function CharacterSpotlight() {
     <section>
       <div className="container-principal-comics">
         <div className="container-name-comics">
-          <h1>CHARACTERS SPOTLIGHT</h1>
+          <h1 className="mvl-char-spl">CHARACTERS SPOTLIGHT</h1>
         </div>
         <div className="container-grid-comics">
           <ComicsGrid comics={comics} isLoading={Loading} itemsPerPage={ITEM_PER_PAGE} />
@@ -46,17 +46,18 @@ function ComicsGrid({ comics, isLoading, itemsPerPage }) {
   if (comics.length === 0) {
     return <EmptyState />;
   }
-
-  return comics.map(({ title, image }, index) => <Comic title={title} image={image} key={index} />);
+  return comics
+    .slice(9, 13)
+    .map(({ title, image }, index) => <Comic title={title} image={image} key={index} />);
 }
 
 const Comic = ({ title, image }) => {
   return (
-    <div>
-      <div>
+    <div className="container-principal">
+      <div className="container-comics">
         <img className="image-comics" src={image} alt="aquí esta la imagen" />
       </div>
-      <div>
+      <div className="container-comics">
         <p className="container-text-comics">COMICS</p>
         <a className="link-comics" href="#">
           {title}

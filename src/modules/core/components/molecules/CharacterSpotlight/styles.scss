@@ -6,13 +6,12 @@
 
 .container-name-comics h1 {
   margin-bottom: 20px;
-  color: var(--black);
 }
 section {
   width: 100%;
   margin-bottom: 20px;
 }
-.container-principal-comics {
+.container-principal {
   width: 100%;
 }
 
@@ -23,8 +22,14 @@ section {
   gap: 10px;
 }
 
+.container-comics {
+  width: 100%;
+  height: 140px;
+}
+
 .image-comics {
   width: 100%;
+  height: 140px;
 }
 
 .container-text-comics {
@@ -41,4 +46,8 @@ section {
 
 .link-comics:hover {
   color: red;
+}
+
+.mvl-char-spl {
+  color: black;
 }

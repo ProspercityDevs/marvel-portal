@@ -25,6 +25,6 @@ export function getComicsForGrid(page, itemsPerPage) {
 
 export function getComicsForList(page, itemsPerPage) {
   return getComicsAtPage(page, itemsPerPage, {
-    mappedBy: mapComicsToList
+    mappedBy: mapComicToList
   });
 }
