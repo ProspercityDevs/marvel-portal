@@ -22,7 +22,7 @@ export default function CharacterSpotlight() {
     <section>
       <div className="container-principal-comics">
         <div className="container-name-comics">
-          <h1>CHARACTERS SPOTLIGHT</h1>
+          <h1 className="mvl-char-spl">CHARACTERS SPOTLIGHT</h1>
         </div>
         <div className="container-grid-comics">
           <ComicsGrid comics={comics} isLoading={Loading} itemsPerPage={ITEM_PER_PAGE} />

@@ -14,7 +14,7 @@ export default function FeaturedCharacters() {
           />
         </div>
         <div className="mvl-featuredCharacters-card__body">
-          <h5 className="u-no-margin">Shuri</h5>
+          <h5 className="u-margin">Shuri</h5>
         </div>
       </div>
       <div className="mvl-featuredCharacters-card">
@@ -26,7 +26,7 @@ export default function FeaturedCharacters() {
           />
         </div>
         <div className="mvl-featuredCharacters-card__body">
-          <h5 className="u-no-margin">Riri Williams</h5>
+          <h5 className="u-margin">Riri Williams</h5>
         </div>
       </div>
       <div className="mvl-featuredCharacters-card">
@@ -38,7 +38,7 @@ export default function FeaturedCharacters() {
           />
         </div>
         <div className="mvl-featuredCharacters-card__body">
-          <h5 className="u-no-margin">M’baku</h5>
+          <h5 className="u-margin">M’baku</h5>
         </div>
       </div>
       <div className="mvl-featuredCharacters-card">
@@ -50,7 +50,7 @@ export default function FeaturedCharacters() {
           />
         </div>
         <div className="mvl-featuredCharacters-card__body">
-          <h5 className="u-no-margin">Okoye</h5>
+          <h5 className="u-margin">Okoye</h5>
         </div>
       </div>
       <div className="mvl-featuredCharacters-card">
@@ -62,7 +62,7 @@ export default function FeaturedCharacters() {
           />
         </div>
         <div className="mvl-featuredCharacters-card__body">
-          <h5 className="u-no-margin">Namor</h5>
+          <h5 className="u-margin">Namor</h5>
         </div>
       </div>
       <div className="mvl-featuredCharacters-card">
@@ -74,7 +74,7 @@ export default function FeaturedCharacters() {
           />
         </div>
         <div className="mvl-featuredCharacters-card__body">
-          <h5 className="u-no-margin">Queen Ramonda</h5>
+          <h5 className="u-margin">Queen Ramonda</h5>
         </div>
       </div>
     </section>

@@ -1,6 +1,9 @@
 .filter_search {
-  border: 1px solid transparent;
-  border-bottom: 1px solid var(--black);
+  border: 2px solid transparent;
+  border-bottom: 2px solid var(--black);
+  width: 50%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .icon_search {
@@ -8,7 +11,7 @@
 }
 
 .filter_search:focus-within {
-  border: 1px solid var(--color-warning);
+  border: 2px solid var(--color-warning);
 }
 
 .input-search {
@@ -20,4 +23,5 @@
   margin-left: 10px;
   outline: none;
   position: static;
+  font-weight: bolder;
 }
