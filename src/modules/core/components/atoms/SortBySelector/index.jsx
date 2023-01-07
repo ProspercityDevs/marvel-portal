@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 SortBySelector.propTypes = {
   selectValue: PropTypes.string,
-  setSelectValue: PropTypes.function
+  setSelectValue: PropTypes.func
 };
 
 function SortBySelector({ selectValue, setSelectValue }) {
@@ -17,7 +17,7 @@ function SortBySelector({ selectValue, setSelectValue }) {
     <>
       <div>
         <h3>Sort By</h3>
-        <h3>{selectValue}</h3>
+        <span>{selectValue}</span>
       </div>
       <div>
         <select value={selectValue} onChange={onSelectValueChange}>

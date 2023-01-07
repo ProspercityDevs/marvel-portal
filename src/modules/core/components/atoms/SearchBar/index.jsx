@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 SearchBar.propTypes = {
   searchValue: PropTypes.string,
-  setSearchValue: PropTypes.func    
+  setSearchValue: PropTypes.func
 };
 
 function SearchBar({ searchValue, setSearchValue }) {

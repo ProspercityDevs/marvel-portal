@@ -81,7 +81,7 @@ export function CharactersPage() {
             <h1 className="u-no-margin">MARVEL CHARACTERS LIST</h1>
             <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
             <Autocomplete searchValue={searchValue} setSelectValue={setSelectValue} />
-            <SortBySelector selectValue={selectValue}/>
+            <SortBySelector selectValue={selectValue} setSelectValue={setSelectValue} />
             <SelectOption selectValue={selectValue} />
           </div>
         </div>
