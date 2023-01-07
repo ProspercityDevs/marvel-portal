@@ -16,7 +16,7 @@ const AppRoutes = () => (
     <Route exact path="/events" element={<EventsPage />} />
     <Route exact path="/series" element={<SeriesPage />} />
     <Route exact path="/stories" element={<StoriesPage />} />
-    <Route element={<NotFoundPage404 />} />
+    <Route exact path="*" element={<NotFoundPage404 />} />
   </Routes>
 );
 

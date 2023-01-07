@@ -1,80 +1,80 @@
-.mvl-character-card{
-    box-sizing: border-box;
-    max-width: 100%;
-    height: 355px;
-    overflow: hidden;
-    background: var(--color-primary-dark);
-    color: var(--color-accent);
-    border-color: var(--color-logo);
-    border-style: solid;
-    cursor: pointer;
+.mvl-character-card {
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 355px;
+  overflow: hidden;
+  background: var(--color-primary-dark);
+  color: var(--color-accent);
+  border-color: var(--color-logo);
+  border-style: solid;
+  cursor: pointer;
 }
 
-.mvl-character-card:hover .mvl-character-card__image{
-    transform: scale(1.1);
-    height: 97%;
+.mvl-character-card:hover .mvl-character-card__image {
+  transform: scale(1.1);
+  height: 100%;
 }
 
-.mvl-character-card__image-container{
-    background: black;
-    height: 50%;
-    position: relative;
-    &::before{
-        content: '';
-        width: 100%;
-        height: 5px;
-        background: var(--color-logo);
-        position: absolute;
-        bottom: -5px;
-        z-index: 2;
-    }
+.mvl-character-card__image-container {
+  background: var(--color-logo);
+  height: 50%;
+  position: relative;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: var(--color-logo);
+    position: absolute;
+    bottom: -5px;
+    z-index: 2;
+  }
 }
 
-.mvl-character-card__image{
+.mvl-character-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  transform: scaleX(1) 2s;
+  border-bottom: 2px solid var(--color-logo);
+}
+
+.mvl-character-card__body {
+  padding: var(--space-sm);
+  height: 2px;
+  transition: height 0.8s;
+}
+
+.mvl-character-card:hover .mvl-character-card__body {
+  height: 355px;
+  background: var(--color-logo);
+}
+
+.mvl-character-card[data-is-skeleton='true'] {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--color-skeleton);
+    opacity: 0.9;
+    z-index: 3;
+  }
+}
+
+.mvl-character-card:hover {
+  color: var(--color-accent);
+  box-shadow: 5px 10px 20px 1px rgb(153, 66, 175);
+  transition: all 0.7s linear;
+
+  .mvl-character-card__image {
+    width: 100%;
+    height: 98%;
     object-fit: cover;
     object-position: left bottom;
-    transform: scaleX(1) 2s;
-    border-bottom: 2px solid var(--color-logo);
-}
-
-.mvl-character-card__body{
-    padding: var(--space-sm);
-    height: 2px;
-    transition: height 2s;
-}
-
-.mvl-character-card:hover .mvl-character-card__body{
-    height: 355px;
-    background: var(--color-logo);
-}
-
-.mvl-character-card[data-is-skeleton=true]{
-    position: relative;
-    &::after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: var(--color-skeleton);
-        opacity: 0.9;
-        z-index: 3;
-    }
-}
-
-.mvl-character-card:hover{
-     color: var(--color-accent);
-     box-shadow: 5px 10px 20px 1px rgb(153, 66, 175);
-     transition: all 0.7s linear;
-  
-     .mvl-character-card__image{
-         width: 100%;
-         height: 97%;
-         object-fit: cover;
-         object-position: left bottom;
-         transition: all 0.1s linear;
-     }
+    transition: all 0.3s linear;
+  }
 }

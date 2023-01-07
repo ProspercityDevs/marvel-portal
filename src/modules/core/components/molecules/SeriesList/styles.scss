@@ -1,0 +1,23 @@
+  .series_list {
+    list-style-type: none;
+    max-height: 280px;
+    font-weight: 500;
+    padding: 15px 15px 25px 15px;
+    margin-bottom: 5px;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+
+  .series__list--item {
+    margin-bottom: inherit;
+  }
+ 
+  .series__list input {
+    cursor: pointer;
+    margin-right: 15px;
+  }
+ 
+  .series__list--text {
+    padding-left: 15px;
+    cursor: pointer;
+  }

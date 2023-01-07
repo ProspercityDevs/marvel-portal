@@ -1,0 +1,27 @@
+.filter_search {
+  border: 2px solid transparent;
+  border-bottom: 2px solid var(--black);
+  width: 50%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icon_search {
+  position: static;
+}
+
+.filter_search:focus-within {
+  border: 2px solid var(--color-warning);
+}
+
+.input-search {
+  width: 94%;
+  border-radius: 0;
+  font-size: 1.5rem;
+  border: 0;
+  padding-bottom: 0.4375rem;
+  margin-left: 10px;
+  outline: none;
+  position: static;
+  font-weight: bolder;
+}
