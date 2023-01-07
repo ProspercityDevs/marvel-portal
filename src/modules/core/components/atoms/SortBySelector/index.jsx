@@ -21,8 +21,8 @@ function SortBySelector({ selectValue, setSelectValue }) {
       </div>
       <div>
         <select value={selectValue} onChange={onSelectValueChange}>
-          <option value={1}>A-Z</option>
-          <option value={2}>Z-A</option>
+          <option value='A-Z'>A-Z</option>
+          <option value='Z-A'>Z-A</option>
         </select>
       </div>
     </>

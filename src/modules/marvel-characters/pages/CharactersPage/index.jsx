@@ -17,25 +17,26 @@ export function CharactersPage() {
 
 
   SelectOption.propTypes = {
-    selectValue: PropTypes.number
+    selectValue: PropTypes.string
   };
 
   function SelectOption( {selectValue} ) {
-     if (selectValue == 1) {
-       return (
-       <> 
-          <span>{selectValue}</span>
-          <CharactersGrid option={1} />          
-       </>
-       );
-     } else {
-       return(
-        <>
-          <span>{selectValue}</span>
-          <CharactersGrid option={2} />
+      const option=1;  
+      if (selectValue == 'A-Z') {
+        return (
+        <> 
+           <span>{selectValue}</span>
+           <CharactersGrid option={1} />          
         </>
-       )       
-     }
+        );
+      } else {
+        return(
+         <>
+           <span>{selectValue}</span>
+           <CharactersGrid option={2} />
+         </>
+        )       
+      }
   }
  
   Autocomplete.propTypes = {

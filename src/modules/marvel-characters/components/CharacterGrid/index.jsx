@@ -25,7 +25,7 @@ CharacterGridPaginated.propTypes = {
 
 export default function CharacterGridPaginated({ 
   // searchValue, 
-  option 
+  option
 }) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
@@ -39,7 +39,7 @@ export default function CharacterGridPaginated({
 
 
   const order = {
-     orderBy: 'name'
+     orderBy: '-name'
   };
 
  
@@ -60,6 +60,7 @@ export default function CharacterGridPaginated({
   // }
 
   async function fetchCharactersAtPage(page = 1 ) {
+
      if (option == 1){
        setLoading(true);
        const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
