@@ -22,7 +22,7 @@ export function CharactersPage() {
   };
 
   function SelectOption( {selectValue} ) {
-      const option=1;  
+      //const option=1;  
       if (selectValue == 'A-Z') {
         return (
         <> 
