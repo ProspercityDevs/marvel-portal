@@ -4,12 +4,13 @@ import { useState } from 'react';
 import { BsSquareFill } from 'react-icons/bs';
 
 Modal.propTypes = {
+  letterMod: PropTypes.object,
+  modalFcambio: PropTypes.object,
   estado: PropTypes.bool,
-  closeModal: PropTypes.object,
-  letterMod: PropTypes.func,
-  modalFmod: PropTypes.func
+  closeModal: PropTypes.object
+
 };
-function Modal({ estado, closeModal, letterMod, modalFmod }) {
+function Modal({letterMod, modalFcambio, estado, closeModal  }) {
   const [estado1, setestado1] = useState(false);
 
   const openModal1 = () => {
@@ -177,11 +178,11 @@ function Modal({ estado, closeModal, letterMod, modalFmod }) {
 
     if (text.length > 0) {
       console.log(text);
-      modalFmod(true);
+      modalFcambio(true);
       letterMod(text);
     } else {
       console.log('No has seleccionado nada aún');
-      modalFmod(false);
+      modalFcambio(false);
       letterMod(text);
     }
   }
