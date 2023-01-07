@@ -8,10 +8,38 @@ import FilteredCharacterListPaginated from '../../components/FilteredCharactersL
 import SearchBar from 'src/modules/core/components/atoms/SearchBar';
 import PropTypes from 'prop-types';
 import CharacterSpotlight from 'src/modules/core/components/molecules/CharacterSpotlight';
+import SortBySelector from 'src/modules/core/components/atoms/SortBySelector';
+
+
 
 export function CharactersPage() {
   const [searchValue, setSearchValue] = useState('');
+  let [selectValue, setSelectValue] = useState();
 
+
+  SelectOption.propTypes = {
+    selectValue: PropTypes.string
+  };
+
+  function SelectOption( {selectValue} ) {
+      const option=1;  
+      if (selectValue == 'A-Z') {
+        return (
+        <> 
+           <span>{selectValue}</span>
+           <CharactersGrid option={1} />          
+        </>
+        );
+      } else {
+        return(
+         <>
+           <span>{selectValue}</span>
+           <CharactersGrid option={2} />
+         </>
+        )       
+      }
+  }
+ 
   Autocomplete.propTypes = {
     searchValue: PropTypes.string
   };
@@ -39,6 +67,7 @@ export function CharactersPage() {
     }
   }
 
+ 
   return (
     <>
       <header className="mvl-characters-page-header">
@@ -54,8 +83,9 @@ export function CharactersPage() {
             <CharacterSpotlight />
             <h1 className="u-no-margin-mcl">MARVEL CHARACTERS LIST</h1>
             <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
-            <Autocomplete searchValue={searchValue} />
-            <CharactersGrid searchValue={searchValue} />
+            <Autocomplete searchValue={searchValue} setSelectValue={setSelectValue} />
+            <SortBySelector selectValue={selectValue} setSelectValue={setSelectValue} />
+            <SelectOption selectValue={selectValue} />
           </div>
         </div>
       </div>

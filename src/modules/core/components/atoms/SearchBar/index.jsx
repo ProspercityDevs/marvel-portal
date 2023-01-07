@@ -1,8 +1,13 @@
 import React from 'react';
 import './styles.scss';
 import { RiSearch2Line } from 'react-icons/ri';
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
+SearchBar.propTypes = {
+  searchValue: PropTypes.string,
+  setSearchValue: PropTypes.func
+};
+
 function SearchBar({ searchValue, setSearchValue }) {
   const onSearchValueChange = (event) => {
     console.log(event.target.value);
