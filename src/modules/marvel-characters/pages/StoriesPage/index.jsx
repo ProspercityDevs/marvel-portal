@@ -4,7 +4,7 @@ import './styles.scss';
 export function StoriesPage() {
   return (
     <div>
-      <h1>STORIES PAGE</h1>
+      <h1 className='title_page'>STORIES PAGE</h1>
     </div>
   );
 }

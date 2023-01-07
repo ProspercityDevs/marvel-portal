@@ -4,7 +4,7 @@ import './styles.scss';
 export function EventsPage() {
   return (
     <div>
-      <h1>EVENTS PAGE</h1>
+      <h1 className='title_page'>EVENTS PAGE</h1>
     </div>
   );
 }

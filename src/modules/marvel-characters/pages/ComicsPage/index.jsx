@@ -4,7 +4,7 @@ import './styles.scss';
 export function ComicsPage() {
   return (
     <div>
-      <h1>COMICS PAGE</h1>
+      <h1 className='title_page'>COMICS PAGE</h1>
     </div>
   );
 }

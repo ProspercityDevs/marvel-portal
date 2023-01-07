@@ -10,32 +10,28 @@ import PropTypes from 'prop-types';
 import CharacterSpotlight from 'src/modules/core/components/molecules/CharacterSpotlight';
 import SortBySelector from 'src/modules/core/components/atoms/SortBySelector';
 
-
-
 export function CharactersPage() {
   const [searchValue, setSearchValue] = useState('');
   let [selectValue, setSelectValue] = useState();
-
 
   SelectOption.propTypes = {
     selectValue: PropTypes.string
   };
 
   function SelectOption( {selectValue} ) {
-      //const option=1;  
-      if (selectValue == 'A-Z') {
+      if (selectValue == 'Z-A') {
         return (
         <> 
            <span>{selectValue}</span>
-           <CharactersGrid option={1} />          
+           <CharactersGrid option={2} />          
         </>
         );
       } else {
-        return(
-         <>
-           <span>{selectValue}</span>
-           <CharactersGrid option={2} />
-         </>
+          return(
+          <>
+            <span>{selectValue}</span>
+            <CharactersGrid option={1} />
+          </>
         )       
       }
   }
@@ -67,7 +63,6 @@ export function CharactersPage() {
     }
   }
 
- 
   return (
     <>
       <header className="mvl-characters-page-header">
