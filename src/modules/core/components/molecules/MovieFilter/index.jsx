@@ -5,11 +5,11 @@ import Modal from './Modal';
 import PropTypes from 'prop-types';
 
 MovieFilter.propTypes = {
-  letterMod: PropTypes.func,
-  modalFmod: PropTypes.func
+  letterMod: PropTypes.object,
+  modalFcambio: PropTypes.object
 };
 
-export default function MovieFilter(letterMod, modalFmod) {
+export default function MovieFilter({letterMod, modalFcambio}) {
   const [estado, setestado] = useState(false);
 
   // useState, va hacer el estado inicial
@@ -34,7 +34,7 @@ export default function MovieFilter(letterMod, modalFmod) {
         </button>
       </div>
 
-      <Modal letterMod={letterMod} modalFmod={modalFmod} estado={estado} closeModal={closeModal} />
+      <Modal letterMod={letterMod} modalFcambio={modalFcambio} estado={estado} closeModal={closeModal} />
     </div>
   );
 }

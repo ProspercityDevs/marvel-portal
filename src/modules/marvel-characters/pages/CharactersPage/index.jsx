@@ -16,7 +16,7 @@ export function CharacterPage() {
   const [modalF, setModalF] = useState(false);
   const [select, setselect] = useState('A-Z');
 
-  const modalFmod = (a) => {
+  const modalFcambio = (a) => 
     setModalF(a);
   };
   const letterMod = (a) => {
@@ -107,7 +107,7 @@ export function CharacterPage() {
               </div>
               <div className="col">
                 <div className="filtros">
-                  <MovieFilter letterMod={letterMod} modalFmod={modalFmod} />
+                  <MovieFilter letterMod={letterMod} modalFcambio={modalFcambio} />
                 </div>
                 <hr className="linea" />
               </div>
