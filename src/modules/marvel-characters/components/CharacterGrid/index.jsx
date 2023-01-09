@@ -15,6 +15,9 @@ CharacterGridPaginated.propTypes = {
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
+
+
+
 export default function CharacterGridPaginated({ n, search }) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
@@ -25,10 +28,19 @@ export default function CharacterGridPaginated({ n, search }) {
     nameStartsWith: search
   };
 
+  const orden = {
+    orderBy: 'name'
+  };
+
+  const orden1 = {
+    orderBy: '-name'
+  };
+
   console.log(nameStarts);
   useEffect(() => {
     fetchCharactersAtPage();
   }, []); // para que no se ejecute continuamente,
+
 
   async function fetchCharactersAtPage(page = 1) {
     if (n == 0) {
@@ -40,9 +52,12 @@ export default function CharacterGridPaginated({ n, search }) {
       setLoading(false);
       console.log(data.results); //se le agrego esta linea de codigo para sacar los id.
     }
+
+  
+
     if (n == 1) {
       setLoading(true);
-      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts);
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts, orden);
       setTotalItems(data.total);
       console.log('Personajes', data.total);
       setCharacters(data.results);
@@ -53,7 +68,44 @@ export default function CharacterGridPaginated({ n, search }) {
         series: search
       };
       setLoading(true);
-      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts);
+
+      
+
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts, orden);
+      setTotalItems(data.total);
+      console.log('Personajes', data.total);
+      setCharacters(data.results);
+      setLoading(false);
+    }
+    if (n == 4) {
+      setLoading(true);
+      const data = await getCharactersForGrid2(page, ITEMS_PER_PAGE, orden1);
+      setTotalItems(data.total);
+      console.log('Personajes', data.total);
+      setCharacters(data.results);
+      setLoading(false);
+      console.log(data.results); //se le agrego esta linea de codigo para sacar los id.
+    }
+
+  
+
+    if (n == 5) {
+      setLoading(true);
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts, orden1);
+      setTotalItems(data.total);
+      console.log('Personajes', data.total);
+      setCharacters(data.results);
+      setLoading(false);
+    }
+    if (n == 6) {
+      const nameStarts = {
+        series: search
+      };
+      setLoading(true);
+
+      
+
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, nameStarts, orden1);
       setTotalItems(data.total);
       console.log('Personajes', data.total);
       setCharacters(data.results);

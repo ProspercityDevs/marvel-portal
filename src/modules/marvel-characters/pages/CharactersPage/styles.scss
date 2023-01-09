@@ -27,3 +27,12 @@
     align-items: center;
     border: 1px solid var(--color-border);
 }
+
+.Sort_selector::selection{
+    display: flex ;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+   
+    
+}
+

@@ -14,6 +14,8 @@ export function CharacterPage() {
 
   const [letter, setLetter] = useState('');
   const [modalF, setModalF] = useState(false);
+  const [select, setselect] = useState('A-Z');
+
   const modalFmod = (a) => {
     setModalF(a);
   };
@@ -28,6 +30,7 @@ export function CharacterPage() {
     setSearch(a);
   };
 
+
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       setUpdated(search);
@@ -38,6 +41,7 @@ export function CharacterPage() {
     Peticion();
   }, []);
   function Peticion() {
+    if (select=='A-Z') {
     if (modalF == false) {
       if (filterEnter == true) {
         if (updated.length < 1) {
@@ -50,8 +54,23 @@ export function CharacterPage() {
       }
     } else {
       return <CharactersGrid n={2} search={letter} />;
-    }
-  }
+    } 
+  } else {
+    if (modalF == false) {
+      if (filterEnter == true) {
+        if (updated.length < 1) {
+          return <CharactersGrid n={4} />;
+        } else {
+          return <CharactersGrid n={5} search={search} />;
+        }
+      } else {
+        return <CharactersGrid n={4} search={search} />;
+      }
+    } else {
+      return <CharactersGrid n={6} search={letter} />;
+    } 
+ }
+}
   function Peticion2() {
     if (search.length >= 3) {
       return <ModalAuto search={search} modalAuto={modalAuto} />;
@@ -93,6 +112,13 @@ export function CharacterPage() {
                 <hr className="linea" />
               </div>
             </div>
+          </div>
+          <div>
+          <select className="Sort_selector" value={select} onChange={(e) => setselect(e.target.value)}>
+          <option selected>A-Z</option>
+          <option>Z-A</option>
+         </select>
+
           </div>
         </div>
         <Peticion />
